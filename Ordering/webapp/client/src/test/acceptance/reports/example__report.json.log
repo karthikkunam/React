@@ -1,0 +1,173 @@
+{
+  "feature": {
+    "uri": "login.feature",
+    "keyword": "Feature",
+    "name": "Login",
+    "line": 1,
+    "id": "login",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "login.feature",
+    "id": "login;login-with-valid-credentials",
+    "keyword": "Scenario",
+    "line": 8,
+    "name": "login with valid credentials",
+    "tags": [
+      {
+        "name": "@tags",
+        "line": 2
+      }
+    ],
+    "type": "scenario",
+    "result": {
+      "duration": 0,
+      "status": "undefined"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "Given ",
+        "line": 9,
+        "name": "I am at the login page",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 10,
+        "name": "I enter valid credentials",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 11,
+        "name": "I click on Submit button",
+        "result": {
+          "status": "undefined"
+        }
+      }
+    ]
+  }
+}{
+  "feature": {
+    "uri": "storeselection.feature",
+    "keyword": "Feature",
+    "name": "Store selector",
+    "line": 1,
+    "id": "store-selector",
+    "tags": []
+  }
+}{
+  "scenario": {
+    "uri": "storeselection.feature",
+    "id": "store-selector;do-login",
+    "keyword": "Scenario",
+    "line": 3,
+    "name": "do login",
+    "tags": [],
+    "type": "scenario",
+    "result": {
+      "duration": 0,
+      "status": "undefined"
+    },
+    "steps": [
+      {
+        "arguments": [],
+        "keyword": "Given ",
+        "line": 4,
+        "name": "I am at the login page",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 5,
+        "name": "I enter valid credentials",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 6,
+        "name": "I click on Submit button",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 7,
+        "name": "I am at the store selector page",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 8,
+        "name": "I check logo as 7B",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 9,
+        "name": "I check title",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 10,
+        "name": "I check application name & page name",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 11,
+        "name": "I check search textbox is implemented & available on right hand corner",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 12,
+        "name": "I enter number in search box",
+        "result": {
+          "status": "undefined"
+        }
+      },
+      {
+        "arguments": [],
+        "keyword": "Then ",
+        "line": 13,
+        "name": "I click on previous button",
+        "result": {
+          "status": "undefined"
+        }
+      }
+    ]
+  }
+}

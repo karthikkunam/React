@@ -1,0 +1,87 @@
+[
+    {
+        "cat": "07",
+        "psa": "17",
+        "device": "-",
+        "orderWriter": "-",
+        "items": [
+            {
+                "itemId": 230004,
+                "itemName": "Chips Ahoy Cocoa 2lb 4ct",
+                "promotion": null,
+                "itemStatus": "newItem",
+                "isBillBackAvailable": true,
+                "forecastPeriod1": 12,
+                "forecastPeriod2": 9,
+                "forecastPeriod3": 10,
+                "forecastPeriod4": 15,
+                "orderedQuantity": null,
+                "sellForecast": 4,
+                "inventory": null,
+                "minimumOnHand": null,
+                "device": "-",
+                "orderWriter": "-"
+            },
+            {
+                "itemId": 230004,
+                "itemName": "Chips Ahoy Cocoa 2lb 4ct",
+                "promotion": null,
+                "itemStatus": "deleted",
+                "isBillBackAvailable": false,
+                "forecastPeriod1": 12,
+                "forecastPeriod2": 9,
+                "forecastPeriod3": 10,
+                "forecastPeriod4": 15,
+                "orderedQuantity": null,
+                "sellForecast": 4,
+                "inventory": null,
+                "minimumOnHand": null,
+                "device": "-",
+                "orderWriter": "-"
+            }
+        ],
+        "name": "FRESH BAKERY"
+    },
+    {
+        "cat": "01",
+        "psa": "23",
+        "device": "-",
+        "orderWriter": "-",
+        "items": [
+            {
+                "itemId": 230004,
+                "itemName": "Chips Ahoy Cocoa 2lb 4ct",
+                "promotion": null,
+                "itemStatus": "deleted",
+                "forecastPeriod1": 12,
+                "forecastPeriod2": 9,
+                "forecastPeriod3": 10,
+                "forecastPeriod4": 15,
+                "orderedQuantity": null,
+                "sellForecast": 4,
+                "inventory": null,
+                "isBillBackAvailable": true,
+                "minimumOnHand": null,
+                "device": "-",
+                "orderWriter": "-"
+            },
+            {
+                "itemId": 230004,
+                "itemName": "Chips Ahoy Cocoa 2lb 4ct",
+                "promotion": null,
+                "itemStatus": "newItem",
+                "forecastPeriod1": 12,
+                "forecastPeriod2": 9,
+                "forecastPeriod3": 10,
+                "forecastPeriod4": 15,
+                "orderedQuantity": null,
+                "sellForecast": 4,
+                "inventory": null,
+                "minimumOnHand": null,
+                "device": "-",
+                "orderWriter": "-"
+            }
+        ],
+        "name": "COFFEE"
+    }
+]

@@ -1,0 +1,4874 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Orderering page",
+    "line": 2,
+    "id": "orderering-page",
+    "tags": [
+      {
+        "name": "@all",
+        "line": 1
+      }
+    ],
+    "uri": "features\\features\\LandingPage.feature",
+    "elements": [
+      {
+        "id": "orderering-page;verify-ordering-landing-page",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Verify Ordering Landing Page",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13719000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "SevenBOSS application launches ISP Landing page",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5459000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Verify PlaceOrder tile got loaded and it has some data",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10690000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "Verify reporting tile",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8702000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "Verify Support functions tile",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 364000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Ordering a Multi day item",
+    "line": 2,
+    "id": "ordering-a-multi-day-item",
+    "tags": [
+      {
+        "name": "@all",
+        "line": 1
+      }
+    ],
+    "uri": "features\\features\\MultiDay.feature",
+    "elements": [
+      {
+        "id": "ordering-a-multi-day-item;verify-ordering-a-multi-day-item-with-order-remaining-items-true",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Verify Ordering a multi day item with Order Remaining Items True",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3720000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3679000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8362000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "Click on All Radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:485"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "Check only Multi Day checkbox for selecting Multi day item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1200000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Select the first avilable multiday item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2137000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6729000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "Verify Cursor if defaulted to first question",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1022000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "Verify the default values for all questions for first item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "Answer all the questions",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8229000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "Verify the Formula",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:170"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 161000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "Answer the questions with special characters",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:204"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4580000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "Answer the questions with Zero",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:234"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9142000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "Verify the Daily Trend for last '4' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2200000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "Verify the Weekly Trend for last '4' weeks for Multiday Item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:273"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 170000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "Verify the Next day Weekly Trend for last '4' weeks for Multiday Item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:332"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1363000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "Click On NO button on modal pop up",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:329"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1201000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2498000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-multi-day-item;verify-ordering-a-multi-day-item-with-order-remaining-items-false-with-carried-items",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Verify Ordering a multi day item with Order Remaining Items False with Carried Items",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5111000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3832000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8386000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "Check only Multi Day checkbox for selecting Multi day item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1268000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4136000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "Select the first avilable multiday item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2079000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12614000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "Verify Cursor if defaulted to Order textBox",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1020000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "Answer all the questions",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:140"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8154000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "Verify the Formula",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:170"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 193000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "Update Order quantity for second item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3018000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "Verify the Daily Trend for last '4' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2215000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "Verify the Weekly Trend for last '4' weeks for Multiday Item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:273"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 169000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "Verify the Next day Weekly Trend for last '4' weeks for Multiday Item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:332"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 209000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1360000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "Click On NO button on modal pop up",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:329"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1172000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2572000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-multi-day-item;verify-ordering-a-single-day-item-with-order-remaining-items-true-and-with-all-items-radio-button-on",
+        "keyword": "Scenario",
+        "line": 44,
+        "name": "Verify Ordering a single day item with Order Remaining Items True and with All Items Radio button ON",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1907000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 45,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8924000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 46,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11127000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "Check only Multi Day checkbox for selecting Multi day item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1341000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 48,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4140000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "Click on All Radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:485"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 108000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "Select the first avilable multiday item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2097000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4945000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "Verify the Daily Trend for last '4' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2179000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "Verify the Weekly Trend for last '4' weeks for Multiday Item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:273"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 179000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "Verify the Next day Weekly Trend for last '4' weeks for Multiday Item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:332"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 164000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1450000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "Click On NO button on modal pop up",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:329"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1169000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 57,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2688000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-multi-day-item;verify-warning-message-when-you-click-on-home-button-in-the-middle-of-transaction",
+        "keyword": "Scenario",
+        "line": 60,
+        "name": "Verify Warning message when you click on Home button in the middle of transaction",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8060000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 61,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5232000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 62,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8367000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 63,
+            "name": "Check only Multi Day checkbox for selecting Multi day item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1312000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 64,
+            "name": "Select the first avilable multiday item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2088000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 65,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11229000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 66,
+            "name": "Click in Home Button and verify the popup for Multiday Item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:359"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1299000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11268000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4181000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "Check only Multi Day checkbox for selecting Multi day item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1199000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 70,
+            "name": "Select the first avilable multiday item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2081000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 71,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5627000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 72,
+            "name": "Enter Order Quantity ONE in the Order text box and click Enter Key for multiday",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6761000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 73,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1414000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 74,
+            "name": "Click on No Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2690000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 75,
+            "name": "Enter Order quantity for first item in review and finalize page for 'MultiDay'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3197000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 76,
+            "name": "Click On Home Button and verify that we are in ordering page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:512"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1127000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-multi-day-item;verify-ordering-a-multi-day-item-with-clicking-previous-button-in-the-middle-of-order",
+        "keyword": "Scenario",
+        "line": 79,
+        "name": "Verify Ordering a multi day item with clicking Previous Button in the middle of order",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5763000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 80,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6337000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 81,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9282000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 82,
+            "name": "Check only Multi Day checkbox for selecting Multi day item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1233000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 83,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4169000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 84,
+            "name": "Select the first avilable multiday item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2083000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 85,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9697000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 86,
+            "name": "Enter Order Quantity ONE in the Order text box and click Enter Key for multiday",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3443000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 87,
+            "name": "Click On Previous Button and Verify pop up message",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:489"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1981000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 88,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8368000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 89,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4137000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 90,
+            "name": "Check only Multi Day checkbox for selecting Multi day item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1206000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 91,
+            "name": "Select the first avilable multiday item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2086000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 92,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6350000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 93,
+            "name": "Enter Order Quantity ONE in the Order text box and click Enter Key for multiday",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3274000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 94,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1397000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 95,
+            "name": "Click on No Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2719000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 96,
+            "name": "Enter Order quantity for first item in review and finalize page for 'MultiDay'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3128000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 97,
+            "name": "Click On Previous Button and Verify pop up message",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:489"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1529000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-multi-day-item;verify-ordering-a-multi-day-item-with-order-remaining-items-false-and-order-all-items-with-10-quantity",
+        "keyword": "Scenario",
+        "line": 99,
+        "name": "Verify Ordering a Multi day item with Order Remaining Items False and order all items with 10 Quantity",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2308000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 100,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2473000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 101,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8325000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 102,
+            "name": "Check only Multi Day checkbox for selecting Multi day item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1216000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 103,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4138000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 104,
+            "name": "Select the first avilable multiday item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2086000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 105,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5179000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 106,
+            "name": "Enter Order Quantity as '10' all the items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:521"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91476000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 107,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1414000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 108,
+            "name": "Click On NO button on modal pop up",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:329"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1255000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 109,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3092000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 110,
+            "name": "Verify the Items Ordered count matches",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:575"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 111,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 112,
+            "name": "Verify that Order reaminging Quantity as '0'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:569"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3047000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-multi-day-item;verify-ordering-a-multiday-day-item-with-order-remaining-items-false-and-order-all-items-with-5-quantity",
+        "keyword": "Scenario",
+        "line": 115,
+        "name": "Verify Ordering a MultiDay day item with Order Remaining Items False and order all items with 5 Quantity",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3611000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 116,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5429000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 117,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9114000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 118,
+            "name": "Check only Multi Day checkbox for selecting Multi day item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2175000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 119,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4654000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 120,
+            "name": "Select the first avilable multiday item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2515000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 121,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 122,
+            "name": "Enter Order Quantity as '5' all the items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:521"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91332000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 123,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1229000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 124,
+            "name": "Click On NO button on modal pop up",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:329"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1249000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 125,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2627000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 126,
+            "name": "Verify the Items Ordered count matches",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:575"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 127,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 128,
+            "name": "Verify that Order reaminging Quantity as '0'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:569"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3024000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Ordering a Non-daily item",
+    "line": 3,
+    "id": "ordering-a-non-daily-item",
+    "tags": [
+      {
+        "name": "@all",
+        "line": 2
+      }
+    ],
+    "uri": "features\\features\\Non-Daily.feature",
+    "elements": [
+      {
+        "id": "ordering-a-non-daily-item;verify-ordering-a-non-daily-item-with-order-remaining-items-true",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Verify Ordering a Non-daily item with Order Remaining Items True",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6039000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3847000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8360000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "Check only Non-Daily checkbox for selecting Non-Daily item",
+            "match": {
+              "location": "features\\step_definitions\\Non-Daily.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 222000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Select the first avilable Non-Daily item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\Non-Daily.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 389000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13018000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "Verify Cursor if defaulted to first question",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1022000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "Get the required Item details from the Service for 'NonDaily'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3916000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "Verify Tooltip for the Item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1237000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "Answer the question on forecast sales",
+            "match": {
+              "location": "features\\step_definitions\\Non-Daily.js:46"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 6008000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -6\n    +NaN\n\n    at World.Then (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\features\\step_definitions\\Non-Daily.js:89:23)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "Enter Order Quantity ONE in the Order text box and click Enter Key for Non-Daily items",
+            "match": {
+              "location": "features\\step_definitions\\Non-Daily.js:122"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "Verify the Daily Trend for last '8' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "Verify the Weekly Trend for last '4' weeks for Non_daily Item",
+            "match": {
+              "location": "features\\step_definitions\\Non-Daily.js:94"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "Verify that we will get modal popup with No. of items not ordered",
+            "match": {
+              "location": "features\\step_definitions\\Non-Daily.js:152"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "Click On NO button on modal pop up",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:329"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "Verify that Order Landing page got opened and Remaining to Order was decreased by one for Non-Daily Items",
+            "match": {
+              "location": "features\\step_definitions\\Non-Daily.js:160"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 555000000,
+              "error_message": "TypeError: scenario.attach is not a function\n    at scope.driver.takeScreenshot.then (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\features\\support\\hooks.js:34:22)\n    at ManagedPromise.invokeCallback_ (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:1376:14)\n    at TaskQueue.execute_ (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:3084:14)\n    at TaskQueue.executeNext_ (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:3067:27)\n    at asyncRun (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:2927:27)\n    at C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:668:7\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-non-daily-item;verify-ordering-a-non-daily-items-with-order-remaining-items-false-and-order-all-items-with-10-quantity",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Verify Ordering a Non-Daily items with Order Remaining Items False and order all items with 10 Quantity",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7483000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6983000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10096000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "Check only Non-Daily checkbox for selecting Non-Daily item",
+            "match": {
+              "location": "features\\step_definitions\\Non-Daily.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 220000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4132000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "Select the first avilable Non-Daily item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\Non-Daily.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 352000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7420000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "Enter Order Quantity as '10' all the items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:521"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21374000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1226000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "Click On NO button on modal pop up",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:329"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1016000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2321000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "Verify that Order reaminging Quantity as '0'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:569"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3027000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-non-daily-item;verify-ordering-a-non-daily-items-with-order-remaining-items-false-and-with-all-items-radio-button-on",
+        "keyword": "Scenario",
+        "line": 40,
+        "name": "Verify Ordering a Non-Daily items with Order Remaining Items False and with All Items Radio button ON",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4453000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7375000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8371000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "Check only Non-Daily checkbox for selecting Non-Daily item",
+            "match": {
+              "location": "features\\step_definitions\\Non-Daily.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 260000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4155000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "Click on All Radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:485"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "Select the first avilable Non-Daily item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\Non-Daily.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 558000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10812000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 48,
+            "name": "Enter Order Quantity as '10' all the items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:521"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 152474000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1344000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "Click On NO button on modal pop up",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:329"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1231000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2742000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "Verify that Order reaminging Quantity as '0'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:569"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3029000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Verify Reporting Page",
+    "line": 2,
+    "id": "verify-reporting-page",
+    "tags": [
+      {
+        "name": "@all",
+        "line": 1
+      }
+    ],
+    "uri": "features\\features\\Reporting.feature",
+    "elements": [
+      {
+        "id": "verify-reporting-page;verify-daily-items-reporting-data",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Verify Daily items Reporting Data",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5590000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4085000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10156000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 326000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4194000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Select All Daily Items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 586000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4730000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "Get the all items names and Order Quantity",
+            "match": {
+              "location": "features\\step_definitions\\Reporting.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 591000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "Click in Home Button and verify the popup",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:472"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1217000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "Click on Reporting tab",
+            "match": {
+              "location": "features\\step_definitions\\Reporting.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4774000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 209000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "Select All Daily Items in Reporting Page",
+            "match": {
+              "location": "features\\step_definitions\\Reporting.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 514000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3176000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "Wait for Spinner to close",
+            "match": {
+              "location": "features\\step_definitions\\Reporting.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2896000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "Verify the default Date set to OrderWindow Date",
+            "match": {
+              "location": "features\\step_definitions\\Reporting.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "Get reporting details by Item for Single day items",
+            "match": {
+              "location": "features\\step_definitions\\Reporting.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1695000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-reporting-page;verify-multiday-items-reporting-data",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Verify Multiday items Reporting Data",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7752000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6349000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8345000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4150000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "Check only Multi Day checkbox for selecting Multi day item",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1206000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "Select the first avilable multiday item and Verify remaing Items to Order",
+            "match": {
+              "location": "features\\step_definitions\\MultiDay.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2079000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9915000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "Get the all items names and Order Quantity",
+            "match": {
+              "location": "features\\step_definitions\\Reporting.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1940000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "Click in Home Button and verify the popup",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:472"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1142000000,
+              "error_message": "AssertionError: expected 'Are you sure you want to exit?' to include 'have not been ordered. Do you want to proceed with ordering'\n    at World.Then (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\features\\step_definitions\\SingleDay.js:477:28)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "Click on Reporting tab",
+            "match": {
+              "location": "features\\step_definitions\\Reporting.js:12"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "Select All Daily Items in Reporting Page",
+            "match": {
+              "location": "features\\step_definitions\\Reporting.js:19"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "Wait for Spinner to close",
+            "match": {
+              "location": "features\\step_definitions\\Reporting.js:29"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "Verify the default Date set to OrderWindow Date",
+            "match": {
+              "location": "features\\step_definitions\\Reporting.js:33"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "Get reporting details by Item for Single day items",
+            "match": {
+              "location": "features\\step_definitions\\Reporting.js:57"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 671000000,
+              "error_message": "TypeError: scenario.attach is not a function\n    at scope.driver.takeScreenshot.then (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\features\\support\\hooks.js:34:22)\n    at ManagedPromise.invokeCallback_ (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:1376:14)\n    at TaskQueue.execute_ (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:3084:14)\n    at TaskQueue.executeNext_ (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:3067:27)\n    at asyncRun (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:2927:27)\n    at C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:668:7\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Ordering a Single day item",
+    "line": 2,
+    "id": "ordering-a-single-day-item",
+    "tags": [
+      {
+        "name": "@all",
+        "line": 1
+      }
+    ],
+    "uri": "features\\features\\SingleDay.feature",
+    "elements": [
+      {
+        "id": "ordering-a-single-day-item;verify-ordering-a-single-day-item-with-order-remaining-items-true",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Verify Ordering a single day item with Order Remaining Items True",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4457000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9855000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17980000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 233000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "Select All Daily Items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 559000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8533000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Get the required Item details from the Service for 'Daily'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1506000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "Verify Cursor if defaulted to order quantity text box",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:136"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "Verify Tooltip for the Item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1199000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "If remaining Orders are more than Zero, Enter Zero in Order text box then click on Enter Key",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:143"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1540000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "ReOrder the Item with Zero in Order text box then click on Enter Key",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:163"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1014000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1157000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "Verify that we will get modal popup with minimum order quantity",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:214"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1032000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "click On YES button on modal pop up and verify that Cursor is placed in order text box",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:252"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1054000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "Enter number Max number in order textbox and click on Enter Key",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:235"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3382000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "Verify that we will get modal popup with Maximum order quantity",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:227"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "Click on Close Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:223"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "Enter Order Quantity ONE in the Order text box and click Enter Key",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:259"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3205000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1196000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "Click On NO button on modal pop up",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:329"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1188000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2313000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "Verify that Order Landing page got opened and Remaining to Order was decreased by one",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:426"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8429000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-single-day-item;verify-ordering-a-single-day-item-with-order-remaining-items-false",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Verify Ordering a single day item with Order Remaining Items False",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4103000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5341000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9943000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 224000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4132000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "Select All Daily Items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 555000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6170000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "Order Submit Date",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:443"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3115000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "Verify Order Delivered Date",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:458"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3076000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "Enter Order Quantity ONE in the Order text box and click Enter Key",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:259"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5913000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "Verify the Daily Trend for last '8' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2423000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "Verify the Weekly Trend for last '4' weeks",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:377"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 388000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1501000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "Click On NO button on modal pop up",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:329"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1155000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2381000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "Verify that Order Landing page got opened and Remaining to Order was decreased by one",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:426"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7100000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-single-day-item;verify-ordering-a-single-day-item-with-order-remaining-items-true-and-with-all-items-radio-button-on",
+        "keyword": "Scenario",
+        "line": 46,
+        "name": "Verify Ordering a single day item with Order Remaining Items True and with All Items Radio button ON",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5968000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4707000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 48,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8392000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 417000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4134000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "Click on All Radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:485"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "Select All Daily Items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 561000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8173000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "Clear the existing order quantity and make sure that we have defaulted to Zero",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:280"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3721000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "Verify the Daily Trend for last '8' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2396000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "Verify the Weekly Trend for last '4' weeks",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:377"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 393000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 57,
+            "name": "Close the Chevron",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2140000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1095000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "Click On NO button on modal pop up",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:329"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1150000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2341000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "Modify the Order quantity for one item in review and finalise page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:310"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1087000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 62,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 63,
+            "name": "Verify that Order Landing page got opened and Remaining to Order was decreased by one",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:426"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8866000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-single-day-item;verify-warning-message-when-you-click-on-home-button-in-the-middle-of-transaction",
+        "keyword": "Scenario",
+        "line": 65,
+        "name": "Verify Warning message when you click on Home button in the middle of transaction",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1841000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7786000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 67,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11364000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16118000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4968000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 70,
+            "name": "Select All Daily Items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 567000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 71,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7016000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 72,
+            "name": "Click in Home Button and verify the popup",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:472"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1233000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 73,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9380000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 74,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4109000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 75,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 215000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 76,
+            "name": "Select All Daily Items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 553000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 77,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6817000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 78,
+            "name": "Enter Order Quantity ONE in the Order text box and click Enter Key",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:259"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5530000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 79,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1307000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 80,
+            "name": "Click on No Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2735000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 81,
+            "name": "Enter Order quantity for first item in review and finalize page for 'Daily'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3062000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 82,
+            "name": "Click On Home Button and verify that we are in ordering page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:512"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1150000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-single-day-item;verify-ordering-a-single-day-item-with-clicking-previous-button-in-the-middle-of-order",
+        "keyword": "Scenario",
+        "line": 84,
+        "name": "Verify Ordering a single day item with clicking Previous Button in the middle of order",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5351000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 85,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5064000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 86,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9728000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 87,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4148000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 88,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 256000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 89,
+            "name": "Select All Daily Items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 562000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 90,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7413000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 91,
+            "name": "Enter Order Quantity ONE in the Order text box and click Enter Key",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:259"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5214000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 92,
+            "name": "Click On Previous Button and Verify pop up message",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:489"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1843000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 93,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5590000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 94,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 222000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 95,
+            "name": "Select All Daily Items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 546000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 96,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6237000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 97,
+            "name": "Enter Order Quantity ONE in the Order text box and click Enter Key",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:259"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5639000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 98,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1249000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 99,
+            "name": "Click on No Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2678000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 100,
+            "name": "Enter Order quantity for first item in review and finalize page for 'Daily'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3055000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 101,
+            "name": "Click On Previous Button and verify that we are in order details page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:502"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 921000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-single-day-item;verify-ordering-a-single-day-item-with-clicking-previous-button-in-the-middle-of-order-with-all-items-enabled",
+        "keyword": "Scenario",
+        "line": 103,
+        "name": "Verify Ordering a single day item with clicking Previous Button in the middle of order with All items enabled",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4900000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 104,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4949000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 105,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10320000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 106,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4205000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 107,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 277000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 108,
+            "name": "Click on All Radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:485"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 109,
+            "name": "Select All Daily Items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 556000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 110,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9201000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 111,
+            "name": "Enter Order Quantity ONE in the Order text box and click Enter Key",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:259"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5692000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 112,
+            "name": "Click On Previous Button and Verify pop up message",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:489"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 67000000,
+              "error_message": "WebDriverError: element click intercepted: Element <button id=\"btn-prev\" type=\"button\" class=\"btn btn-previous d-none d-sm-block\">...</button> is not clickable at point (716, 765). Other element would receive the click: <div class=\"modal fade show\" role=\"dialog\" tabindex=\"-1\" style=\"display: block;\">...</div>\n  (Session info: headless chrome=79.0.3945.88)\n  (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.16299 x86_64)\n    at Object.checkLegacyResponse (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\error.js:546:15)\n    at parseHttpResponse (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\http.js:509:13)\n    at doSend.then.response (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\http.js:441:30)\n    at process._tickCallback (internal/process/next_tick.js:68:7)\nFrom: Task: WebElement.click()\n    at thenableWebDriverProxy.schedule (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\webdriver.js:807:17)\n    at WebElement.schedule_ (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2010:25)\n    at WebElement.click (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2092:17)\n    at C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\features\\pages\\OrderingPage.js:335:28\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 618000000,
+              "error_message": "TypeError: scenario.attach is not a function\n    at scope.driver.takeScreenshot.then (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\features\\support\\hooks.js:34:22)\n    at ManagedPromise.invokeCallback_ (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:1376:14)\n    at TaskQueue.execute_ (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:3084:14)\n    at TaskQueue.executeNext_ (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:3067:27)\n    at asyncRun (C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:2927:27)\n    at C:\\Users\\gponu001\\Documents\\ordering\\webapp\\tests\\uitests\\node_modules\\selenium-webdriver\\lib\\promise.js:668:7\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-single-day-item;verify-ordering-a-single-day-item-with-order-remaining-items-false-and-order-all-items-with-10-quantity",
+        "keyword": "Scenario",
+        "line": 114,
+        "name": "Verify Ordering a single day item with Order Remaining Items False and order all items with 10 Quantity",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5453000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 115,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4988000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 116,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8361000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 117,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 239000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 118,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4150000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 119,
+            "name": "Select All Daily Items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 559000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 120,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7995000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 121,
+            "name": "Enter Order Quantity as '10' all the items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:521"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56235000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 122,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1194000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 123,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2312000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 124,
+            "name": "Verify the Items Ordered count matches",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:575"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 125,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 126,
+            "name": "Verify that Order reaminging Quantity as '0'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:569"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5321000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ordering-a-single-day-item;verify-ordering-a-single-day-item-with-order-remaining-items-false-and-order-all-items-with-5-quantity",
+        "keyword": "Scenario",
+        "line": 128,
+        "name": "Verify Ordering a single day item with Order Remaining Items False and order all items with 5 Quantity",
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1855000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 129,
+            "name": "You are in BOSS home page",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6077000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 130,
+            "name": "Click Place Order from Landing Page to navigate to Order Selection page.",
+            "match": {
+              "location": "features\\step_definitions\\LandingPage.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9134000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 131,
+            "name": "Check only Daily checkbox for selecting single day item",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 298000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 132,
+            "name": "Disable the Order remaining items only radio button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:437"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4168000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 133,
+            "name": "Select All Daily Items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 561000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 134,
+            "name": "Click on Continue Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6190000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 135,
+            "name": "Get the required Item details from the Service for 'Daily'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3312000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 136,
+            "name": "Enter Order Quantity as '5' all the items",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:521"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45980000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 137,
+            "name": "Click on Review and Finalise Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:321"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1217000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 138,
+            "name": "Verify the Daily Trend for last '10' days",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:336"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2483000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 139,
+            "name": "Verify the Items Ordered count matches",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:575"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 140,
+            "name": "Click on Submit Button",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:408"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 141,
+            "name": "Verify that Order reaminging Quantity as '0'",
+            "match": {
+              "location": "features\\step_definitions\\SingleDay.js:569"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3030000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+{
+    "environments":
+   [{
+        "Environment":"DEV",
+        "StoreNo":"18473",
+        "UserId":"1",
+        "TimeZone":"America/Chicago",
+        "BOSSURL":"https://portal.ris-dev.7-eleven.com/7boss/order/isp/launch/",
+        "APIURL":"https://eit330tle4.execute-api.us-east-1.amazonaws.com/live/v1",
+        "APIKEY":"QqTv0ITd2CaUms64YTD6V9qCed9VWEeG6g14lwia"
+    },
+
+   {
+        "Environment":"QA",
+        "StoreNo":"19903",
+        "UserId":"40",
+        "TimeZone":"America/Toronto",
+        "BOSSURL":"https://portal.ris-qa.7-eleven.com/7boss/order/isp/launch/",
+        "APIURL":"https://2pcs7pxsml.execute-api.us-east-1.amazonaws.com/live/v1",
+        "APIKEY":"NcmjIipqVq2woOQICZRRQ4Cd71prArwIaS9aneQ6"
+    }]
+}

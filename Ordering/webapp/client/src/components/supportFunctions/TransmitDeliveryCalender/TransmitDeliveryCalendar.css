@@ -1,0 +1,346 @@
+.deliveryComponent-main{
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.deliveryComponent{
+  margin-left: 3%;
+  margin-right: 1%;
+}
+
+.Delivery-Agent {
+    height: 29px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #5b616b;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center
+  }
+
+  .DT-no-data-indicator {
+    position: fixed;
+    margin: auto;
+    top: 50%;
+    left: 45%;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 6;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+  }
+
+.DT-Transmit-Delivery-Schedule {
+    height: 1085px;
+}
+
+.no-margin {
+  margin: 0%;
+}
+
+/* .deliverycustomwidth {
+  max-width: 40.9%!important;
+} */
+
+
+.order-transmit-dates {
+    height: 35px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    color: #5b616b;
+    border: solid 1px #d3d3d3;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+.padding-top-only{
+  padding-top: 1%;
+}
+
+  .remove-margin-right-left{
+        margin-right: 0px !Important;
+        margin-left: 0px !Important;
+  }
+
+  .curren-dates {
+    height: 24px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+    margin-right: 4px;
+  }
+  .curren-dates:last-child {
+    margin-right: 0;
+  }
+ .curren-dates-text {
+    font-weight: bold;
+  }
+.create-margin{
+    margin-right: 35px;
+}
+.delivery-dates{
+  /* width: 134px; */
+  height: 30px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5b616b;
+  padding: 0rem;
+}
+
+.custom-seven-column-grid {
+  max-width: 14.285714285714285714285714285714% !important;
+  flex: 14.285714285714285714285714285714% !important;
+  /* padding: 1%; */
+  border-right: 1px solid #dedede;
+  /* padding-top: 7px; */
+}
+
+.delivery-dates .card {
+  border: 0px !Important;
+}
+
+.agent-name {
+  /* width: 173px; */
+  height: 50px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: #4a4a4a;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 3%;
+  padding-top: 2%;
+  border-right: 1px solid #d3d3d3;
+}
+
+.delivery-transmit-dates{
+  /* width: 40px; */
+  height: 50px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 3.0;
+  letter-spacing: normal;
+  text-align: center;
+  color: #4a4a4a;
+  padding-top: 5px;
+  border-right: 1px solid #d3d3d3;
+}
+.data-grid{
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.curren-body-dates {
+  height: 24px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5b616b;
+}
+
+.make-spin-bigger{
+  width: 10rem;
+    height: 10rem;
+    margin: 2% 2% 2% 2%;
+}
+
+.updated-date{
+    text-align: right;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    color: #5b616b;
+    margin-top: auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .deliveryComponent-main {
+      margin-left: 15px;
+      margin-right: 15px;
+  }
+  .deliveryComponent-main .headerTransmit {
+    border: solid 1px #d3d3d3;
+    background-color: #f1f1f1;
+    overflow: hidden;
+  }
+  .deliveryComponent-main .headerTransmit .headerTransmit {
+    border: 0;
+    background-color: transparent;
+    border-left: solid 1px #d3d3d3;
+  }
+  .deliveryComponent-main .headerTransmit .Delivery-Agent,
+  .deliveryComponent .deliverycustomwidth {
+    max-width: 40.8%;
+  }
+  .deliveryComponent-main .headerTransmit .headerTransmit,
+  .deliveryComponent .delivery-dates {
+    flex: 0 0 59.2%;
+    max-width: 59.2%;
+  }
+  .headerTransmit .order-transmit-dates.padding-top-only {
+    padding: 9px 0 0px;
+    border: solid 1px #d3d3d3;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+  }
+  .headerTransmit .order-transmit-dates.remove-margin-right-left {
+    border: solid 1px #d3d3d3;
+    border-bottom: 0;
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
+  }
+  .deliveryComponent {
+    margin-left: 0;
+    margin-right: 0;
+    max-height: 100%;
+  }
+  .custom-seven-column-grid {
+    font-size: 14px;
+    padding: 8px 7px;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 8px 4px;
+    width: 73px;
+  }
+  .headerTransmit .order-transmit-dates.remove-margin-right-left > div:last-child .custom-seven-column-grid {
+    border: 0;
+  }
+}
+
+/* BROWSER > 1025PX Styles */
+@media (min-width: 1025px) {
+  .deliveryComponent-main {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .deliveryComponent-main .headerTransmit {
+    border: solid 1px #d3d3d3;
+    background-color: #f1f1f1;
+    overflow: hidden;
+  }
+  .deliveryComponent-main .headerTransmit .headerTransmit {
+    border: 0;
+    background-color: transparent;
+    border-left: solid 1px #d3d3d3;
+  }
+  .deliveryComponent-main .headerTransmit .Delivery-Agent,
+  .deliveryComponent .deliverycustomwidth {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .deliveryComponent-main .headerTransmit .headerTransmit,
+  .deliveryComponent .delivery-dates {
+    flex: 0 0 60%;
+    max-width: 60%;
+    border-bottom: 0 !important;
+  }
+  .headerTransmit .order-transmit-dates.padding-top-only {
+    padding: 9px 0 0px;
+    border: solid 1px #d3d3d3;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+  }
+  .headerTransmit .order-transmit-dates.remove-margin-right-left {
+    border: solid 1px #d3d3d3;
+    border-bottom: 0;
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .headerTransmit .order-transmit-dates.remove-margin-right-left > div {
+    flex: 0 0 14.28% !important;
+    max-width: 14.28% !important;
+  }
+  .deliveryComponent {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 5px;
+  }
+  .deliveryComponent.data-grid {
+    height: auto;
+    max-height: 100%;
+    padding-bottom: 50px;
+    position: absolute;
+    top: 270px;
+    z-index: 2;
+    bottom: 62px;
+    right: 30px;
+    left: 30px;
+  }
+  .deliveryComponent.data-grid > div:first-child {
+    border-top: 1px solid #dee2e6;
+  }
+  .custom-seven-column-grid {
+    font-size: 14px;
+    /* padding: 8px 7px; */
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 8px 4px;
+    /* width: 73px; */
+  }
+  .headerTransmit .order-transmit-dates.remove-margin-right-left > div:last-child .custom-seven-column-grid {
+    border: 0;
+  }
+  .agent-name {
+    max-width: 40%;
+  }
+  .delivery-transmit-dates {
+    flex: 0 0 8.57%;
+    max-width: 8.57%;
+    /* border-top: 1px solid #dee2e6; */
+  }
+}
+
+/* @media screen and (max-height: 665px) {
+  .deliveryComponent {
+      max-height: 320px;
+      padding-bottom: 60px;
+  }
+} */

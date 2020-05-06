@@ -1,0 +1,130 @@
+.modal-box .modal-content{
+    border-radius: 8px;
+    box-shadow: 0 15px 24px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+}
+
+.modal-box .modal-body {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2c2f35;
+}
+
+.modal-box-pdf .modal-body{
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2c2f35;
+    padding: 1.3rem;
+}
+
+.modal-box-pdf .modal-content{
+    border-radius: 8px;
+    box-shadow: 0 15px 24px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    height: 650px;
+    width: 100%;
+}
+
+.msg-box-btn-align-center{
+    margin: 0 auto;
+}
+
+.btn-msg-box:active{
+    color: white;
+    background-color: #008060;
+}
+
+.btn-msg-box:hover{
+    color: white;
+    background-color: #008060;
+}
+
+#btn-previous:focus {
+    color: white;
+    background-color: #008060;
+    border: 2px solid #008060;  
+}
+
+#btn-ldu-min:focus {
+    color: white;
+    background-color: #008060;
+    border: 2px solid #008060;  
+}
+
+.mg-close-align{
+    display: flex;
+    align-items: flex-end;
+    height: 39px;
+    position: relative;
+    top: 0%;
+    right: 0%;
+}
+
+.modal-box-pdf.modal-dialog {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+  .modal-box-pdf .modal-content {
+    background: transparent;
+    box-shadow: none;
+    height: 100%;
+  }
+  .modal-box-pdf .modal-body {
+    padding: 0;
+    height: 100%;
+  }
+  .modal-box-pdf .modal-body object {
+    height: 99%;
+    width: 100%;
+  }
+  .modal-box-pdf .modal-footer {
+    border: 0;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+  .modal-box-pdf .modal-footer button {
+    font-size: 35px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: transparent;
+    color: #fff;
+    border: 0;
+    transition: all .3s linear;
+    color: #ec2526;
+    background: transparent;
+    border: 0;
+  }
+  .modal-box-pdf .modal-footer button:nth-child(2) {
+    top: 60px;
+  }
+  .modal-box-pdf .modal-footer button:nth-child(3) {
+    top: 120px;
+  }
+  .modal-box-pdf .modal-footer button:hover {
+    color: #018062;
+  }
+
+@media only screen and (max-width: 768px) {
+
+}

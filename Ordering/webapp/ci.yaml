@@ -1,0 +1,720 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+  ApplicationName:
+    Type: String
+    Description: Application name
+  NonProdAccount:
+    Type: String
+    Description: Non-prod account id where non-prod resources & CodeCommit repository exist
+  ProdAccount:
+    Type: String
+    Description: Prod account id where prod resources exist
+  RepoAccount:
+    Type: String
+    Description: The account the repository is in
+  CodeRepoName:
+    Type: String
+    Description: Name of CodeCommit repository for CICD
+  CodeRepoBranch:
+    Type: String
+    Description: Git branch to build off
+  PipelineStackPrefix:
+    Type: String
+    Description: Common prefix to use for pipeline stacks
+  ApplicationStackPrefix:
+    Type: String
+    Description: Common prefix to use for application stacks
+  DeployableUnit:
+    Type: String
+    Description: Deployable unit name
+Conditions:
+  Master: !Equals [!Ref CodeRepoBranch, master]
+  Development: !Equals [!Ref CodeRepoBranch, development]
+Resources:
+  # # S3 bucket where build artifacts go
+  DeploymentArtifactBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
+    Properties:
+      AccessControl: Private
+
+  # S3 buckets can only be deleted when empty; this custom resource will clean up a bucket
+  CleanupDeploymentArtifactBucket:
+    Type: Custom::CleanupBucket
+    Properties:
+      ServiceToken: !ImportValue EmptyS3BucketFunctionArn
+      BucketName: !Ref DeploymentArtifactBucket
+
+  DeploymentArtifactBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref DeploymentArtifactBucket
+      PolicyDocument:
+        Statement:
+          # # Deny unencrypted object uploads
+          # - Action:
+          #     - s3:PutObject
+          #   Effect: Deny
+          #   Resource:
+          #     - !Sub arn:aws:s3:::${DeploymentArtifactBucket}/*
+          #   Principal: "*"
+          #   Condition:
+          #     "StringNotEquals":
+          #       "s3:x-amz-server-side-encryption": "aws:kms"
+          # Deny insecure connections
+          - Action:
+              - s3:*
+            Effect: Deny
+            Resource:
+              - !Sub arn:aws:s3:::${DeploymentArtifactBucket}/*
+            Principal: "*"
+            Condition:
+              "Bool":
+                "aws:SecureTransport": false
+          # Allow Get/Put access from non-prod & prod accounts
+          - Action:
+              - s3:GetObject
+              - s3:GetObjectVersion
+              - s3:PutObject
+              - s3:PutObjectAcl
+            Effect: Allow
+            Resource:
+              - !Sub arn:aws:s3:::${DeploymentArtifactBucket}/*
+            Principal:
+              AWS:
+                - !Sub arn:aws:iam::${RepoAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCodeCommitRole
+                - !Sub arn:aws:iam::${NonProdAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCloudFormationRole
+                - !Sub arn:aws:iam::${NonProdAccount}:role/${AWS::Region}-ScaffoldingCloudFormationDeployerRole
+                - !Sub arn:aws:iam::${ProdAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCloudFormationRole
+                - !Sub arn:aws:iam::${ProdAccount}:role/${AWS::Region}-ScaffoldingCloudFormationDeployerRole
+          # Allow List access from non-prod & prod account
+          - Action:
+              - s3:ListBucket
+            Effect: Allow
+            Resource:
+              - !Sub arn:aws:s3:::${DeploymentArtifactBucket}
+            Principal:
+              AWS:
+                - !Sub arn:aws:iam::${RepoAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCodeCommitRole
+                - !Sub arn:aws:iam::${NonProdAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCloudFormationRole
+                - !Sub arn:aws:iam::${NonProdAccount}:role/${AWS::Region}-ScaffoldingCloudFormationDeployerRole
+                - !Sub arn:aws:iam::${ProdAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCloudFormationRole
+                - !Sub arn:aws:iam::${ProdAccount}:role/${AWS::Region}-ScaffoldingCloudFormationDeployerRole
+          # Deny object uploads that don't allow full control by me
+          - Action:
+              - s3:PutObject
+            Effect: Deny
+            Resource:
+              - !Sub arn:aws:s3:::${DeploymentArtifactBucket}/*
+            Principal:
+              AWS:
+                - !Sub arn:aws:iam::${RepoAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCodeCommitRole
+            Condition:
+              "StringNotEquals":
+                "s3:x-amz-acl": "bucket-owner-full-control"
+
+  CodeBuildServiceRole:
+    Type: AWS::IAM::Role
+    DependsOn: DeploymentArtifactBucketPolicy
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - sts:AssumeRole
+            Principal:
+              Service:
+                - codebuild.amazonaws.com
+      Policies:
+        - PolicyName: CodeBuildServicePolicy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/codebuild/${ApplicationName}-${CodeRepoBranch}-*"
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:GetObjectVersion
+                  - s3:PutObject
+                Resource:
+                  - !Sub ${DeploymentArtifactBucket.Arn}/*
+                  - arn:aws:s3:::testreports.7-11.com/browser/RIS2.0/*
+                  - arn:aws:s3:::artifactory.7-11.com/others/devopsutils/codepipeline_scripts/sonarscan/*
+                  - arn:aws:s3:::artifactory.7-11.com/checkmarx/*
+              - Effect: Allow
+                Action:
+                  - kms:Encrypt
+                  - kms:Decrypt
+                  - kms:ReEncrypt*
+                  - kms:GenerateDataKey*
+                  - kms:DescribeKey
+                Resource:
+                  - !ImportValue ScaffoldingKeyArn
+              - Effect: Allow
+                Action:
+                  - cloudformation:ValidateTemplate
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - ecr:*
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - sts:assumerole
+                Resource: 
+                  - !Sub arn:aws:iam::${RepoAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCloudFormationRole
+              - Effect: Allow
+                Action:
+                  - ssm:GetParameter*
+                Resource:
+                  - !Sub arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/codebuild/sonarqube*
+                  - !Sub arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/app/checkmarx*
+              - Effect: Allow
+                Action:
+                  - ec2:CreateNetworkInterface
+                  - ec2:DescribeDhcpOptions
+                  - ec2:DescribeNetworkInterfaces
+                  - ec2:DeleteNetworkInterface
+                  - ec2:DescribeSubnets
+                  - ec2:DescribeSecurityGroups
+                  - ec2:DescribeVpcs
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - ec2:CreateNetworkInterfacePermission
+                Resource: !Sub "arn:aws:ec2:${AWS::Region}:${AWS::AccountId}:network-interface/*"
+                Condition:
+                  StringEquals:
+                    ec2:Subnet:
+                      - Fn::Sub:
+                        - "arn:aws:ec2:${AWS::Region}:${AWS::AccountId}:subnet/${PrivateSubnet1}"
+                        - PrivateSubnet1: !ImportValue sei-css-network-stack-PrivateSubnet1
+                      - Fn::Sub:
+                        - "arn:aws:ec2:${AWS::Region}:${AWS::AccountId}:subnet/${PrivateSubnet2}"
+                        - PrivateSubnet2: !ImportValue sei-css-network-stack-PrivateSubnet2
+                    ec2:AuthorizedService: codebuild.amazonaws.com
+  BuildArtifactCodeBuildProject:
+    Type: AWS::CodeBuild::Project
+    Properties:
+      Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-build-artifact
+      ServiceRole: !GetAtt CodeBuildServiceRole.Arn
+      EncryptionKey: !ImportValue ScaffoldingKeyArn
+      Artifacts:
+        Type: CODEPIPELINE
+      Environment:
+        Type: linuxContainer
+        # ComputeType options: BUILD_GENERAL1_SMALL, BUILD_GENERAL1_MEDIUM, BUILD_GENERAL1_LARGE
+        ComputeType: BUILD_GENERAL1_SMALL
+        # Run `aws codebuild list-curated-environment-images` for a complete list of images provided.
+        Image: aws/codebuild/nodejs:8.11.0
+        EnvironmentVariables:
+          - Name: BUILD_ARTIFACT_BUCKET
+            Value: !Ref DeploymentArtifactBucket
+      Source:
+        Type: CODEPIPELINE
+        BuildSpec: !Sub ${DeployableUnit}/buildspec-build-artifact.yaml
+      TimeoutInMinutes: 10
+  BuildArtifactCodeBuildLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/codebuild/${BuildArtifactCodeBuildProject}
+      RetentionInDays: 7
+  BuildImageCodeBuildProject:
+    Type: AWS::CodeBuild::Project
+    Properties:
+      Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-buildimage
+      ServiceRole: !GetAtt CodeBuildServiceRole.Arn
+      EncryptionKey: !ImportValue ScaffoldingKeyArn
+      Artifacts:
+        Type: CODEPIPELINE
+      Environment:
+        Type: linuxContainer
+        # ComputeType options: BUILD_GENERAL1_SMALL, BUILD_GENERAL1_MEDIUM, BUILD_GENERAL1_LARGE
+        ComputeType: BUILD_GENERAL1_SMALL
+        # Run `aws codebuild list-curated-environment-images` for a complete list of images provided.
+        Image: aws/codebuild/docker:18.09.0
+        EnvironmentVariables:
+          - Name: App_Name
+            Value: ordering
+          - Name: ECR_REPOSITORY
+            Value: !Ref ECRRepository
+          - Name: ACCOUNT
+            Value: !Sub ${AWS::AccountId}
+          - Name: BRANCH
+            Value: !Ref CodeRepoBranch
+      Source:
+        Type: CODEPIPELINE
+        BuildSpec: !Sub ${DeployableUnit}/buildspec-build-image.yaml
+      TimeoutInMinutes: 10
+
+  BuildImageCodeBuildLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/codebuild/${BuildImageCodeBuildProject}
+      RetentionInDays: 7
+
+#  APITestCodeBuildProject:
+#    Type: AWS::CodeBuild::Project
+#    Properties:
+#      Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-APITests
+#      ServiceRole: !GetAtt CodeBuildServiceRole.Arn
+#      EncryptionKey: !ImportValue ScaffoldingKeyArn
+#      Artifacts:
+#        Type: CODEPIPELINE
+#      Environment:
+#        Type: linuxContainer
+#        # ComputeType options: BUILD_GENERAL1_SMALL, BUILD_GENERAL1_MEDIUM, BUILD_GENERAL1_LARGE
+#        ComputeType: BUILD_GENERAL1_SMALL
+#        # Run `aws codebuild list-curated-environment-images` for a complete list of images provided.
+#        Image: aws/codebuild/java:openjdk-8
+#        EnvironmentVariables:
+#          - Name: REPO_NAME
+#            Value: !Ref ApplicationName
+#          - Name: DEPLOY_UNIT
+#            Value: !Ref DeployableUnit
+#          - Name: BUILD_ARTIFACT_BUCKET
+#            Value: !Ref DeploymentArtifactBucket
+#          - Name: NONPROD_ACCOUNT
+#            Value: !Ref NonProdAccount
+#          - Name: QA_BUCKET_NAME
+#            Value: testreports.7-11.com
+#          - Name: NONPROD_CODEBUILD_ROLE
+#            Value:
+#              Fn::If:
+#                - Master
+#                - !Sub dev-codeBuild-role
+#                - !Sub ${CodeRepoBranch}-codeBuild-role
+#          - Name: BRANCH_ENV
+#            Value:
+#              Fn::If:
+#                - Master
+#                - dev
+#                - !Ref CodeRepoBranch
+#          - Name: BRANCH
+#            Value: !Ref CodeRepoBranch
+#          - Name: ENVIRONMENT_TYPE
+#            Value:
+#              Fn::If:
+#                - Master
+#                - dev
+#                - dev
+#      Source:
+#        Type: CODEPIPELINE
+#        BuildSpec: !Sub ${DeployableUnit}/buildspec-apiTests.yaml
+#      TimeoutInMinutes: 30
+  StaticApplicationSecurityTestingSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: VPC-attached CodeBuild security group for static application security testing (SAST)
+      VpcId: !ImportValue sei-css-network-stack-VPCID
+
+  StaticApplicationSecurityTestingCodeBuildProject:
+    Type: AWS::CodeBuild::Project
+    Properties:
+      Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-static-application-security-testing
+      ServiceRole: !GetAtt CodeBuildServiceRole.Arn
+      EncryptionKey: !ImportValue ScaffoldingKeyArn
+      Artifacts:
+        Type: CODEPIPELINE
+      Environment:
+        Type: linuxContainer
+        # ComputeType options: BUILD_GENERAL1_SMALL, BUILD_GENERAL1_MEDIUM, BUILD_GENERAL1_LARGE
+        ComputeType: BUILD_GENERAL1_MEDIUM
+        # Run `aws codebuild list-curated-environment-images` for a complete list of images provided.
+        Image: aws/codebuild/java:openjdk-8-1.6.0
+        EnvironmentVariables:
+          - Name: BUILD_ARTIFACT_BUCKET
+            Value: !Ref DeploymentArtifactBucket
+          - Name: REPO_NAME
+            Value: !Ref CodeRepoName
+          - Name: REPO_BRANCH
+            Value: !Ref CodeRepoBranch
+          - Name: DeployableUnit
+            Value: !Ref DeployableUnit
+          - Name: CX_PLUGIN_VERSION
+            Value: "8.80.2"
+          - Name: CXSAST_MIN_VERSION
+            Value: "8.8.0"
+      Source:
+        Type: CODEPIPELINE
+        BuildSpec: !Sub ${DeployableUnit}/buildspec-static-application-security-testing.yml
+      TimeoutInMinutes: 10
+      VpcConfig:
+        SecurityGroupIds:
+          - !Ref StaticApplicationSecurityTestingSecurityGroup
+        Subnets:
+          - !ImportValue sei-css-network-stack-PrivateSubnet1
+          - !ImportValue sei-css-network-stack-PrivateSubnet2
+        VpcId: !ImportValue sei-css-network-stack-VPCID
+
+  StaticApplicationSecurityTestingCodeBuildLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/codebuild/${StaticApplicationSecurityTestingCodeBuildProject}
+      RetentionInDays: 7
+  StaticCodeAnalysisCodeBuildProject: 
+    Type: AWS::CodeBuild::Project 
+    Properties: 
+      Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-static-code-analysis 
+      ServiceRole: !GetAtt CodeBuildServiceRole.Arn 
+      EncryptionKey: !ImportValue ScaffoldingKeyArn 
+      Artifacts: 
+        Type: CODEPIPELINE 
+      Environment: 
+        Type: linuxContainer 
+        # ComputeType options: BUILD_GENERAL1_SMALL, BUILD_GENERAL1_MEDIUM, BUILD_GENERAL1_LARGE 
+        ComputeType: BUILD_GENERAL1_MEDIUM 
+        # Run `aws codebuild list-curated-environment-images` for a complete list of images provided. 
+        Image: aws/codebuild/standard:2.0
+        EnvironmentVariables: 
+          - Name: BUILD_ARTIFACT_BUCKET 
+            Value: !Ref DeploymentArtifactBucket 
+          - Name: REPO_NAME 
+            Value: !Ref CodeRepoName 
+          - Name: BRANCH 
+            Value: !Ref CodeRepoBranch 
+          - Name: DeployableUnit
+            Value: !Ref DeployableUnit 
+          - Name: ApplicationName 
+            Value: !Ref ApplicationName
+      Source: 
+        Type: CODEPIPELINE 
+        BuildSpec: !Sub ${DeployableUnit}/buildspec-static-code-analysis.yaml 
+      TimeoutInMinutes: 10
+  StaticCodeAnalysisCodeBuildLogGroup: 
+    Type: AWS::Logs::LogGroup 
+    Properties: 
+      LogGroupName: !Sub /aws/codebuild/${StaticCodeAnalysisCodeBuildProject} 
+      RetentionInDays: 7
+################################################################################
+################################################################################
+
+  PipelineTriggerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - sts:AssumeRole
+            Principal:
+              Service:
+                - events.amazonaws.com
+      Policies:
+        - PolicyName: CodePipelineServicePolicy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - codepipeline:StartPipelineExecution
+                Resource: !Sub arn:aws:codepipeline:${AWS::Region}:${AWS::AccountId}:${CodePipeline}
+
+  CodeCommitPipelineTriggerRule:
+    Type: AWS::Events::Rule
+    Properties:
+      EventPattern:
+        source:
+          - scaffolding
+        'detail-type':
+          - CodeCommit Repository State Change
+        resources:
+          - !Sub "arn:aws:codecommit:${AWS::Region}:${RepoAccount}:${CodeRepoName}"
+        detail:
+          deployable:
+            - !Ref DeployableUnit
+          referenceType:
+            - branch
+          referenceName:
+            - !Ref CodeRepoBranch
+      State: ENABLED
+      Targets:
+        - Arn: !Sub arn:aws:codepipeline:${AWS::Region}:${AWS::AccountId}:${CodePipeline}
+          Id: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-pipeline
+          RoleArn: !GetAtt PipelineTriggerRole.Arn
+
+  CodePipelineServiceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - sts:AssumeRole
+            Principal:
+              Service:
+                - codepipeline.amazonaws.com
+      Policies:
+        - PolicyName: CodePipelineServicePolicy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: "arn:aws:logs:*:*:*"
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:GetObjectVersion
+                  - s3:PutObject
+                  - s3:GetBucketPolicy
+                  - s3:ListBucket
+                Resource: !Sub ${DeploymentArtifactBucket.Arn}/*
+              - Effect: Allow
+                Action:
+                  - kms:Decrypt
+                Resource: !ImportValue ScaffoldingKeyArn
+              - Effect: Allow
+                Action:
+                  - codebuild:BatchGetBuilds
+                  - codebuild:StartBuild
+                  - codebuild:StopBuild
+                Resource:
+                  - !GetAtt BuildArtifactCodeBuildProject.Arn
+                  #- !GetAtt APITestCodeBuildProject.Arn
+                  - !GetAtt BuildImageCodeBuildProject.Arn
+                  - !GetAtt StaticApplicationSecurityTestingCodeBuildProject.Arn
+                  - !GetAtt StaticCodeAnalysisCodeBuildProject.Arn
+              - Effect: Allow
+                Action:
+                  - sts:AssumeRole
+                Resource:
+                  - !Sub arn:aws:iam::${RepoAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCodeCommitRole
+                  - !Sub arn:aws:iam::${RepoAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCloudFormationRole
+                  - !Sub arn:aws:iam::${NonProdAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCloudFormationRole
+                  - !Sub arn:aws:iam::${ProdAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCloudFormationRole
+  CodePipeline:
+    Type: AWS::CodePipeline::Pipeline
+    DependsOn:
+      # Make sure log groups are created before pipeline, which kicks off CodeBuild almost immediately
+      - BuildArtifactCodeBuildLogGroup
+      - StaticApplicationSecurityTestingCodeBuildLogGroup
+################################################################################
+##########    The following are commented out pending use    ###################
+      # - StaticCodeAnalysisCodeBuildLogGroup
+      # - UnitTestingCodeBuildLogGroup
+################################################################################
+################################################################################
+    Properties:
+      RoleArn: !GetAtt CodePipelineServiceRole.Arn
+      Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}
+      ArtifactStore:
+        Type: S3
+        Location: !Ref DeploymentArtifactBucket
+        EncryptionKey:
+          Id: !ImportValue ScaffoldingKeyArn
+          Type: KMS
+      RestartExecutionOnUpdate: true
+      Stages:
+        - Name: Source
+          Actions:
+            - Name: FetchSource
+              ActionTypeId:
+                Category: Source
+                Owner: AWS
+                Version: 1
+                Provider: CodeCommit
+              OutputArtifacts:
+                - Name: SourceCodeOutputArtifact
+              Configuration:
+                PollForSourceChanges: false
+                RepositoryName: !Ref CodeRepoName
+                BranchName: !Ref CodeRepoBranch
+              RunOrder: 1
+              RoleArn: !Sub arn:aws:iam::${RepoAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCodeCommitRole
+        ######## Code snippet on how to use detect-code-change
+        # - Name: Changed
+        #   Actions:
+        #     - Name: ChangeTest
+        #       ActionTypeId:
+        #         Category: Invoke
+        #         Owner: AWS
+        #         Version: 1
+        #         Provider: Lambda
+        #       InputArtifacts:
+        #         - Name: SourceCodeOutputArtifact
+        #       Configuration:
+        #         FunctionName: !ImportValue DetectCodeChangeFunctionName
+        #         UserParameters: !Sub "{\"artifact\":\"SourceCodeOutputArtifact\", \"path\":\"${DeployableUnit}/\"}"
+        #       RunOrder: 1
+        - Name: Build
+          Actions:
+#            - Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-build-artifact
+#              ActionTypeId:
+#                Category: Build
+#                Owner: AWS
+#                Version: 1
+#                Provider: CodeBuild
+#              InputArtifacts:
+#                - Name: SourceCodeOutputArtifact
+#              OutputArtifacts:
+#                - Name: BuildArtifact
+#              Configuration:
+#                ProjectName: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-build-artifact
+#                PrimarySource: SourceCodeOutputArtifact
+#              RunOrder: 1
+#            - Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-static-application-security-testing
+#              ActionTypeId:
+#                Category: Test
+#                Owner: AWS
+#                Version: 1
+#                Provider: CodeBuild
+#              InputArtifacts:
+#                - Name: SourceCodeOutputArtifact
+#              OutputArtifacts:
+#                - Name: StaticApplicationSecurityTestingOutputArtifact
+#              Configuration:
+#                ProjectName: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-static-application-security-testing
+#              RunOrder: 1  
+#            - Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-static-code-analysis
+#              ActionTypeId:
+#                Category: Test
+#                Owner: AWS
+#                Version: 1
+#                Provider: CodeBuild
+#              InputArtifacts:
+#                - Name: SourceCodeOutputArtifact
+#              OutputArtifacts:
+#                - Name: StaticCodeAnalysisOutputArtifact
+#              Configuration:
+#                ProjectName: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-static-code-analysis
+#              RunOrder: 1
+            - Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-buildimage
+              ActionTypeId:
+                Category: Build
+                Owner: AWS
+                Version: 1
+                Provider: CodeBuild
+              InputArtifacts:
+                - Name: SourceCodeOutputArtifact
+              OutputArtifacts:
+                - Name: ContainerImage
+              Configuration:
+                ProjectName: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-buildimage
+                PrimarySource: SourceCodeOutputArtifact
+              RunOrder: 1
+################################################################################
+##########    The following are commented out pending use    ###################
+################################################################################
+            # - Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-static-code-analysis
+            #   ActionTypeId:
+            #     Category: Test
+            #     Owner: AWS
+            #     Version: 1
+            #     Provider: CodeBuild
+            #   InputArtifacts:
+            #     - Name: SourceCodeOutputArtifact
+            #   OutputArtifacts:
+            #     - Name: StaticCodeAnalysisOutputArtifact
+            #   Configuration:
+            #     ProjectName: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-static-code-analysis
+            #   RunOrder: 1
+            # - Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-unit-testing
+            #   ActionTypeId:
+            #     Category: Test
+            #     Owner: AWS
+            #     Version: 1
+            #     Provider: CodeBuild
+            #   InputArtifacts:
+            #     - Name: SourceCodeOutputArtifact
+            #   OutputArtifacts:
+            #     - Name: UnitTestingOutputArtifact
+            #   Configuration:
+            #     ProjectName: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-unit-testing
+            #   RunOrder: 1
+################################################################################
+################################################################################
+        - Fn::If:
+            - Development
+            - Name: TestDevChangeSet
+              Actions:
+                - Name: CreateChangeSet
+                  ActionTypeId:
+                    Category: Deploy
+                    Owner: AWS
+                    Version: 1
+                    Provider: CloudFormation
+                  InputArtifacts:
+                    - Name: ContainerImage
+                  Configuration:
+                    ActionMode: CHANGE_SET_REPLACE
+                    ChangeSetName: !Sub ChangeSet-${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-dev
+                    RoleArn: !Sub arn:aws:iam::${NonProdAccount}:role/${AWS::Region}-ScaffoldingCloudFormationDeployerRole
+                    Capabilities: CAPABILITY_NAMED_IAM
+                    StackName: !Sub ${ApplicationStackPrefix}-${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-dev
+                    TemplatePath: ContainerImage::container.yaml
+                    ParameterOverrides: !Sub |
+                      {
+                        "ApplicationName": "${ApplicationName}",
+                        "EnvironmentName": "dev",
+                        "DeployableUnit": "${DeployableUnit}",
+                        "branch": "${CodeRepoBranch}",
+                        "logLevel": "DEBUG",
+                        "DockerImage": "${RepoAccount}.dkr.ecr.${AWS::Region}.amazonaws.com"
+                      }
+                  RunOrder: 1
+                  RoleArn: !Sub arn:aws:iam::${NonProdAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCloudFormationRole
+                - Name: ExecuteChangeSet
+                  ActionTypeId:
+                    Category: Deploy
+                    Owner: AWS
+                    Version: 1
+                    Provider: CloudFormation
+                  Configuration:
+                    StackName: !Sub ${ApplicationStackPrefix}-${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-dev
+                    ActionMode: CHANGE_SET_EXECUTE
+                    ChangeSetName: !Sub ChangeSet-${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-dev
+                  RunOrder: 2
+                  RoleArn: !Sub arn:aws:iam::${NonProdAccount}:role/${AWS::Region}-ScaffoldingCodePipelineCloudFormationRole
+            - !Ref AWS::NoValue
+#        - Fn::If:
+#            - Development
+#            - Name: APITest
+#              Actions:
+#                - Name: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-APITests
+#                  ActionTypeId:
+#                    Category: Build
+#                    Owner: AWS
+#                    Version: 1
+#                    Provider: CodeBuild
+#                  InputArtifacts:
+#                    - Name: SourceCodeOutputArtifact
+#                  # OutputArtifacts:
+#                  #   - Name: SourceCodeOutputArtifact
+#                  Configuration:
+#                    ProjectName: !Sub ${ApplicationName}-${CodeRepoBranch}-${DeployableUnit}-APITests
+#                  RunOrder: 1
+#            - !Ref AWS::NoValue
+  ECRRepository:
+    Type: AWS::ECR::Repository
+    Condition: Development
+    Properties:
+      RepositoryName: !Sub ordering-${CodeRepoBranch}
+      RepositoryPolicyText:
+        Version: "2012-10-17"
+        Statement:
+          -
+            Sid: AllowPushPull
+            Effect: Allow
+            Principal:
+              AWS:
+                - !Sub "arn:aws:iam::${NonProdAccount}:root"
+                - !Sub "arn:aws:iam::${ProdAccount}:root"
+            Action:
+              - "ecr:GetDownloadUrlForLayer"
+              - "ecr:BatchGetImage"
+              - "ecr:BatchCheckLayerAvailability"
+              - "ecr:PutImage"
+              - "ecr:InitiateLayerUpload"
+              - "ecr:UploadLayerPart"
+              - "ecr:CompleteLayerUpload"

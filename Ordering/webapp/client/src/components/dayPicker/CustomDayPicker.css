@@ -1,0 +1,75 @@
+.customDayPicker .date-picker-text-box{
+    height: 38px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #000000;
+    text-align:center; 
+    border: 0;
+    }
+.customDayPicker .date-picker-text-div{  
+      height: 40px;  
+      width: 33%;  
+      border-radius: 3px;
+      border: solid 1px #9b9b9b;
+      background-color: #ffffff;
+      padding-right: 2%; 
+    }  
+.customDayPicker .date-picker-calender{
+      width: 387px;
+      height: 323px;
+      border-radius: 6px;
+      /* box-shadow: 0 2px 23px 0 #ededed; */
+      background-color: #ffffff;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;  
+    }
+.customDayPicker .date-picker-calender-day{
+      width: 19px;
+      height: 21px;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #ffffff;
+}
+
+.calender {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1290px) {
+    .customDayPicker .day-picker-padding{
+          padding: 2%;
+      }
+
+      .customDayPicker p {
+          margin-top: 1px;
+      }
+       
+      .customDayPicker .date-picker-text-div{  
+        height: 40px;  
+        width: 60%;  
+        border-radius: 3px;
+        border: solid 1px #9b9b9b;
+        background-color: #ffffff;
+        padding-left: 0%; 
+        padding-right: 1%; 
+      } 
+  } 
+
+    

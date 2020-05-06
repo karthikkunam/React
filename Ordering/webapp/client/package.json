@@ -1,0 +1,132 @@
+{
+  "name": "7-eleven",
+  "version": "1.0.7-beta",
+  "private": true,
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "cucumber": "^5.1.0",
+    "cucumber-html-reporter": "^4.0.5",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "faker": "^4.1.0",
+    "jest-cli": "^24.9.0",
+    "moxios": "^0.4.0",
+    "node-fetch": "^2.3.0",
+    "npm-watch": "^0.6.0",
+    "puppeteer": "^1.14.0",
+    "puppeteer-core": "^1.11.0",
+    "puppeteer-firefox": "^0.4.2",
+    "redux-devtools-extension": "^2.13.7",
+    "redux-mock-store": "^1.5.3",
+    "sw-precache-webpack-plugin": "^0.11.5"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-react-treetable": "^1.0.2",
+    "classnames": "^2.2.6",
+    "contentful": "^7.0.3",
+    "core-js": "^3.3.5",
+    "dateformat": "^3.0.3",
+    "env-cmd": "^8.0.2",
+    "font-awesome": "^4.7.0",
+    "html2canvas": "^1.0.0-rc.3",
+    "jspdf": "^1.5.3",
+    "jwt-decode": "^2.2.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.25",
+    "pdfmake": "^0.1.57",
+    "print-js": "^1.0.61",
+    "prop-types": "^15.6.1",
+    "react": "^16.5.2",
+    "react-accessible-accordion": "^3.0.0",
+    "react-app-polyfill": "^1.0.4",
+    "react-app-rewire-workbox": "^2.0.1",
+    "react-app-rewired": "^2.1.4",
+    "react-bootstrap-table-next": "^3.2.1",
+    "react-day-picker": "^7.4.0",
+    "react-dev-utils": "^9.1.0",
+    "react-dom": "^16.11.0",
+    "react-markdown": "^3.6.0",
+    "react-pdfmake": "^0.2.0",
+    "react-popper": "^1.0.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.2.0",
+    "react-select": "^2.3.0",
+    "react-toggle": "^4.0.2",
+    "react-tooltip": "^3.10.0",
+    "react-transition-group": "^2.4.0",
+    "react-web-tabs": "^1.0.1",
+    "reactstrap": "^8.0.0",
+    "redux": "^3.5.2",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.1.0",
+    "roboto-fontface": "^0.10.0",
+    "svgo": "1.3.2",
+    "workbox-webpack-plugin": "^4.3.1"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "start:dev": "set PORT=3006 && react-app-rewired start",
+    "build:dev": "react-app-rewired build && sw-precache --config=sw-precache-config.js",
+    "build:orig": "react-app-rewired build && sw-precache --config=sw-precache-config-prod.js",
+    "build": "react-app-rewired build",
+    "watch:nothing": "npm-watch build:dev",
+    "watch": "npm start",
+    "eject": "react-scripts eject",
+    "test": "react-app-rewired test -- --env=jsdom --coverage",
+    "test:coverage": "jest --coverage --colors",
+    "testOLP": "node_modules\\.bin\\cucumber-js  --require \"src/test/acceptance/step_definitions/*.js\" --require \"src/test/acceptance/support/*.js\" src/test/acceptance/Features/orderingLandingDesktop.feature -f json:src/test/acceptance/report/cucumber_report.json"
+  },
+  "proxy": "http://localhost:5000",
+  "nodemonConfig": {
+    "ignore": [
+      "../dist/",
+      "build/",
+      "public/",
+      "public/service-worker.js"
+    ],
+    "delay": "50"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "."
+      ],
+      "ignore": "build",
+      "extensions": "*",
+      "quiet": false
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!src/reducers/*.{js}",
+      "!src/actions/*.{js}",
+      "!src/logger/*.{js}",
+      "!src/index.js",
+      "!src/containers/*.{js}",
+      "src/**/*.{js}",
+      "!<rootDir>/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "coverageReporters": [
+      "text",
+      "html"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

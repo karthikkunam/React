@@ -1,0 +1,38 @@
+[
+    {
+        "storeId": "12200",
+        "userId": 41,
+        "assignedRoles": [
+            {
+                "resourcePrivileges": [
+                    {
+                        "resourceScope": [
+                            "ISP",
+                            "GOT"
+                        ],
+                        "resourceAccess": [
+                            "read",
+                            "write",
+                            "modify",
+                            "delete"
+                        ],
+                        "resourceName": "SingleDayOrdering",
+                        "resourceType": "Screen"
+                    }
+                ],
+                "roleId": 1,
+                "roleName": "Store Manager",
+                "roleDescription": "Manager responsible for the store operations",
+                "roleType": "In-Store",
+                "securityLevel": "3",
+                "systemPrivileges": {
+                    "assignRoles": "Y",
+                    "resetPassword": "Y",
+                    "resetPasswordOthers": "Y"
+                },
+                "updatedTimeStamp": "2019-04-02T16:00:34.000Z",
+                "updatedBy": "Installer"
+            }
+        ]
+    }
+]

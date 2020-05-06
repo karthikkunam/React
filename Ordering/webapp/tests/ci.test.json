@@ -1,0 +1,13 @@
+{
+    "test_in_app_account":"true",
+    "dev": {
+      "parallel":"false",
+      "tests": ["uiTests"],
+      "uiTests": {
+        "testframework": "npm",
+        "location": "uitests",
+        "testreports": "reporter,screenshots"
+      }
+    }
+    
+}

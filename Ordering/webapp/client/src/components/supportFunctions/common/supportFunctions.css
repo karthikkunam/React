@@ -1,0 +1,66 @@
+.SupportFunctions .print-pdf {
+    height: 40px;
+    border-radius: 3px;
+    border: solid 1px #5b616b;
+    background-color: #ffffff;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+}
+
+.headerTransmit {
+    height: 70px;
+    border-bottom: solid 1px #d3d3d3;
+    background-color: #f1f1f1;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.no-side-padding {
+    margin: 2% 1% 2% 1.5%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .SupportFunctions.no-side-padding {
+        margin-left: -15px;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+    .SupportFunctions .print-pdf {
+        /* margin-left: -15px; */
+        margin-top: 13px;
+        height: 32px;
+        font-size: 16px;
+        /* padding-top: 3px;     */
+    }
+    .SupportFunctions .updated-date {
+        padding-right: 0;
+    }
+    .StoreOrderErrors .customDayPicker .date-picker-text-div {
+        height: 32px;
+    }
+    .StoreOrderErrors .customDayPicker .date-picker-text-box {
+        height: 100%;
+    }
+}
+
+/* FOR BROWSER SIZE > 1025PX */
+@media (min-width: 1025px) {
+    .SupportFunctions .print-pdf {
+        margin-top: 8px;
+        height: 40px;
+        font-size: 16px;
+        /* padding-top: 3px; */
+    }
+    .SupportFunctions.no-side-padding {
+        margin-left: -15px;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+}

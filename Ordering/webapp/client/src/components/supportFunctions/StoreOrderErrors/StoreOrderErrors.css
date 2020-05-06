@@ -1,0 +1,550 @@
+.no-side-padding {
+margin: 2% 1% 2% 1%;
+}
+.StoreOrderErrors .date-picker-text-box{
+    height: 38px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #000000;
+    text-align:center; 
+    border: 0;
+}
+.StoreOrderErrors .date-picker-text-div{  
+    height: 40px;  
+    width: 36%;  
+    border-radius: 1px;
+    border: solid 1px #9b9b9b;
+    background-color: #ffffff;
+    padding-left: 0%; 
+    padding-right: 2%; 
+}  
+
+.customDayPicker .day-picker-padding{
+    padding: 2%;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.customDayPicker p {
+    margin-top: 1px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+ 
+.customDayPicker .date-picker-text-div{  
+  height: 40px;  
+  width: 60%;  
+  border-radius: 3px;
+  border: solid 1px #9b9b9b;
+  background-color: #ffffff;
+  padding-left: 0%; 
+  padding-right: 2%; 
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.StoreOrderErrors .date-picker-calender{
+    width: 387px;
+    height: 323px;
+    border-radius: 6px;
+    /* box-shadow: 0 2px 23px 0 #ededed; */
+    background-color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;  
+}
+.StoreOrderErrors .date-picker-calender-day{
+    width: 19px;
+    height: 21px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.StoreOrderErrors .print-pdf {
+    width: 150px;
+    height: 40px;
+    border-radius: 3px;
+    border: solid 1px #5b616b;
+    background-color: #ffffff;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+}
+
+.StoreOrderErrors .error-table-row{
+    border-bottom: solid 1px #cccccc
+}
+
+.StoreOrderErrors .store-error-heading{
+    margin: 0% 2% 0% 2%;
+    background-color: #5b616b;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.25;
+    letter-spacing: normal;
+    color: #ffffff;
+    height: 40px;
+    padding-left: 2%;
+}
+
+.StoreOrderErrors .error-table-column-header{
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+}
+
+.StoreOrderErrors .error-table-column-data{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    text-align: left;
+}
+
+.StoreOrderErrors .error-table-column-data-cursor{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    text-align: left;
+    cursor: pointer;
+}
+
+.StoreOrderErrors .bold{
+    font-weight: bolder;
+}
+#mapping_table {
+    width: 96%;
+    margin: 0% 2% 0% 2%;
+    height:225px;
+    overflow-y:scroll;
+    display: block;
+}
+
+/* #mapping_table tbody {
+    height:175px !important;
+    overflow-y:auto;
+    display: block;
+} */
+/* #mapping_table thead{
+    display:block;
+    width: 96%;
+    position:fixed;
+} */
+#mapping_table tbody tr td {
+    padding: 1% 0% 1% 0%;
+}
+
+#mapping_table thead tr th {
+    padding: 1% 9px 1% 9px;
+}
+
+.StoreOrderErrors .store-order-spinner {
+    margin: auto;
+}
+
+.store-order-error-footer{
+    bottom:0%
+}
+
+@media only screen and (max-width: 1030px) and (min-width: 1020px) {
+.no-side-padding {
+    margin: 1% 0% 1% 0%;
+    }
+.StoreOrderErrors .date-picker-text-box{
+    height: 38px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #000000;
+    text-align:center; 
+    border: 0;
+}
+.StoreOrderErrors .date-picker-text-div{  
+    height: 40px;  
+    width: 36%;  
+    border-radius: 1px;
+    border: solid 1px #9b9b9b;
+    background-color: #ffffff;
+    padding-left: 0%; 
+    padding-right: 2%; 
+}  
+.StoreOrderErrors .date-picker-calender{
+    width: 387px;
+    height: 323px;
+    border-radius: 6px;
+    /* box-shadow: 0 2px 23px 0 #ededed; */
+    background-color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;  
+}
+.StoreOrderErrors .date-picker-calender-day{
+    width: 19px;
+    height: 21px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.StoreOrderErrors .print-pdf {
+    width: 150px;
+    height: 40px;
+    border-radius: 3px;
+    border: solid 1px #5b616b;
+    background-color: #ffffff;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+}
+
+.StoreOrderErrors .error-table-row{
+    border-bottom: solid 1px #cccccc
+}
+
+.StoreOrderErrors .store-error-heading{
+    margin: 0% 2% 0% 2%;
+    background-color: #5b616b;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.25;
+    letter-spacing: normal;
+    color: #ffffff;
+    height: 40px;
+    padding-left: 2%;
+}
+
+.StoreOrderErrors .error-table-column-header{
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+}
+
+.StoreOrderErrors .error-table-column-data{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    text-align: left;
+}
+
+.StoreOrderErrors .error-table-column-data-cursor{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    text-align: left;
+    cursor: pointer;
+}
+
+.StoreOrderErrors .bold{
+    font-weight: bolder;
+}
+#mapping_table {
+    width: 96%;
+    margin: 0% 2% 0% 2%;
+    height:225px;
+    overflow-y:scroll;
+    display: block;
+}
+
+/* #mapping_table tbody {
+    height:175px !important;
+    overflow-y:auto;
+    display: block;
+} */
+/* #mapping_table thead{
+    display:block;
+    width: 96%;
+    position:fixed;
+} */
+    #mapping_table tbody tr td {
+        padding: 1% 0% 1% 1%;
+    }
+
+    #mapping_table thead tr th {
+        padding: 1% 9px 1% 9px;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .customDayPicker .date-picker-text-div{  
+      width: 70%;  
+    } 
+    .StoreOrderErrors.SupportFunctions.no-side-padding {
+        margin-top: 15px;
+    }
+    .StoreOrderErrors.SupportFunctions .print-pdf{
+        margin-top: 0;
+    }
+    .StoreOrderErrors .customDayPicker .date-picker-text-div {  
+        width: 40%;  
+        padding-right: 1%;
+        border-radius: 3px;
+    }
+    .StoreOrderErrors .customDayPicker .DayPickerInput {
+        width: 80%;
+        height: 100%;
+    }
+    .StoreOrderErrors .date-picker-text-box {
+        width: 100%;
+    }
+    .StoreOrderErrors .calender {
+        margin-top: 3px;
+        margin-left: 10px;
+    }
+    .StoreOrderErrors .store-error-heading {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .StoreOrderErrors #mapping_table {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        height: 220px;
+    }
+    #mapping_table thead tr th {
+        padding: 10px 5px;
+    }
+    .StoreOrderErrors .react-bootstrap-table {
+        height: auto;
+        min-height: 100%;
+    }
+    .StoreOrderErrors #vendor_table  {
+        margin: 0;
+        overflow-x: hidden;
+        height: auto;
+        max-height: 100%;
+        padding-bottom: 50px;
+        position: absolute;
+        top: 150px;
+        z-index: 1;
+        bottom: 62px;
+        right: 30px;
+        left: 30px;
+        width: auto;
+    }
+} 
+
+/* FOR BROWSER SIZE > 1025PX */
+@media (min-width: 1025px) {
+    .customDayPicker .date-picker-text-div {
+        width: 70%;
+        padding: 0px 5px;
+    }
+    .StoreOrderErrors.SupportFunctions.no-side-padding {
+        margin-top: 15px;
+    }
+    .StoreOrderErrors.SupportFunctions .print-pdf {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .StoreOrderErrors .customDayPicker .date-picker-text-div {
+        width: 40%;
+        padding-right: 1%;
+        border-radius: 3px;
+    }
+    .StoreOrderErrors .customDayPicker .date-picker-text-div {
+        height: 40px;
+    }
+    .StoreOrderErrors .customDayPicker .DayPickerInput {
+        width: 80%;
+        height: 100%;
+    }
+    .StoreOrderErrors .date-picker-text-box {
+        width: 100%;
+    }
+    .StoreOrderErrors .date-picker-text-box {
+        height: 100%;
+        background: transparent;
+    }
+    .StoreOrderErrors .calender {
+        margin-top: 3px;
+        margin-left: 10px;
+    }
+    .StoreOrderErrors .store-error-heading {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .StoreOrderErrors .error-table-column-header {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #5b616b;
+    }
+    .StoreOrderErrors #mapping_table {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        height: 100%;
+        display: table;
+    }
+    #mapping_table thead tr th {
+        padding: 10px 5px;
+    }
+    .StoreOrderErrors#errors-container {
+        left: 30px;
+        right: 30px;
+        height: auto;
+        max-height: 100%;
+        padding-bottom: 50px;
+        bottom: 52px;
+        position: absolute;
+        top: 145px;
+        overflow-y: scroll;
+    }
+    .StoreOrderErrors#errors-container .react-bootstrap-table {
+        height: 45%;
+        min-height: 290px;
+        margin-bottom: 10px;
+    }
+    .StoreOrderErrors .DayPickerInput .DayPickerInput-OverlayWrapper {
+        margin-left: -10px;
+    }
+    /* .StoreOrderErrors #vendor_table {
+        margin: 0;
+        width: 100%;
+    } */
+    .StoreOrderErrors #vendor_table thead tr th:first-child {
+        width: 13% !important;
+        padding: 1% 0px 1% 9px;
+    }
+    .StoreOrderErrors #vendor_table thead tr th:nth-child(2) {
+        width: 20% !important;
+        padding: 1% 0px 1% 9px;
+    }
+    .StoreOrderErrors #vendor_table thead tr th:nth-child(3) {
+        width: 12% !important;
+        padding: 1% 0px 1% 9px;
+    }
+    .StoreOrderErrors #vendor_table thead tr th:nth-child(4) {
+        width: 17% !important;
+        padding: 1% 0px 1% 9px;
+    }
+    .StoreOrderErrors #vendor_table thead tr th:nth-child(5) {
+        width: 5% !important;
+        padding: 1% 0px 1% 9px;
+    }
+    .StoreOrderErrors #vendor_table thead tr th:last-child {
+        width: 10% !important;
+    }
+    .StoreOrderErrors #vendor_table thead tr th {
+        font-size: 14px;
+    }
+    .StoreOrderErrors #vendorPopup {
+        top: 115px !important;
+        left: 200px !important;
+    }
+    .StoreOrderErrors #vendor_table tbody tr td {
+        font-size: 14px;
+    }
+    .StoreOrderErrors .react-bootstrap-table {
+        height: auto;
+        min-height: 100%;
+    }
+    .StoreOrderErrors #vendor_table  {
+        margin: 0;
+        overflow-x: hidden;
+        height: auto;
+        max-height: 100%;
+        padding-bottom: 50px;
+        position: absolute;
+        top: 150px;
+        z-index: 1;
+        bottom: 62px;
+        right: 30px;
+        left: 30px;
+        width: auto;
+    }
+}
+
+/* @media screen and (max-height: 665px) {
+    .StoreOrderErrors #mapping_table {
+        max-height: 180px;
+        padding-bottom: 60px;
+    }
+} */

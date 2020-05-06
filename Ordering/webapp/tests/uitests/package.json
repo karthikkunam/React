@@ -1,0 +1,37 @@
+{
+  "name": "cucumber-js-selenium-webdriver",
+  "version": "0.0.1",
+  "description": "cucumber-js,selenium,appuim,android",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "lint": "eslint features/*/*.js --format node_modules/eslint-html-reporter/reporter.js --output-file lint-results.html",
+    "test": "npm install && node_modules/cucumber/bin/cucumber-js features/**/*.feature -f json:reporter/cucumber_reporter.json --tags @all && node reporter.js && node sendMail.js",
+    "e2e": "node_modules\\.bin\\ cucumber-js  features/**/*.feature --require features/step_definitions/*.js --require features/support/*.js -f json:reporter/cucumber_reporter.json --tags @all && node reporter.js  && node sendMail.js",
+    "sendMail": "node sendMail.js",
+    "report": "node reporter.js"
+
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chromedriver": "^80.0.1",
+    "cucumber": "^5.1.0",
+    "cucumber-html-reporter": "^4.0.5",
+    "sanitize-filename": "^1.6.0",
+    "selenium-webdriver": "^3.6.0",
+    "eslint": "^6.1.0",
+    "eslint-html-reporter": "^0.7.3"
+  },
+  "dependencies": {
+    "@7eleven/winston-kinesis": "^1.0.13",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "os": "^0.1.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "sendmail": "^1.6.1",
+    "winston": "^3.2.1"
+  }
+}

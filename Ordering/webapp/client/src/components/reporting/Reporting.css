@@ -1,0 +1,48 @@
+.reporting .order-type-margin{
+    margin-top: 1%;
+    margin-left: 6px;
+    margin-right: 0%;
+    padding-left: 1%;
+  }
+
+  .reporting .button-state {
+    width: 213px;
+    height: 40px;
+    border-radius: 3px;
+    border: solid 0.9px #008060;
+    background-color: #ffffff;
+  }
+
+.reporting .daily-order {
+    font-family: Trasandina;
+    font-size: 20px;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+}
+
+
+  /****** main content *********/
+
+  /* .right-padding{
+    padding-right: 3%;
+  } */
+  .left-padding {
+    padding-left: 3%;
+  }
+
+/*For ISP changes*/
+@media (min-width:769px) and (max-width:1024px) {
+  .reporting .cat-table-resize {
+    top: 145px;
+  }
+}
+
+/* FOR BROWSER SIZE > 1025PX */
+@media (min-width: 1025px) {
+  .reporting .cat-table-resize {
+    top: 150px;
+  }
+}
+
+  

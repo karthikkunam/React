@@ -1,0 +1,30 @@
+version: 0.2
+
+env:
+  variables:
+    CXSERVER: "http://checkmarx.7-11.com"
+    PRESET: "Checkmarx Default"
+    LOCATIONTYPE: "folder"
+  parameter-store:
+    CXTOKEN: "/app/checkmarx/access-token"
+    CXPWD: "/app/checkmarx/jenkins_user/password"
+    CXUSR: "/app/checkmarx/jenkins_user"
+    CXOWT: "/app/checkmarx/owningteam"
+    CXSECRET: "/app/checkmarx/secret"
+phases:
+  install:
+    commands:
+      - echo Build enviromment `uname -a` `aws --version 2>&1` java/`java -version`
+  pre_build:
+    commands:
+  build:
+    commands:
+      - echo Static application security testing started on `date`
+      - ls -ltr && pwd
+      - ( cd $DeployableUnit && aws s3 sync s3://artifactory.7-11.com/checkmarx/reporter reporter)
+      - ( cd $DeployableUnit/reporter && chmod 755 checkmarx.sh && ./checkmarx.sh )
+      - echo Checkmarx result validation started on `date`
+      - ( cd $DeployableUnit/reporter && chmod 755 vulnerabilitycheck.sh && ./vulnerabilitycheck.sh )
+  post_build:
+    commands:
+      - echo Static application security testing completed on `date`

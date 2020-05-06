@@ -1,0 +1,117 @@
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #fff;
+  }
+  
+  .message-title {
+      height: 61px;
+      font-family: Roboto;
+      font-size: 48px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #5b616b;
+    }
+  
+    .message-body {
+      width: 70%;
+      margin: 5% 15% 5% 15%;
+      height: 160px;
+      font-family: Roboto;
+      font-size: 24px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #000000;
+    }
+  
+    .button-container{
+      margin: 0% 35% 0% 35%;
+    }
+    .message-btn {
+      width: 250px;
+      height: 50px;
+      border: none;
+      border-radius: 3px;
+      background-color: #107f62;
+      font-family: Roboto;
+      font-size: 18px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #ffffff;
+    }
+    .launch-spinner {
+      position: fixed;
+      z-index: 999;
+      height: 100%;
+      width: 100%;
+      overflow: visible;
+      margin: 0 auto;
+      top: 50%;
+      left: 45%;
+    }
+    
+    /* Transparent Overlay */
+    .launch-spinner:before {
+      content: '';
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.75);
+    }
+
+    
+  @media (min-width:360px) and (max-width:760px){
+    .message-body {
+      margin-top: 20%;
+      height: auto;
+      margin-bottom: 15%;
+    }
+    .message-title {
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+    .button-container {
+      margin: 0% 35% 0% 12%;
+    }
+
+    .launch-spinner {
+      position: fixed;
+      z-index: 999;
+      height: 100%;
+      width: 100%;
+      overflow: visible;
+      margin: 0 auto;
+      top: 50%;
+      left: 35%;
+    }
+    
+    /* Transparent Overlay */
+    .launch-spinner:before {
+      content: '';
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.75);
+    }
+    
+  }

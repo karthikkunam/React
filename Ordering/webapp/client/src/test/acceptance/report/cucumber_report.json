@@ -1,0 +1,1103 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Order Landing Page",
+    "line": 2,
+    "id": "order-landing-page",
+    "tags": [],
+    "uri": "src\\test\\acceptance\\Features\\orderingLandingDesktop.feature",
+    "elements": [
+      {
+        "id": "order-landing-page;validate-cycle-type-counts",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Validate cycle-type counts",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8262000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Validate cycle-type counts for Carried & All items",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13750000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 175000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;check-color-coded-bars-for-cycle-types",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Check color coded bars for cycle-types",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1315000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see the color coded bars",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:109"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 588000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "All cycle types are selected by default",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 993000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 173000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-guided-replenishment-recap",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Validate Guided Replenishment recap",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1323000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I click on Guided Replenishment recap",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 850000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "It sends me to Guided Replenishment recap page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:75"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 184000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-order-by-vendor-button-is-activated-only-when-non-daily-is-selected",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Validate Order by Vendor button is activated only when non-daily is selected",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1302000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I click on order by vendor button",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 861000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "Order by vendor button is activated",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 335000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I uncheck Non-daily",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 342000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "Order by vendor button is deactivated",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1122000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 177000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-order-remaining-items-toggle",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Validate Order remaining items toggle",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1318000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "Order remaining items toggle is OFF",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 673000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I click on the toggle",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:135"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 759000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "Order remaining items toggle is ON",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 841000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 176000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-color-coded-bars-for-groups",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Validate color coded bars for Groups",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1307000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "Categories should have a color coded bar on the left side",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:152"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1612000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 181000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-that-by-default-all-groups-are-collapsed",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "Validate that by default all groups are collapsed",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1349000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 36,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "All Groups should be collapsed by default",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:166"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9927000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I click on the arrow button on the right",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:180"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 350000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "Categories will display under Groups",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:186"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 594000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 191000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-that-store-number-has-5-digits",
+        "keyword": "Scenario",
+        "line": 41,
+        "name": "Validate that store number has 5 digits",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1282000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 42,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "Store number should have 5 digits",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:198"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 752000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 195000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-that-non-daily-cycle-type-includes-gr-categories",
+        "keyword": "Scenario",
+        "line": 45,
+        "name": "Validate that non-daily cycle type includes GR categories",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1367000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 46,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "Deselect Daily and Multi day cycle types",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:207"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1681000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 48,
+            "name": "The remaining categories are non-daily and GR",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:216"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7931000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 202000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-gr-groups-names",
+        "keyword": "Scenario",
+        "line": 50,
+        "name": "Validate GR groups names",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1311000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "GR groups should have \"-GR\" suffix to the group name",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:303"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8652000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 207000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-counts-are-displayd-to-reflect-both-non-daily-and-gr",
+        "keyword": "Scenario",
+        "line": 54,
+        "name": "Validate counts are displayd to reflect both non-daily and GR",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1332000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 55,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 56,
+            "name": "Deselect Daily and Multi day cycle types",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:207"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1641000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 57,
+            "name": "Counts should match the total of GR and non-daily groups",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:268"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5631000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 178000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-the-order-of-categories-inside-a-group",
+        "keyword": "Scenario",
+        "line": 59,
+        "name": "Validate the order of categories inside a group",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1289000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 60,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 61,
+            "name": "The list of categories is desplayed in alphabetical order",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:430"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30691000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 211000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-status-indicator-and-text-description",
+        "keyword": "Scenario",
+        "line": 63,
+        "name": "Validate status indicator and text description",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1305000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 64,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 65,
+            "name": "Status indicator and status text should be present and match",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:350"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29490000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 206000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-continue-button",
+        "keyword": "Scenario",
+        "line": 67,
+        "name": "Validate continue button",
+        "tags": [
+          {
+            "name": "@run",
+            "line": 66
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1298000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 68,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 69,
+            "name": "Continue button should be deactivated",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:405"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 836000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 70,
+            "name": "I select a group",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:412"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 810000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 71,
+            "name": "Continue button will become available",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:418"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1568000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 181000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "order-landing-page;validate-groups/category-feature-is-implemented",
+        "keyword": "Scenario",
+        "line": 73,
+        "name": "Validate Groups/Category feature is implemented",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1330000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 74,
+            "name": "I am at the order landing page",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 75,
+            "name": "I select a group",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:412"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 855000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 76,
+            "name": "All categories should be selected automatically",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:471"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1360000000,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).toBe(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at World.Then (C:\\Users\\adedg001\\Desktop\\7-Eleven\\repositories\\ordering\\webapp\\src\\test\\acceptance\\step_definitions\\orderLandingPage.js:482:25)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 77,
+            "name": "I select all categories for a particular group",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:494"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 78,
+            "name": "The group should be selected automatically",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:503"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 79,
+            "name": "I select two groups",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:515"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 80,
+            "name": "Should be two groups and all their categories selected",
+            "match": {
+              "location": "src\\test\\acceptance\\step_definitions\\orderLandingPage.js:525"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\test\\acceptance\\support\\hooks.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 195000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

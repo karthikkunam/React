@@ -1,0 +1,4 @@
+**/*.test.js
+--exclude client/**/*.js
+--exclude node_modules/**/*.js
+--recursive

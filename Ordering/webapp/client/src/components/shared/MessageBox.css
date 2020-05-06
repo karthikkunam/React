@@ -1,0 +1,420 @@
+.message-box .modal-title{
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+
+.message-box .modal-content{
+    border-radius: 0;
+    box-shadow: 0 15px 24px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+}
+
+.message-box .modal-body,.modal-title {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2c2f35;
+}
+
+.message-box-reporting .modal-body{
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2c2f35;
+    padding: 1.3rem;
+}
+
+.message-box-reporting .modal-content{
+    border-radius: 8px;
+    box-shadow: 0 15px 24px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+}
+
+.btn.btn-msg-box {
+    width: 50%;
+    margin-right: 15px;
+}
+
+.btn-msg-box.review-page-no {
+    background-color: white;
+    color: #5b616b;
+}
+
+.btn-msg-box.review-page-no:hover {
+    color: #5b616b;
+    background-color: white;
+}
+
+.grRecap .msg-box-review-finalize{
+    width: 100%;
+    height: 39px;
+    text-align: center;
+    position: relative;
+}
+
+.msg-box-review-finalize .review-page-yes,
+.msg-box-review-finalize .review-page-yes:hover {
+    margin-right: 0;
+    background-color: #ec2526;
+    border-color: #ec2526;
+    color: #fff;
+}
+
+.review-page-yes.btn-close {
+    margin: 0 auto;
+    background-color: #008060;
+    color: #fff;
+}
+
+/* .review-page-yes.btn-close:hover {
+    background-color: #fff;
+    color: #008060;
+} */
+
+.grRecap .btn.review-page-yes,
+.grRecap .btn.review-page-no {
+    width: 50%;
+    margin-right: 15px;
+    /* padding: 10px 15px;  */
+    display: inline-block !important;
+}
+
+.grRecap .btn.review-page-yes {
+    margin-right: 0;
+    background-color: #ec2526;
+    border-color: #ec2526;
+    color: #fff;
+}
+
+.review-finalize .review-page-yes-updated {
+    margin-right: 0;
+    background-color: #008060;
+    border-color: #008060;
+    color: #fff;
+}
+
+/* .grRecap .btn.review-page-yes:hover {
+    background-color: #fff;
+    border-color: #ec2526;
+    color: #ec2526;
+} */
+
+.grRecap .btn.review-page-no {
+    background-color: white;
+    color: #5b616b;
+}
+
+/* .grRecap .btn.review-page-no:hover {
+    background-color: #008060;
+    border-color: #008060;
+    color: #fff;
+} */
+.message-box-ldu.three-buttons {
+    width: 100%;
+}
+
+/* .message-box-ldu.three-buttons:last-child {
+    margin: 0 !important;
+} */
+/* 
+.message-box-ldu.three-buttons .modal-content .btn-secondary {
+    width: 32.5%;
+} */
+
+.message-box-ldu.three-buttons .btn {
+    width: 32.5%;
+    margin: 0 !important;
+    margin-right: 5px !important;
+}
+
+.message-box-ldu.three-buttons .btn:last-child {
+    margin: 0 !important;
+}
+
+.message-box-ldu .modal-content{
+    border-radius: 8px;
+    box-shadow: 0 15px 24px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+}
+
+.message-box-ldu .modal-content .btn-secondary {
+    color: #6c757d;
+    background-color: white;
+    border-color: #6c757d;
+}
+
+.message-box-ldu .modal-content .btn-secondary:hover {
+    color: #fff;
+    background-color: #008060;
+    border-color: #008060;
+}
+
+.message-box-ldu .modal-body {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2c2f35;
+}
+
+.message-box-ordering-unavailable .modal-content{
+    border-radius: 8px;
+    box-shadow: 0 15px 24px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+}
+
+.mg-ldu{
+    float: left !important;
+    align-items: flex-end !important;
+    height: 39px !important;
+    position: relative !important;
+    margin: 8px !important;
+    top: 10% !important;
+    right: 0px !important;
+}
+
+.message-box-ordering-unavailable .modal-body {
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2c2f35;
+}
+
+.message-box-ordering-unavailable .modal-content .message-box-ordering-unavailable {
+    margin: 0 auto;
+    width: 100%;
+}   
+.message-box-ordering-unavailable .modal-footer button {
+    display: block;
+}
+
+.msg-box-btn-align-center{
+    margin: 0 auto;
+}
+
+.msg-box-review-finalize{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    height: 39px;
+    position: relative;
+    /* right: 19%; */
+}
+
+.mg-review-margin-rt{
+    margin-right: 8%;
+}
+
+.mg-close-align{
+    display: flex;
+    align-items: flex-end;
+    height: 39px;
+    position: relative;
+    top: 10%;
+    right: 115%;
+}
+
+.btn-msg-box { 
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+    color: #5b616b;
+    background-color: white;
+    border: solid 1px #5b616b;
+    border-radius: 3px;
+    width: 138px;
+    text-align: center;
+}
+
+.btn-msg-box:active{
+    color: white;
+    background-color: #008060;
+}
+
+.btn-msg-box:hover{
+    color: white;
+    background-color: #008060;
+}
+
+#btn-previous:focus {
+    color: white;
+    background-color: #008060;
+    border: 2px solid #008060;  
+}
+
+#btn-ldu-min:focus {
+    color: white;
+    background-color: #008060;
+    border: 2px solid #008060;  
+}
+
+.btn-yes,.btn-no {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+    color: #5b616b;
+    background-color: white;
+    border: solid 1px #5b616b;
+    border-radius: 3px;
+    width: 150px;
+    text-align: center;
+}
+
+
+.btn-yes:hover{
+    color: white;
+    background-color: #008060;
+}
+
+.btn-no:hover{
+    color: white;
+    background-color: red;
+}
+
+.btn-yes:focus {
+    color: white;
+    background-color: #008060;
+    border: 2px solid #008060;  
+}
+
+.btn-no:focus {
+    color: white;
+    background-color: red;
+    border: 2px solid red;  
+}
+
+  /*For ISP changes*/
+  @media (min-width:769px) and (max-width:1024px){
+
+    .btn-yes,.btn-no, .btn-next:disabled, .btn-next {
+        font-size: 13px;
+        height: 30px;
+        padding: 0.375rem 0.75rem 0.375rem;
+    }
+  }
+
+@media only screen and (max-width: 768px) {
+    .grRecap .btn.review-page-no,
+    .grRecap .btn.review-page-yes {
+        margin-bottom: 5px;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .message-box-ldu .modal-content .btn-secondary {
+        display: block;
+    }
+    .msg-box-review-finalize{
+        display: flex;
+        align-items: flex-end;
+        height: 39px;
+        position: relative;
+        /* top: 68%; */
+        /* right: 15%; */
+    }
+
+    .message-box-ldu .modal-footer{
+        padding: 0px !important;
+    }
+
+    .mg-ldu{
+        width: 96px !important;
+    }
+
+    .review-page-yes{
+        background-color: #008060;
+        color: white;
+    }
+
+    .review-page-no{
+        background-color: white;
+        color: #5b616b;
+    }
+
+    .mg-close-align{
+        display: inline-block;
+        align-items: flex-end;
+        height: 39px;
+        position: relative;
+        top: 10%;
+        right: 95%;
+    }
+
+    .message-box .modal-body,.modal-title {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #2c2f35;
+    }
+
+    .message-box-ordering-unavailable .modal-body {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #2c2f35;
+    }
+
+    .btn-msg-box { 
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        color: #5b616b;
+        background-color: white;
+        border: solid 1px #5b616b;
+        border-radius: 3px;
+        width: 106px;
+        text-align: center;
+        height: 32px;
+    }
+    .message-box-ldu.three-buttons {
+        padding: 10px;
+    }
+    .message-box-ldu .modal-content .btn-secondary {
+        width: 100% !important;
+        margin: 5px 0 !important;
+    }
+    .btn-msg-box.review-page-no {
+        margin-right: 5px;
+    }
+}

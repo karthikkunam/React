@@ -1,0 +1,504 @@
+.reportingDetailGrid .coloring-stripe-multiday {
+    /* border-left: solid #41a44b  10px; */
+    border-left: solid #3ba944  10px;
+}
+.reportingDetailGrid .coloring-stripe-singleday {
+  border-left: solid #ee7102 10px;
+}
+
+.reportingDetailGrid .coloring-stripe-nondaily {
+    border-left: solid #5a58a3 10px;
+}
+
+.reportingDetailGrid .cycles{
+    margin:0px !important;
+}
+
+.reportingDetailGrid .grid-header-row{
+    margin-left: 4.8%;
+    margin-right: 0%;
+}
+
+.multi-spinner-component{
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+}
+
+.multi-spinner:before{
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.reportingDetailGrid .cat-table-resize {
+    overflow-x: hidden;
+    margin-left: 2.0%;
+    margin-right: 3.3%;
+  }
+
+
+.reportingDetailGrid .table{
+    width: 95%;
+    margin-bottom: 0%;
+  }
+.reportingDetailGrid .table thead tr th{    
+    height: 50px;
+    border: solid 1px #d3d3d3;
+    background-color: #f1f1f1;
+}
+
+.reportingDetailGrid .grid-header{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #333333;
+
+}
+
+.reportingDetailGrid .reporting-cat-item-detail {
+    width: 99%;
+}
+.reportingDetailGrid .reporting-cat-item-detail  tr{
+    width: 100%;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+    color: #000000;
+    border-bottom: 2px solid #d3d3d3;    
+}
+
+
+.reportingDetailGrid .cat-item-table-text{    
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 1%;
+  text-align: left;
+ 
+}
+
+.reportingDetailGrid .font-bold-header{    
+    font-weight: bold;   
+  }
+
+.reportingDetailGrid .cat-item-table-text-light{
+
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+ 
+  color: #9a9a9b;
+}
+
+.reportingDetailGrid .reporting-cat-item-detail .td-cat .first-col{
+    margin-left: 2%
+}
+
+.reportingDetailGrid .reporting-cat-item-detail .td-cat .other-col{
+    text-align: left;
+    margin-left: 2%;
+}
+
+
+.reportingDetailGrid .reporting-cat-item-detail .tr-sub{
+font-family: Roboto;
+font-size: 18px;
+font-weight: normal;
+font-style: normal;
+font-stretch: normal;
+line-height: 1.22;
+letter-spacing: normal;
+color: #333333;
+}
+
+.reportingDetailGrid .reporting-cat-item-detail .tr-cat{
+font-family: Roboto;
+font-size: 14px;
+font-weight: normal;
+font-style: normal;
+font-stretch: normal;
+line-height: 1.22;
+letter-spacing: normal;
+color: #4a4a4a;
+vertical-align: middle !important;
+}
+
+.reportingDetailGrid .reporting-cat-item-detail .td-cat{
+    text-align: left;
+    margin-left: 2%;
+}
+
+    .reportingDetailGrid .item-sales-trend-first-row-div{
+        border-bottom: 1px solid #d3d3d3;        
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #5b616b;
+    }
+
+    .reportingDetailGrid .item-sales-trend-second-row-div{          
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        font-weight: bold;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+    }
+
+    .reportingDetailGrid .forecast-period-div{           
+        text-align: left;
+
+    }
+
+    .reportingDetailGrid .cat-table-parent-div{   
+        height:400px;        
+        width:98%;
+        margin-right: 0%;
+        margin-left: -1.5%;
+        position: relative;
+        overflow: auto;
+    }
+
+    .reportingDetailGrid .cat-forecast-period{
+        text-align: center
+    }
+
+    .Promo-Start{
+        color: #018062;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        width: 20px;
+    display: inline-block;
+    text-align: left;
+      }
+    
+      .Promo-On{
+        color: #6e61a7;
+        padding:0;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+      }
+    
+      .Promo-Ends{
+        color: #ec2526;
+        padding:0;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        width: 20px;
+        display: inline-block;
+        text-align: left;
+      }
+
+      .multi-span-spacing{
+        margin-right: 3px;
+      }
+  
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .reportingDetailGrid, .reportingDetailGRGrid {
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            bottom: 0;
+            top: 185px;
+            background: #fff;
+            overflow: hidden;
+        }
+        .reportingDetailGrid .grid-header-row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .reportingDetailGrid .table {
+            width: 100%;
+            margin-left: 15px;
+            margin-right: 15px;
+            display: block;
+        }
+
+        .reportingDetailGrid .table thead {
+            display: block;
+        }
+    
+        .reportingDetailGrid .cat-table-parent-div {
+            margin-left: 0px;
+            margin-right: 0px;
+            /* padding-bottom: 30px; */
+            height: auto;
+            max-height: 100%;
+            width: 100%;
+            padding-bottom: 50px;
+            bottom: 52px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            z-index: 1;
+        }
+
+        .reportingDetailGrid .table thead tr th {
+            padding: 15px 10px;
+        }
+        .reportingDetailGrid .table thead tr th:nth-child(4) {
+            padding: 0.25rem 0.75rem 0.75rem;
+        }
+        .reportingDetailGrid.nondaily .table thead tr th {
+            padding: 10px;
+        }
+        .reportingDetailGrid.nondaily .table thead tr th:nth-child(4) {
+            padding: 0.25rem 0.75rem 0.75rem;
+        }
+        .reportingDetailGrid.multiday .table thead tr th {
+            padding: 10px;
+        }
+        .reportingDetailGrid.multiday .table thead tr th:first-child {
+            padding: 15px 10px;
+        }
+        .reportingDetailGrid.multiday .table thead tr th:nth-child(4) {
+            padding: 0.25rem 0.75rem 0.75rem;
+        }
+
+        .reportingDetailGrid .item-sales-trend-first-row-div {
+            padding-bottom: 5px;
+        }
+
+        .reportingDetailGrid .item-sales-trend-second-row-div {
+            padding-top: 3px;
+        }
+
+        .reportingDetailGrid .reporting-cat-item-detail {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reportingDetailGrid .reporting-cat-item-detail tr {
+            margin-left: 0;
+            min-height: 30px;
+            border-bottom-width: 1px;
+        }
+
+        .reportingDetailGrid .cat-item-table-text {
+            padding: 10px 0 10px 13px;
+            font-size: 14px;
+        }
+
+        .reportingDetailGrid .reporting-cat-item-detail .tr-cat {
+            margin-left: 0;
+            min-height: 30px;
+        }
+
+        .reportingDetailGrid .reporting-cat-item-detail td {
+            padding: 6px 0;
+        }
+        .reportingDetailGrid .reporting-cat-item-detail td.deatailsTd-other {
+            padding: 6px 0 6px 23px;
+            word-break: break-word;
+        }
+        .reportingDetailGrid .reporting-cat-item-detail td:nth-child(4) {
+            /* margin-left: 12px; */
+            /* flex: 0 0 35%;
+            max-width: 35%; */
+        }
+        .reportingDetailGrid .reporting-cat-item-detail td.col-md-5:nth-child(4) {
+            flex: 0 0 43%;
+            max-width: 43%;        
+        }
+        .reportingDetailGrid .reporting-cat-item-detail td:nth-child(4) .forecast-period-div{
+            margin-left: 7px;
+        }
+        .reportingDetailGrid .reporting-cat-item-detail .td-cat {
+            margin-left: 0;
+            padding: 6px 0 5px 23px;
+        }
+        .reportingDetailGrid .reporting-cat-item-detail .orderQuantity {
+            padding: 6px 5px 5px 0;
+            width: 6%;
+        }
+
+        .reportingDetailGrid .orderQuantity {
+            width: 8%;
+            text-align: right;
+            margin-left: 0;
+            padding-right: 15px;
+        }
+
+        .reportingDetailGrid .forecast-period-div {
+            margin-left: 12px;
+            margin-right: 0;
+        }
+        .reportingDetailGrid.nondaily .forecast-period-div {
+            margin-left: 0 !important;
+            /* margin-right: -25px; */
+        }
+        .multi-spinner-component{
+            position: fixed;
+            z-index: 999;
+            height: 100%;
+            width: 100%;
+            overflow: visible;
+            margin: 0 auto;
+            top: 50%;
+            left: 50%;
+        }
+        
+        .multi-spinner:before{
+            content: '';
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.75);
+        }
+    }
+
+/* FOR BROWSER SIZE > 1025PX */
+@media (min-width: 1025px) {
+    .reportingDetailGrid, .reportingDetailGRGrid {
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        bottom: 0;
+        top: 200px;
+        background: #fff;
+        overflow: hidden;
+    }
+    .reportingDetailGrid .grid-header-row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .reportingDetailGrid .table {
+        width: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+        display: block;
+    }
+    .reportingDetailGrid .table thead {
+        display: block;
+    }
+    .reportingDetailGrid .table thead tr th {
+        padding: 0.25rem 0.75rem 0.75rem;
+    }
+    .reportingDetailGrid .table thead tr th:first-child {
+        padding-left: 22px;
+        text-align: left;
+    }
+    .reportingDetailGrid .table thead tr th:first-child, 
+    .reportingDetailGrid .table thead tr th:nth-child(3), 
+    .reportingDetailGrid .table thead tr th:last-child {
+        padding-top: 17px;
+    }
+    .reportingDetailGrid .item-sales-trend-first-row-div {
+        padding-bottom: 5px;
+    }
+    .reportingDetailGrid .item-sales-trend-second-row-div {
+        padding-top: 3px;
+    }
+    .reportingDetailGrid .cat-table-parent-div {
+        margin-left: 0px;
+        margin-right: 0px;
+        height: auto;
+        max-height: 100%;
+        width: 100%;
+        padding-bottom: 50px;
+        bottom: 52px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1;
+    }
+    .reportingDetailGrid .reporting-cat-item-detail {
+        width: 100%;
+    }
+    .reportingDetailGrid .reporting-cat-item-detail tr {
+        margin-left: 0;
+        min-height: 30px;
+        border-bottom-width: 1px;
+    }
+    .reportingDetailGrid .cat-item-table-text {
+        padding: 10px 0 10px 13px;
+        font-size: 14px;
+    }
+    .reportingDetailGrid .reporting-cat-item-detail .tr-cat {
+        margin-left: 0;
+        min-height: 30px;
+    }
+    .reportingDetailGrid .reporting-cat-item-detail .td-cat {
+        margin-left: 0;
+        padding: 6px 0 5px 23px;
+    }
+    .reportingDetailGrid .reporting-cat-item-detail td {
+        padding: 6px 0;
+    }
+    .reportingDetailGrid.nondaily .table thead tr th:first-child, .reportingDetailGrid.nondaily .table thead tr th:nth-child(3), .reportingDetailGrid.nondaily .table thead tr th:nth-child(5), .reportingDetailGrid.nondaily .table thead tr th:nth-child(6), .reportingDetailGrid.nondaily .table thead tr th:nth-child(7), .reportingDetailGrid.nondaily .table thead tr th:last-child {
+        padding-top: 10px;
+    }
+    .reportingDetailGrid.multiday .table thead tr th:nth-child(3) {
+        padding-top: 10px;
+    }
+    .reportingDetailGrid .reporting-cat-item-detail td.col-md-5:nth-child(4) {
+        flex: 0 0 41.7%;
+        max-width: 41.7%;
+    }
+    .reportingDetailGrid.multiday .table thead tr th:nth-child(5), 
+    .reportingDetailGrid.multiday .table thead tr th:nth-child(6), 
+    .reportingDetailGrid.multiday .table thead tr th:last-child {
+        padding-top: 10px;
+    }
+    .reportingDetailGrid .reporting-cat-item-detail .orderQuantity {
+        padding: 6px 5px 5px 0;
+        width: 6%;
+    }
+    .reportingDetailGrid .reporting-cat-item-detail td.deatailsTd-other {
+        padding: 6px 0 6px 23px;
+    }
+}
+
+    /* @media screen and (max-height: 665px) {
+        .reportingDetailGrid .cat-table-parent-div {
+            max-height: 340px;
+            padding-bottom: 60px;
+        }
+    } */

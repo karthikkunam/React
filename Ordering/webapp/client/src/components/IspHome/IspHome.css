@@ -1,0 +1,310 @@
+
+.isp-options{
+  margin-top: 13%;
+  width: 80%;
+  margin-left:10%;
+  margin-right: 10%;
+}
+
+.isp-options-content {
+  /* width: 80%;
+  margin-left:10%;
+  margin-right: 10%; */
+  margin-top: 5%;
+  margin-bottom: 1%;
+}
+
+.ISP-Overlay{
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.75);
+}
+
+.ISP-Spinner{
+  position: absolute;
+  top: 50%;
+  left: 48%;     
+}
+
+.isp-box, .isp-box-store-function{
+  box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  background-color: #ffffff;
+  height: 180px;
+  width: 42%;
+  display: flex;
+  justify-content: center;
+  margin-left: 28%;
+  text-align: center;
+  position: relative; 
+  max-height: 121px;
+  max-width: 128px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.isp-box :hover{
+  background-color: #008060;
+}
+
+/* .isp-container-store-function:hover .isp-box-store-function{
+  background-color: #008060;
+} */
+
+.isp-home-img-ordering{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding: 25% 20% 25% 20%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.isp-home-img-reporting{
+  /* height: 100%; */
+  width: 100%;
+  position: absolute;
+  padding: 20% 25% 20% 25%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.isp-home-img-store-function{
+  /* height: 100%; */
+  width: 100%;
+  position: absolute;
+  padding: 20% 20% 20% 20%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.isp-content-heading{
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5b616b;
+}
+
+.isp-content{
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5b616b;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.isp-home-store-function-nav {
+  border-radius: 3px;
+  border: solid 1px #5b616b;
+  background-color: #ffffff;
+  min-height: 50px;
+  width: 70%;
+  margin-left: 15%;
+  margin-top:2%;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5b616b;
+}
+
+.isp-home-store-function-nav:hover{
+  background-color: #008060;
+  color: #ffffff;
+
+}
+
+/*For ISP changes*/
+@media (min-width:769px) and (max-width:1024px){
+
+  .isp-options{
+    margin-top: 15%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .isp-box, .isp-box-store-function{
+    box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 12%;
+    max-height: 161px;
+    max-width: 168px;
+    width: 100%;
+    margin: 0 auto 18px;
+    overflow: hidden;
+    height: 160px;
+  }
+
+  .isp-options-content {
+    margin-top: 5%;
+    margin-bottom: 4%;
+  }
+
+  .isp-content-heading{
+    font-family: Roboto;
+    font-size: 21px;
+    margin: 20px 0 8px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+  }
+
+  .isp-content{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+    width: auto;
+    padding: 0 10px;
+    margin: 0;
+  }
+
+  .isp-home-store-function-nav {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+    min-height: 44px;
+    width: 92%;
+    margin-left: 5%;
+    margin-top: 2%;
+  }
+
+  .add-margin-isp{
+    margin-top: -3% !important;
+  }
+
+  .isp-padding{
+    padding: 2% 0 2% 0;
+  }
+}
+
+/* FOR BROWSER SIZE > 1025PX */
+@media (min-width: 1025px) {
+  .isp-options {
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    padding-left: 99px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1160px;
+    position: absolute;
+  }
+
+  .isp-box, .isp-box-store-function{
+    box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 12%;
+    max-height: 161px;
+    max-width: 168px;
+    width: 100%;
+    margin: 0 auto 18px;
+    overflow: hidden;
+    height: 160px;
+  }
+
+  .isp-options-content {
+    margin-top: 5%;
+    margin-bottom: 4%;
+  }
+
+  .isp-content-heading{
+    font-family: Roboto;
+    font-size: 21px;
+    margin: 20px auto 8px;
+    max-width: 230px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+  }
+
+  .isp-content{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+    width: auto;
+    padding: 0 10px;
+    max-width: 230px;
+    margin: 0 auto;
+  }
+
+  .isp-home-store-function-nav {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+    min-height: 44px;
+    width: 92%;
+    margin-left: 5%;
+    margin-top: 2%;
+  }
+
+  .add-margin-isp{
+    margin-top: -3% !important;
+  }
+
+  .isp-padding{
+    padding: 2% 0 2% 0;
+  }
+}

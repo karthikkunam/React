@@ -1,0 +1,833 @@
+  @font-face {
+    font-family: 'Trasandina';
+    src:  url('../fonts/Trasandina/TrasandinaRegular.eot');
+    src:  url('../fonts/Trasandina/TrasandinaRegular.woff2') format('woff2'),
+          url('../fonts/Trasandina/TrasandinaRegular.woff') format('woff'),
+          url('../fonts/Trasandina/TrasandinaRegular.otf') format("opentype"),
+          url('../fonts/Trasandina/TrasandinaRegular.ttf') format('truetype'),
+          url('../fonts/Trasandina/TrasandinaRegular.svg#TrasandinaRegular') format('svg'),
+          url('../fonts/Trasandina/TrasandinaRegular.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  html, body {
+    height: 100%;
+  }
+  body {
+    overflow: hidden;
+  }
+  .full-height {
+    height: 100%;
+  }
+
+.app-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+.app-spinner {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+.app-container {
+  min-height: 300px;
+  height: 100%;
+  background: #fff;
+}
+.app-container-background {
+  height: 100%;
+}
+
+#root {
+  margin: 0 auto;
+  height: 100%;
+}
+.item-detail-spinner-component{
+  text-align: center;
+  /* position: absolute; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.75);
+}
+
+.item-detail-spinner{
+  position: absolute;
+  top: 50%;
+  left: 50%;     
+}
+
+.modal-backdrop.show {
+  opacity: 0.75;
+}
+
+.notificationBar-alert {
+  position: fixed;
+  right: 15px;
+  z-index: 3;
+  font-size: 21px;
+  top: 7px;
+  color: #fff;
+}
+
+.hide {
+  top: -50px;
+  display: none;
+}
+.show {
+  top: 0px;
+  display: block;
+}
+
+.toggle-wrapper {
+  display: inline-block;
+  float: right;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .app-spinner {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+  }  
+
+  .item-detail-spinner {
+    position: absolute;
+    top: 40%;
+    left: 37%;
+}
+}
+
+
+/* ---------------------------------------------------
+TESTING PDF MAKE TABLE STYLES !!! 
+---------------------------------------------------- 
+PDFTableBody {
+  
+}
+*/
+
+/* ---------------------------------------------------
+CODE TO TARGET CHROME 40 ONLY !!! 
+---------------------------------------------------- */
+@supports (-webkit-appearance:none) and (not (-webkit-aspect-ratio:none)) and (not (color:unset)) and (not (overflow:-webkit-marquee)) { 
+  body {
+    -webkit-text-stroke: 0.30px;
+  }
+}
+
+  body{
+    font-family: Trasandina, sans-serif;
+  }
+  input {
+    outline-style: none;
+  }
+
+  input[type="number"]::selection {
+    color: #fff;
+    background: #252423;
+  }
+
+  .ordering-continue {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 18px 0;
+    position: fixed;
+    bottom: -1%;
+    right: 3%;
+    width: 10%;
+  }
+
+  .category-table .no-data-indicator {
+    opacity: .5;
+    position: relative;
+    display: block;
+    line-height: normal;
+    max-width: 80%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    /* left: auto; */
+    /* top: 50px; */
+  }
+
+  .react-bootstrap-table > .table .react-bs-table-no-data,
+  #mapping_table .react-bs-table-no-data {
+    opacity: .5;
+    width: 100%;
+    display: table-cell;
+    right: auto;
+    border: 0;
+    outline: 0;
+    padding-top: 50px;
+  }
+
+  .category-table .cat-text {
+    min-height: 30px;
+  }
+  
+  .btn-continue
+    {
+    font-family: Heebo;
+    font-size: 18px;
+    font-weight: 1000;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid #008060;
+    color: #008060;
+    width: 100%;
+  }
+  
+  .btn-continue:active{
+    color: white;
+    background-color: #008060;
+  }
+  
+  .btn-continue:hover{
+    color: white;
+    background-color: #008060;
+  }
+  
+  .btn-continue:disabled{
+    background-color: #9b9b9b;   
+    border: none;
+    color: #ffffff;
+  }
+  
+  .header-singleday{
+    background-color: #e8e8e8;
+    font-family: Trasandina;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #000000;
+  }
+  
+  .header-category{
+    font-family: Trasandina;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #4a4a4a;
+  }
+  
+  .sub-category {
+    font-family: Trasandina;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    color: #4a4a4a;
+  }
+  
+  .form-check {
+    display: inline;
+  }
+  
+  input[type="radio"] {
+    display:none;
+  }
+  
+  input[type="radio"] + label span {
+    display:inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    background-clip: content-box;
+    border: 2px solid #bbbbbb;
+    background-color: #e7e6e7;
+    border-radius: 50%;
+  }
+  
+  input[type="radio"] + label span {
+     background-color:#ffffff;
+     border: solid 2px #cfcece;
+     padding: 4px;
+  }
+  
+  input[type="radio"]:checked + label span{
+    background-color:#008060;
+    border: solid 2px #008060; 
+  }
+  
+  input[type="radio"] + label span,
+  input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+  }
+  
+  .table thead th {
+    border: none;
+    
+  }
+  .table  td {
+    border: none;
+  }
+  
+  .border-table-right {
+    border-right: solid 1px #979797 !important;
+  }
+  
+  .cat-table {
+    border-radius: 8px;
+    box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+  }
+  
+  .align-center{
+    text-align:center;
+  }
+  
+  .text-align-right{
+    text-align:right;
+  }
+  
+  .table-header-border-bottom{
+    height: 1px;
+    border: solid 1px #9b9b9b;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .margin-left{
+    left: 4%;
+  }
+  .form-control:disabled, 
+  .form-control[readonly] {
+    background: transparent;
+  }
+  
+  .table-margin {
+      /* padding: 5px; */
+      padding: 5px 2px;
+  }
+  .__react_component_tooltip.type-light.place-bottom:after {
+    border-bottom-color: #287cba !important;
+  }
+  
+  label{
+    margin-bottom: 0px !important;
+  }
+
+  .item-name-active .__react_component_tooltip.place-bottom {
+    margin-left: 30px;
+  }
+
+  @media (min-width: 1190px) {
+    #root {
+      background: #505867ba;
+    }
+  }
+  
+/* BROWSER > 1025PX Styles */
+@media (min-width: 1025px) {
+  .notificationBar-alert {
+    display: none;
+  }
+  .collapse.show {
+    position: relative;
+  }
+}
+  
+  @media only screen and (max-width: 767px) {
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    .full-height {
+      height: 100%;
+    }
+    #root, .sidenav-tablist {
+      height: 100%;
+    }
+    .btn-previous,.btn-continue { 
+        display: none !important;
+    }
+    .app-container-background {
+      height: 100%;
+      overflow: hidden;
+    }
+    .sidenav-tablist .rwt__tabs[data-rwt-vertical="true"] {
+      height: 100%;
+      display: block;
+    }
+    .sidenav-tablist .rwt__tabpanel {
+      min-height: 100%;
+      margin-bottom: -42px;
+      height: 100%;
+    }
+    /* .ordering-con-mob {
+      position: relative;
+    } */
+    .cat-table-resize {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 265px;
+      background: #fff;
+    }
+    /* .category-table {
+      height: 100%;
+      max-height: 100%;
+      padding-bottom: 50%;
+    } */
+    .category-table .no-data-indicator {
+      font-size: 21px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .notificationBar-alert {
+      display: none;
+    }
+    .collapse.show {
+      position: relative;
+    }
+  }
+  
+  @media only screen and (min-width: 768px)and (max-width: 850px) {
+    /* .order-remaining-item,.toggle-text {
+        font-size: 12px !important;
+        padding: 0px !important;
+      } */
+
+    .react-toggle-track {
+      width: 47px;
+      height: 24px;
+    }
+    .react-toggle-thumb{
+      width: 22px;
+      height: 22px;
+    }
+    .cat-checkmark{
+        top: 2px;
+        left: 8px;
+        width: 19px;
+        height: 18.5px;
+    }
+    .cat-container .cat-checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 6px;
+        height: 11px;
+        border-width: 0 2px 2px 0;
+  
+    }
+    .subcat-checkmark {
+        top: 5px;
+        left: 12px;
+        width: 15px;
+        height: 15.6px;
+    }
+    .subcat-container .subcat-checkmark:after {
+        left: 5px;
+        top: 2px;
+        width: 5px;
+        height: 9px;
+        border-width: 0 2px 2px 0;
+    }
+    .react-toggle--checked .react-toggle-thumb {
+        left: 15px;
+    }
+      .table-margin {
+        padding: 1px;
+    }
+  
+    .header-category {
+        font-size: 14px;
+    }
+    .sub-category {
+        font-size: 13px;
+    }
+      .header-singleday{
+        font-size: 14px !important;
+      }
+  
+      input[type="radio"] + label span {
+        width: 14px;
+        height: 14px;
+        padding: 2px;
+    }
+    
+    .btn-previous,.btn-continue { 
+        font-size: 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 850px)and (max-width: 1000px) {
+    /* .order-remaining-item,.toggle-text {
+        font-size: 14px !important;
+        padding: 0px !important;
+      } */
+      .react-toggle-track {
+        width: 47px;
+        height: 24px;
+    }
+    .react-toggle-thumb{
+      width: 22px;
+      height: 22px;
+    }
+    .cat-checkmark{
+        top: 2px;
+        left: 8px;
+        width: 19px;
+        height: 18.5px;
+    }
+    .cat-container .cat-checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 6px;
+        height: 11px;
+        border-width: 0 2px 2px 0;
+  
+    }
+    .subcat-checkmark {
+        top: 5px;
+        left: 12px;
+        width: 15px;
+        height: 15.6px;
+    }
+    .subcat-container .subcat-checkmark:after {
+        left: 5px;
+        top: 2px;
+        width: 5px;
+        height: 9px;
+        border-width: 0 2px 2px 0;
+    }
+    .react-toggle--checked .react-toggle-thumb {
+        left: 18px;
+    }
+      .table-margin {
+        padding: 3px;
+    }
+  
+    .header-category {
+        font-size: 16px;
+    }
+      .header-singleday{
+        font-size: 16px !important;
+      }
+      .sub-category {
+        font-size: 14px;
+    }
+      input[type="radio"] + label span {
+        width: 16px;
+        height: 16px;
+        padding: 2.5px;
+    }
+  
+    .btn-previous,.btn-continue { 
+        font-size: 12px;
+    }
+  }
+  
+  @media only screen and (min-width: 1000px)and (max-width: 1100px) {
+    /* .order-remaining-item,.toggle-text {
+        font-size: 16px !important;
+        padding: 0px !important;
+      } */
+      .react-toggle-track {
+        width: 47px;
+        height: 24px;
+    }
+    .react-toggle-thumb{
+      width: 22px;
+      height: 22px;
+    }
+  
+    .cat-checkmark{
+        top: 4px;
+        left: 6px;
+        width: 21px;
+        height: 21.5px;
+    }
+    .cat-container .cat-checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 7px;
+        height: 13px;
+    }
+    .subcat-checkmark {
+        top: 5px;
+        left: 8px;
+        width: 16px;
+        height: 16.6px;
+    }
+    .subcat-container .subcat-checkmark:after {
+        left: 5px;
+        top: 2px;
+        width: 6px;
+        height: 10px;
+    }
+  
+    .react-toggle--checked .react-toggle-thumb {
+        left: 18px;
+    }
+      .header-category {
+        font-size: 18px;
+    }
+    .sub-category {
+        font-size: 16px;
+    }
+      .header-singleday{
+        font-size: 18px !important;
+      }
+  
+      input[type="radio"] + label span {
+        width: 18px;
+        height: 18px;
+        padding: 3px;
+    }
+   
+  }
+  
+  @media only screen and (min-width : 1100px) and (max-width: 1400px) {
+    /* .order-remaining-item,.toggle-text {
+        font-size: 18px !important;
+        padding: 0px !important;
+      } */
+      .react-toggle-track {
+        width: 47px;
+        height: 24px;
+    }
+    .react-toggle-thumb{
+      width: 22px;
+      height: 22px;
+    }
+    .btn-previous,.btn-continue { 
+        font-size: 16px;
+    }
+    .react-toggle--checked .react-toggle-thumb {
+        left: 21px;
+    }
+  
+      .header-category {
+        font-size: 20px;
+    }
+    .sub-category {
+        font-size: 18px;
+    }
+      .header-singleday{
+        font-size: 20px !important;
+      }
+  
+      input[type="radio"] + label span {
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+    }
+  }
+  
+  @media only screen and (min-width : 1400px) and (max-width: 1500px) {
+    /* .order-remaining-item,.toggle-text {
+        font-size: 20px !important;
+        padding: 0px !important;
+      } */
+      .header-singleday{
+        font-size: 22px !important;
+      }
+      .header-category {
+        font-size: 22px;
+    }
+    .react-toggle-track {
+      width: 47px;
+      height: 24px;
+    }
+    .react-toggle-thumb{
+      width: 22px;
+      height: 22px;
+    }
+  
+    .react-toggle--checked .react-toggle-thumb {
+        left: 23px;
+    }
+  
+    .sub-category {
+        font-size: 19px;
+    }
+  
+      input[type="radio"] + label span {
+        width: 22px;
+        height: 22px;
+        padding: 3px;
+    }
+  
+    .col {
+        padding: 0px !important;
+    }
+  }
+
+  @media screen and (max-height: 665px) {
+    .app-container {
+      overflow: hidden;
+    }
+  }
+  
+  .cat-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .cat-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .cat-checkmark {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    width: 23px;
+    height: 23.5px;
+    border-radius: 6px;
+    border: solid 1px #979797;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .cat-container input:checked ~ .cat-checkmark {
+    background-color: #008060;
+    border: none;
+  }
+  
+  /* Create the cat-checkmark/indicator (hidden when not checked) */
+  .cat-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    border: none
+  }
+  
+  /* Show the cat-checkmark when checked */
+  .cat-container input:checked ~ .cat-checkmark:after {
+    display: block;
+  }
+  
+  /* Style the cat-checkmark/indicator */
+  .cat-container .cat-checkmark:after {
+    left: 6px;
+    top: 0px;
+    width: 7px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 2px 2px 0;;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  
+  .subcat-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .subcat-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .subcat-checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 18px;
+    height: 18.6px;
+    border-radius: 6px;
+    border: solid 1px #979797;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .subcat-container input:checked ~ .subcat-checkmark {
+    background-color: #008060;
+    border: none;
+  }
+  
+  /* Create the subcat-checkmark/indicator (hidden when not checked) */
+  .subcat-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    border: none
+  }
+  
+  /* Show the subcat-checkmark when checked */
+  .subcat-container input:checked ~ .subcat-checkmark:after {
+    display: block;
+  }
+  
+  /* Style the subcat-checkmark/indicator */
+  .subcat-container .subcat-checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+  
+  input[type=number] {
+      -moz-appearance:textfield; /* Firefox */
+  }

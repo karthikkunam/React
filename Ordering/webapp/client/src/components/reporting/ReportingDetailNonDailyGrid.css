@@ -1,0 +1,66 @@
+.nonDaily-spinner-component{
+  position: fixed;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+}
+
+.nonDaily-spinner:before{
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.Promo-Start{
+    color: #018062;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    width: 20px;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .Promo-On{
+    color: #6e61a7;
+    padding:0;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+  }
+
+  .nonDaily-span-spacing{
+    margin: 0 2px;
+  }
+
+  .Promo-Ends{
+    color: #ec2526;
+    padding:0;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    width: 20px;
+    display: inline-block;
+    text-align: left;
+  }

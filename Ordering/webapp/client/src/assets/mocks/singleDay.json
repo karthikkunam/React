@@ -1,0 +1,112 @@
+{
+   "singleDay": {
+     "storeId": 37126,
+     "orderCycleTypeCode": "D",
+     "orderCycleTypeName": "Single Day",
+     "category": [
+       {
+         "orderGroupCode": "10",
+         "orderGroupCodeName": "Fresh Bakery",
+         "All": {
+           "itemCounts": 100,
+           "OrderCount": 10,
+           "pendingDeliveryCount": 15,
+           "deliveredItemCount": 20
+         },
+         "Carried": {
+           "itemCounts": 34,
+           "OrderCount": 4,
+           "pendingDeliveryCount": 3,
+           "deliveredItemCount": 8
+         },
+         "subCategories": [
+           {
+             "psa_cat": "07",
+             "psaDescription": "Fresh Bakery",
+             "All": {
+               "itemCounts": 50,
+               "OrderCount": 5,
+               "pendingDeliveryCount": 8,
+               "deliveredItemCount": 10
+             },
+             "Carried": {
+               "itemCounts": 17,
+               "OrderCount": 2,
+               "pendingDeliveryCount": 2,
+               "deliveredItemCount": 4
+             }
+           },
+           {
+            "psa_cat": "07",
+            "psaDescription": "Test",
+            "All": {
+              "itemCounts": 50,
+              "OrderCount": 5,
+              "pendingDeliveryCount": 7,
+              "deliveredItemCount": 10
+            },
+            "Carried": {
+              "itemCounts": 17,
+              "OrderCount": 2,
+              "pendingDeliveryCount": 1,
+              "deliveredItemCount": 4
+            }
+          }
+         ]
+       }
+     ],
+     "itemIds": [
+       32,
+       34,
+       76,
+       89
+     ]
+   },
+   "multiDay": {
+     "storeId": 37126,
+     "orderCycleTypeCode": "O",
+     "orderCycleTypeName": "Single Day",
+     "category": [
+       {
+         "orderGroupCode": "10",
+         "orderGroupCodeName": "Fresh Bakery",
+         "Carried": {
+           "itemCounts": 100,
+           "OrderCount": 10,
+           "pendingDeliveryCount": 15,
+           "deliveredItemCount": 20
+         },
+         "All": {
+           "itemCounts": 34,
+           "OrderCount": 4,
+           "pendingDeliveryCount": 3,
+           "deliveredItemCount": 8
+         },
+         "subCategories": [
+           {
+             "psa_cat": "11",
+             "psaDescription": "Other Fresh Bakery",
+             "Carried": {
+               "itemCounts": 100,
+               "OrderCount": 10,
+               "pendingDeliveryCount": 15,
+               "deliveredItemCount": 20
+             },
+             "All": {
+               "itemCounts": 34,
+               "OrderCount": 4,
+               "pendingDeliveryCount": 3,
+               "deliveredItemCount": 8
+             }
+           }
+         ]
+       }
+     ],
+     "itemIds": [
+       32,
+       34,
+       76,
+       89
+     ]
+   }
+ }

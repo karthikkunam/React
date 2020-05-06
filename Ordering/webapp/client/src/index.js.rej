@@ -1,0 +1,13 @@
+diff a/src/index.js b/src/index.js	(rejected hunks)
+@@ -18,7 +18,11 @@
+    //console = {};
+    // console.log = () => {};
+    // console.error = () => {};
+++<<<<<<< Updated upstream
+ +  middleware.push(createLogger());
+++=======
++   //middleware.push(createLogger());
+++>>>>>>> Stashed changes
+  }
+  
+  storeInstance.interceptors.request.use(request => {

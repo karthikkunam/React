@@ -1,0 +1,34 @@
+version: 0.2
+
+env:
+  variables:
+    deployableUnit: webapp
+
+phases:
+  install:
+    commands:
+      - echo "nothing in install phase"
+  pre_build:
+    commands:
+      - $(aws ecr get-login --no-include-email --region us-east-1)
+      - REPOSITORY_URI=${ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/${App_Name}-${BRANCH}
+      - echo "REPOSITORY_URI = ${REPOSITORY_URI}"
+      - echo "CODEBUILD_RESOLVED_SOURCE_VERSION = ${CODEBUILD_RESOLVED_SOURCE_VERSION}"
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - echo "COMMIT_HASH = ${COMMIT_HASH}"
+      - IMAGE_TAG=${COMMIT_HASH:=latest}
+      - echo "IMAGE_TAG = ${IMAGE_TAG}"
+  build:
+    commands:
+      - cd webapp && docker build -t $REPOSITORY_URI:latest .
+      - docker tag ${REPOSITORY_URI}:latest $REPOSITORY_URI:$IMAGE_TAG
+  post_build:
+    commands:
+      - docker push $REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - sed -i "s/COMMIT_HASH/${IMAGE_TAG}/g" $CODEBUILD_SRC_DIR/${deployableUnit}/container.yaml
+      - cat $CODEBUILD_SRC_DIR/${deployableUnit}/container.yaml
+artifacts:
+  base-directory: $CODEBUILD_SRC_DIR/${deployableUnit}/
+  files:
+    - container.yaml

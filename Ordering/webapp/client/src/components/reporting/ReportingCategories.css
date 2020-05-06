@@ -1,0 +1,654 @@
+
+.reportingCategories table {
+  /* border: 1px solid #ccc; */
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.reportingCategories table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+.reportingCategories .status-text {
+  padding-left: 15%
+}
+
+.reportingCategories .status-group {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  color: #4a4a4a;
+}
+
+.reportingCategories .side-padding {
+  padding-left: 3px;
+  padding-right: 2px;
+}
+.reportingCategories .cat-table-resize {
+  overflow-x: hidden;
+  margin-left: 2.0%;
+  margin-right: 3.3%;
+}
+
+.reportingCategories .left-border {
+  border-left: solid 1px #d3d3d3;
+  height: 22px;
+  top: 4px;
+}
+.reportingCategories .status-category {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: 1.22;
+  letter-spacing: normal;
+  color: #4a4a4a;
+}
+.reportingCategories .reporting-cat-table {
+  overflow-y: scroll;
+  height: 550px;
+}
+.reporting-cat-table .no-data-indicator {
+  opacity: .5;
+  position: relative;
+  left: auto;
+  display: block;
+  top: 50px;
+}
+.reportingCategories .bold{
+  font-weight: bold;
+}
+.reportingCategories .cat-header-text{
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.4;
+  letter-spacing: normal;
+  color: #333333;
+}
+
+.reportingCategories .reporting-cat-header {
+  /* padding-left: 5%; */
+  padding-left: 30px;
+}
+.reportingCategories .cat-border-bottom {
+  border-bottom: solid 1px #cccccc; 
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.reportingCategories .cat-text td {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  line-height: 0.5;
+}
+
+.reportingCategories .sub-cat-text td {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.95;
+  letter-spacing: normal;
+  color: #4a4a4a;
+}
+
+.reportingCategories .cat-table-header {
+  border: solid 1px #d3d3d3;
+  background-color: #f1f1f1;
+}
+.reportingCategories table th,
+.reportingCategories table td {
+  padding: .625em;
+  text-align: center;
+}
+
+.reportingCategories table th {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2c2f35;
+}
+
+.reportingCategories .d-mob{
+    display: none
+}
+
+.reportingCategories .reporting-no-data-indicator {
+  /* position: fixed; */
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  line-height: normal;
+  transform: translate(-50%,-50%);
+}
+
+
+.reportingCategories .category-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 60px;
+  top: 25%; 
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: capitalize;
+}
+
+/* Hide the browser's default checkbox */
+.reportingCategories .category-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.reportingCategories .category-checkmark {
+  position: absolute;
+  /* top: 5px; */
+  left: 40px;
+  width: 15px;
+  height: 15px;
+  -webkit-backdrop-filter: blur(10.2px);
+  backdrop-filter: blur(10.2px);
+  border: solid 1.5px #9a9a9b;
+}
+
+/* When the checkbox is checked, add a blue background */
+.reportingCategories .category-checkbox input:checked ~ .category-checkmark {
+  background-color: #008060;
+  border: none;
+}
+
+/* Create the category-checkmark/indicator (hidden when not checked) */
+.reportingCategories .category-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  border: none
+}
+
+/* Show the category-checkmark when checked */
+.reportingCategories .category-checkbox input:checked ~ .category-checkmark:after {
+  display: block;
+}
+
+/* Style the category-checkmark/indicator */
+.reportingCategories .category-checkbox .category-checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.reportingCategories .group-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  left: 0%;
+  top: 0%;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: capitalize;
+}
+
+/* Hide the browser's default checkbox */
+.reportingCategories .group-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.reportingCategories .group-checkmark {
+  position: absolute;
+  /* top: -22%; */
+  left: 0;
+  width: 15px;
+  height: 15px;
+  -webkit-backdrop-filter: blur(10.2px);
+  backdrop-filter: blur(10.2px);
+  border: solid 1.5px #2c2f35;
+}
+
+/* When the checkbox is checked, add a blue background */
+.reportingCategories .group-checkbox input:checked ~ .group-checkmark {
+  background-color: #008060;
+  border: none;
+}
+
+/* Create the group-checkmark/indicator (hidden when not checked) */
+.reportingCategories .group-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  border: none
+}
+
+/* Show the group-checkmark when checked */
+.reportingCategories .group-checkbox input:checked ~ .group-checkmark:after {
+  display: block;
+}
+
+/* Style the group-checkmark/indicator */
+.reportingCategories .group-checkbox .group-checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+.reportingCategories .cat-arrow {
+  text-align: right;
+  right: 65%;
+  top: -24%;
+  position: absolute;
+  color: #2c2f35;
+  font-size: 32px;
+  width: 12px;
+  height: 7.4px;
+}
+
+.reportingCategories .cat-arrow2 {
+text-align: right;
+left: 60%;
+top: 10%;
+position: absolute;
+color: #2c2f35;
+font-size: 32px;
+width: 12px;
+height: 7.4px;
+}
+
+.reportingCategories .status,.status-mob {
+width: 24px;
+height: 24px;
+object-fit: contain;
+}
+
+.reportingCategories .status-mob{
+width: 17px;
+height: 17px;
+object-fit: contain;
+}
+
+
+.reportingCategories .pending-status{
+width: 20px;
+}
+
+.reportingCategories .complete-status{
+width: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    border: 0;
+  }
+  .status-text {
+    display: none;
+  }
+  .cat-arrow2 {
+    text-align: right;
+    left:1%;
+    top: 10%;
+  }
+  .reportingCategories .reporting-cat-table {
+    overflow-y: scroll;
+    height: 225px;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+    .reportingCycle .box {
+      height: 40px;
+  }
+
+  .left-border-mob {
+    border-left: solid 1px #979797;
+    top: 0%;
+  }
+
+  .left-border-none {
+    border-left: none;
+  }
+  .right-border-mob {
+    border-right: solid 1px #979797;
+    top: 0%;
+  }
+  .coloring-stripe-Singleday {
+      border-left: solid #ee7102 8px;
+  }
+  .coloring-stripe-Multiday {
+      border-left: solid #3ba944 8px;
+  }
+
+  .cat-header-text{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2c2f35;
+  }
+  
+  .group-checkbox {
+    padding-left: 5%;
+    left: 10%;
+    top: 0%;
+    line-height: 1.5;
+    margin-top: 0;
+    display: flex;
+    text-align: left;
+  }
+  .category-checkbox {
+    padding-left: 25%;
+    top: 20%;
+  }
+  .category-checkmark {
+    left: 10%;
+    top: -12%;
+  }
+  .group-checkmark {
+    left: -8%;
+    top: 10%;
+  }
+  .coloring-stripe-Nondaily {
+      border-left: solid #5a58a3 8px;
+  }
+
+  .cat-text td {
+      font-size: 14px;
+      padding-bottom: 3%;
+      padding-top: 3%;      
+  }
+  .mob-to-order-group{
+    margin-top: 5%;
+  }
+
+  .sub-cat-text td {
+      font-size: 14px;
+      padding-bottom: 3%;
+      padding-top: 3%;
+  }
+  .d-mob{
+      display: block
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  .d-mob-none {
+      display: none
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    width: 1px;
+  }
+  
+  table td {
+    /* border-bottom: 1px solid #ddd; */
+    font-size: .8em;
+    text-align: right;
+  }
+  .cat-table-resize {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  .cat-arrow{
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .reportingCategories .group-checkbox {
+    line-height: normal;
+  }
+  .reportingCategories .cat-header-text {
+    font-size: 16px;
+  }
+  .reportingCategories .cat-arrow2 {
+    font-size: 1.4rem;
+    top: 7px;
+    left: 61%;
+  }
+
+  .reportingCategories .cat-arrow {
+    top: -2px;
+    font-size: 1.4rem;
+    left: 18px;
+  }
+  .reportingCategories .group-checkbox input:checked ~ .group-checkmark:after {
+    left: 5px;
+    top: 1px;
+  }
+  .reportingCategories .sub-cat-text td {
+    font-size: 14px;
+    padding: 10px 0 10px 15px;
+    margin: 0;
+  }
+  .reportingCategories .category-checkbox input:checked ~ .category-checkmark:after {
+    left: 5px;
+    top: 1px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+.col-md-3 {
+ width: 27.5%
+}
+.col-md-2 {
+width: 15.66%
+}
+.col-md-1 {
+width: 8.33%
+}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .reportingCycle .box{
+    border-radius: unset;
+  }
+  .reportingCategories .cat-table-header tr {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .reportingCategories .cat-table-header tr .cat-header-text.text-left {
+    flex: 0 0 85%;
+    max-width: 85%;
+    text-align: left !important;
+  }
+  .reportingCategories .cat-table-header tr .cat-header-text {
+    flex: 0 0 15%;
+    max-width: 15%;
+  }
+  .reportingCategories .reporting-cat-table .cat-text td.text-left {
+    width: 85%;
+    flex: 0 0 85%;
+    max-width: 85%;
+  }
+  .reportingCategories .reporting-cat-table .cat-text td {
+    margin: 0;
+    width: 15%;
+    min-width: 15%;
+  }
+  .reportingCategories .reporting-cat-table .cat-text .cat-arrow2 {
+    left: 20px;
+    top: 5px;
+  }
+  .reportingCategories .group-checkbox {
+    font-size: 14px;
+  }
+  .reportingCategories .group-checkmark {
+    top: 15%;
+  }
+  .reportingCategories .reporting-cat-table {
+    height: 330px;
+    padding-bottom: 30px;
+  }
+  .reportingCategories .group-checkbox .group-checkmark:after {
+    left: 5px;
+    top: 1px;
+  }
+  
+} 
+
+@media only screen and (max-width: 768px) {
+  .reportingCycle .box{
+    border-radius: unset;
+  }
+}
+
+@media only screen and (max-width: 1050px) and (min-width: 1020px){
+  .reportingCategories .reporting-cat-table{
+    max-height: 400px ;
+  }
+
+  .reportingCategories .group-checkbox {
+    left: 0%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .reportingCategories .reporting-cat-table {
+    /* max-height: 480px;
+    padding-bottom: 30px; */
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+    padding-bottom: 50px;
+    bottom: 52px;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+  }
+  .reportingCategories .group-checkbox {
+    padding-left: 19px;
+  }
+  .reportingCategories .cat-text td {
+    font-size: 14px;
+    padding: 10px 0 10px 17px;
+  }
+  .reportingCategories .category-checkmark {
+    left: 30px;
+    top: -1px;
+  }
+  .reportingCategories .category-checkbox {
+    padding-left: 50px;
+  }
+}
+
+/* FOR BROWSER SIZE > 1025PX */
+@media (min-width: 1025px) {
+  .reportingCategories .reporting-cat-table {
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+    padding-bottom: 50px;
+    bottom: 52px;
+    position: absolute;
+    top: 32px;
+    z-index: 1;
+  }
+  .reportingCategories .reporting-cat-header {
+    padding-left: 10px;
+  }
+  .reporting .reportingCategories .cat-header-text:first-child {
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+  }
+  .reporting .reportingCategories .cat-header-text:last-child {
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+  }
+  .reportingCategories .cat-arrow {
+    top: -2px;
+    font-size: 1.4rem;
+    right: 30px;
+  }
+  .reportingCategories .cat-text td {
+    font-size: 14px;
+    padding: 10px 0 10px 17px;
+  }
+  .reportingCategories .group-checkbox {
+    line-height: normal;
+  }
+  .reportingCategories .sub-cat-text td {
+    font-size: 14px;
+    padding: 10px 0;
+    margin: 0;
+  }
+  .reportingCategories .sub-cat-text td:first-child {
+    padding-left: 5px;
+  }
+  .reportingCategories .cat-arrow2 {
+    top: 7px;
+    font-size: 1.4rem;
+    right: 30px;
+    left: auto;
+  }
+}
+
+/* @media screen and (max-height: 665px) {
+  .reportingCategories .reporting-cat-table {
+      max-height: 410px;
+      padding-bottom: 60px;
+  }
+} */

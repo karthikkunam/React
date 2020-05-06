@@ -1,0 +1,93 @@
+.label-info{
+    display: inline-block;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+    color: #333333;
+    padding-left: 0px;
+}
+
+.label-border{
+    width: 121px;
+    height: 3px;
+    border-bottom: solid 1px #cccccc;
+    /* padding: .6rem 0 .5rem .15rem;
+    height: 35px;
+    width: 100%; */
+}
+
+.alnleft{
+    text-align: left;
+}
+
+.rmvPadding{
+    padding-left: 0px;
+    padding-top: 29px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+.label-info td {
+    padding-right: 0;
+    height: 33px;
+}
+
+/* BROWSER > 1025PX Styles */
+@media (min-width: 1025px) {
+    .label-info {
+        font-size: 16px;
+    }
+    .label-info td {
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .alnleft{
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #2c2f35;
+        padding-left: 0px;
+    }
+
+    .rmvPadding{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+  
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .alnleft{
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #2c2f35;
+        padding-left: 0px;
+    }
+}
+
+/*For ISP changes*/
+@media (min-width:769px) and (max-width:1024px){
+    .label-info{
+        font-size: 16px;
+    }
+
+    .rmvPadding{
+        padding-top: 24px;
+    }
+
+}

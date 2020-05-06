@@ -1,0 +1,287 @@
+.header {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+}
+
+nav.employee-name {
+  text-align: right;
+}
+
+nav .collapse.navbar-collapse {
+  display: inline-block !important;
+  margin-top: 3px;
+  vertical-align: top;
+}
+
+nav .navbar-nav .nav-item #Shape2 {
+  margin: 0 20px;
+}
+
+.navbar .navbar-nav .nav-link {
+  font-family: Trasandina;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: darkgrey;
+}
+
+.navbar .navbar-toggler {
+    color: #2c2f35;
+    border: none;
+}
+
+.navbar {
+    background-color: #2c2f35;
+    padding: 0px;  
+}
+.navbar .logo-container,.logo-container2 {
+    padding-top: 10px;
+    padding-left: 25px;
+  }
+  #header-logo{
+    width: 107.3px;
+    height: 20px;
+    object-fit: contain;
+    margin-bottom: 9.2px;
+  }
+
+  #boss-icon{
+    object-fit: contain;
+    margin-bottom: 10px;
+    width: 38.1px;
+    height: 35px;
+  }
+
+  .Eleven---Back-Offi{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    padding-left: 10px;
+
+  }
+
+  .Eleven---Back-Offi b {
+    font-weight: normal;
+    vertical-align: top;
+  }
+
+ #Path {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin: 10px;
+  }
+
+  #Shape {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin: 10px;
+  }
+
+  #Shape2 {
+    width: 24px;
+    height: 21.6px;
+    object-fit: contain;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  #Shape-Copy-66 {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin: 10px;
+  }
+
+  #Shape3 {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    padding-bottom: 5px;
+  }
+
+  .Employee-Name {
+    margin-top: 5px;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 30px;
+    width: initial;
+    text-align: right;
+    max-width: 205px;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .logo-container {
+      display: none;
+    }
+
+    .fa-angle-left:before {
+      content: "\F104";
+      color: #ffffff;
+    }
+
+    .cat-arrow3 {
+      text-align: right;
+      left: -15%;
+      top: -3px;
+      position: absolute;
+      color: #ffffff;;
+      font-size: 24px;
+      width: 7.4px;
+      height: 12px;
+      -webkit-backdrop-filter: blur(10.2px);
+      backdrop-filter: blur(10.2px);
+    }
+
+    #boss-icon {
+      width: 27.2px;
+      height: 25px;
+    }
+    .employee-name {
+      padding-right: 0px;
+      display: none
+    }
+
+    #ml-auto {
+      height: 50px;
+      padding-left: 0px
+    }
+
+    #ml-auto2 {
+      height: 50px;
+      padding: 0px; 
+    }
+
+    #ml-auto1 {
+      height: 50px;
+      margin-left: 6px; 
+    }
+    #Shape3 {
+      padding: 3px;
+    }
+
+    .Employee-Name {
+      width: 140.5px;
+      height: 40 px;
+      opacity: 0.5;
+      /* font-family: Trasandina; */
+      font-size: 13px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #000000;
+      padding: 2px;
+    }
+
+    .navbar-toggler-icon {
+      height: 24px;
+      width: 24px
+    }
+
+    .navbar {
+      background-color: #2c2f35;
+    }
+  }
+
+  .Store-Details{
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+    padding: 10px;
+  }
+  
+  .leftAlign {
+    text-align: left!important;
+    padding-left: 4%;
+  }
+
+@media only screen and (min-width : 768px) and (max-width: 920px) {
+    
+  .Employee-Name {
+    font-size: 9px;
+  }
+
+  #Shape3 {
+    padding: 2px;
+    margin-right: 10px !important;
+
+  }
+
+  .navbar .Eleven---Back-Offi {
+    font-size: 15px;
+  }
+  /* #ml-auto {
+    padding-right: 0px;
+  } */
+}
+
+@media only screen and (min-width : 360px) and (max-width: 768px) {
+  #ml-auto, #ml-auto2 {
+    height: 40px;
+  }
+  .header .Store-Details {
+    font-size: 17px;
+    display: inline-block;
+    padding: 0 0 0 25px;
+    margin-top: 7px;
+  }
+  .header .image-container .cat-arrow3 {
+    margin-top: 6px;
+  }
+}
+
+@media only screen and (min-width : 200px) and (max-width: 350px) {
+
+  #Shape3 {
+    margin-right: 5px !important;
+  }
+
+  .navbar .Eleven---Back-Offi {
+    font-size: 12px;
+  }
+}
+
+/* FOR BROWSER SIZE > 1150PX */
+@media (min-width: 1150px) {
+  .header {
+    background-color: #2c2f35;
+  }
+  .navbar {
+    max-width: 1191px;
+    margin: 0 auto
+  }
+}
+
+/* FOR BROWSER SIZE > 1200PX */
+@media (min-width: 1200px) {
+  .navbar .logo-container, .logo-container2 {
+    padding-left: 0;
+  }
+}
+

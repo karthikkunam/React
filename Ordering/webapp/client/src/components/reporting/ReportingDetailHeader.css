@@ -1,0 +1,355 @@
+.reportingDetailHeader .print-button{
+    width: 124px;
+  height: 40px;
+  border-radius: 3px;
+  border: solid 1px #5b616b;
+  background-color: #ffffff;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5b616b;
+}
+
+.reportingDetailHeader .header-first-row{
+    margin: 10px 0px 10px 2%;
+}
+
+.promo-padding-reporting{
+    padding: 10px;
+}
+
+.itemStatus-padding-reporting{
+    padding: 10px 23px 10px;
+}
+
+.reportingDetailHeader .header-second-row{
+    margin: 20px 0px 20px 3.4%;
+}
+
+
+.reportingDetailHeader .print-button-state{ 
+    width: 150px;
+    height: 40px;
+    border-radius: 3px;
+    border: solid 1px #5b616b;
+    background-color: #ffffff;
+  }
+
+.reportingDetailHeader .bill-back{ 
+  padding:10px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #000000;
+  }
+
+.reportingDetailHeader .promo-start{
+    color: #018062;
+    padding:10px;   
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+}
+
+.reportingDetailHeader .promo-on{
+    color: #6e61a7;
+    padding:10px;    
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+}
+
+.reportingDetailHeader .promo-ends{
+    color: #ec2526;
+    padding:10px;    
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+}
+.reportingDetailHeader .daily{
+width: 41.1px;
+height: 20px;
+font-family: Roboto;
+font-size: 14px;
+font-weight: normal;
+font-style: normal;
+font-stretch: normal;
+line-height: 1.29;
+letter-spacing: normal;
+color: #000000;
+}
+
+.reportingDetailHeader .coloring-stripe-multiday {
+    border-left: solid #3ba944 20px;
+    float: right;
+    right: 13px;
+    /* margin-left: 30%; */
+}
+
+.reportingDetailHeader .coloring-stripe-daily{
+    border-left: solid #ee7102 20px;  
+    float: right;
+    right: 13px;
+    /* margin-left: 50%;  */
+}
+
+.reportingDetailHeader .coloring-stripe-gr{
+    /* margin-left: 48%;  */
+    border-left: solid #287cba 25px;
+    float: right;
+    right: 13px;
+}
+
+.reportingDetailHeader .coloring-stripe-nonDaily{
+    /* margin-left: 16%;   */
+    border-left: solid #5a58a3 25px;
+    float: right;
+    right: 13px;
+}
+
+.reportingDetailHeader .cycle-type{
+     height: 20px;   
+}
+
+.reportingDetailHeader .cycles{
+    margin:0px !important;
+}
+
+ /* View By Vendor */
+ .reportingDetailHeader .btn-view-by-vendor{
+    width: 40%;
+    height: 24px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold; 
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #107f62;
+    margin-left: 2%;
+  }
+
+  .reportingDetailHeader .btn_view_by_vendor_state {
+    width: 40%;
+    height: 40px;
+    border-radius: 3px;
+    border: solid 1px #008060;
+    background-color: #ffffff;
+  }
+
+
+
+@media only screen and (min-width: 801px) and (max-width: 1290px) {
+    .customDayPicker .day-picker-padding{
+          padding: 2%;
+      }
+
+      .customDayPicker p {
+          margin-top: 1px;
+      }
+       
+      .customDayPicker .date-picker-text-div{  
+        height: 40px;  
+        width: 60%;  
+        border-radius: 3px;
+        border: solid 1px #9b9b9b;
+        background-color: #ffffff;
+        padding-left: 0%; 
+        padding-right: 2%; 
+      } 
+
+      .reportingDetailHeader .promo-start{
+        color: #018062;
+        padding:5px;   
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+    }
+
+    .reportingDetailHeader .btn_view_by_vendor_state {
+        width: 80%;
+        height: 40px;
+        border-radius: 3px;
+        border: solid 1px #008060;
+        background-color: #ffffff;
+      }
+
+    
+    .reportingDetailHeader .promo-on{
+        color: #6e61a7;
+        padding:5px;    
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+    }
+    
+    .reportingDetailHeader .promo-ends{
+        color: #ec2526;
+        padding: 5px;    
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+    }
+
+    .reportingDetailHeader .bill-back{ 
+        padding:5px;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        color: #000000;
+        }      
+  } 
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .reportingDetailHeader .print-button-state {
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .reportingDetailHeader .header-first-row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .reportingDetailHeader .cycle-type {
+        /* margin-left: 74px; */
+    }
+
+    .reportingDetailHeader .daily {
+        width: auto;
+        margin-left: 10px;
+    }
+
+    .reportingDetailHeader .header-second-row {
+        margin: 20px 0 5px;
+    }
+
+    .reportingDetailHeader .itemStatus-padding-reporting {
+        padding: 10px 0px 10px;
+    }
+
+    .reportingDetailHeader .float-md-left {
+        text-align: right;
+        float: unset !important;
+        float: right !important;
+        line-height: 1;
+    }
+
+    .reportingDetailHeader .header-second-row .promo-padding-reporting {
+        padding-bottom: 0;
+        padding-top: 20px;
+    }
+
+    .reportingDetailHeader .header-second-row .itemStatus-padding-reporting {
+        padding-bottom: 0;
+        padding-top: 21px;
+    }
+
+    .reportingDetailHeader .promo-start, .reportingDetailHeader .promo-on, .reportingDetailHeader .promo-ends {
+        padding-bottom: 0;
+    }
+}
+
+/* FOR BROWSER SIZE > 1025PX */
+@media (min-width: 1025px) {
+    .reportingDetailHeader .print-button-state {
+        height: 40px;
+        font-size: 16px;
+        padding-top: 3px;
+    }
+
+    .reportingDetailHeader .header-first-row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .reportingDetailHeader .daily {
+        width: auto;
+        margin-left: 10px;
+    }
+
+    .reportingDetailHeader .header-second-row {
+        margin: 20px 0 5px;
+    }
+
+    .reportingDetailHeader .itemStatus-padding-reporting {
+        padding: 10px 0px 10px;
+    }
+
+    .reportingDetailHeader .float-md-left {
+        text-align: right;
+        float: unset !important;
+        float: right !important;
+        line-height: 1;
+    }
+
+    .reportingDetailHeader .header-second-row .promo-padding-reporting {
+        padding-bottom: 0;
+        padding-top: 20px;
+    }
+
+    .reportingDetailHeader .header-second-row .itemStatus-padding-reporting {
+        padding-bottom: 0;
+        padding-top: 21px;
+    }
+
+    .reportingDetailHeader .promo-start, .reportingDetailHeader .promo-on, .reportingDetailHeader .promo-ends {
+        padding-bottom: 0;
+        font-size: 14px;
+    }
+    .reportingDetailHeader .DayPickerInput {
+        width: 80%;
+        height: 100%;
+        z-index: 2;
+    }
+    .reportingDetailHeader .customDayPicker .date-picker-text-box {
+        width: 100%;
+        height: 100%;
+    }
+    .reportingDetailHeader .date-picker-text-div .calender {
+        margin-top: 2px;
+        margin-left: 4px;
+    }
+    .reportingDetailHeader .DayPickerInput .DayPickerInput-OverlayWrapper {
+        margin-left: -5px;
+    }
+}

@@ -1,0 +1,208 @@
+.vendor-container .item-name-active {
+    text-decoration: underline;
+}
+
+.items-list {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.7;
+    letter-spacing: normal;
+    color: #333333;
+}
+
+.items-value {
+    font-weight: bold;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dsd-vendor-history .vendor-table-row {
+    border-bottom: solid 1px #cccccc;
+}
+
+.dsd-vendor-history .no-side-padding {
+    margin: 2% 2.2% 1% 2.2%;
+}
+
+.dsd-vendor-history .error-table-column-header {
+    text-align: left;
+}
+
+#vendor_table {
+    margin: 0% 2% 0% 2%;
+    width: 96%;
+    height: 480px;
+    overflow-y:scroll;
+    display: block;
+}
+
+#vendor_table tbody tr td {
+    padding: 1% 0% 1% 1%;
+}
+
+#vendor_table thead tr th {
+    padding: 1% 9px 1% 9px;
+}
+
+#vendorPopup {
+    position: fixed;
+    /* left: 490px !important;
+    top: 151px !important; */
+    width: 450px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+
+@media only screen and (max-width: 1030px) and (min-width: 1020px) {
+    .vendor-container .item-name-active {
+        margin-left: 0;
+        text-decoration: underline;
+        line-height: 3.6;
+        font-size: 16px;
+    }
+    
+    .items-list {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 3.5;
+        letter-spacing: normal;
+        color: #333333;
+    }
+    
+    .items-value {
+        font-weight: bold;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .dsd-vendor-history .vendor-table-row {
+        border-bottom: solid 1px #cccccc;
+    }
+
+    .dsd-vendor-history .error-table-column-header {
+        text-align: left;
+    }
+    
+    .dsd-vendor-history .no-side-padding {
+        margin: 2% 2% 0.5% 2.5%;
+    }
+    
+    #vendor_table {
+        margin: 0% 2% 0% 2%;
+        width: 96%;
+        height: 500px;
+        overflow-y:scroll;
+        display: block;
+    }
+    
+    #vendor_table tbody tr td {
+        padding: 1% 0% 1% 1%;
+    }
+    
+    #vendor_table thead tr th {
+        padding: 1% 9px 1% 9px;
+    }
+    
+    #vendorPopup {
+        position: fixed;
+        top: 115px !important;
+        /* left: 244px !important; */
+        width: 250px;
+        border: 1px solid #cccccc;
+        background-color: #ffffff;
+    }
+
+    .address-container {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .dsd-vendor-history .SupportFunctions {
+        margin: 0 0 1% 0;
+    }
+
+    #vendor_table {
+        margin: 0;
+        width: 100%;
+    }
+
+    #vendor_table thead tr th {
+        font-size: 14px;
+    }
+
+    #vendor_table thead tr th:first-child {
+        width: 13% !important;
+        padding: 1% 0px 1% 9px;
+    }
+
+    #vendor_table thead tr th:nth-child(2) {
+        width: 20% !important;
+        padding: 1% 0px 1% 9px;
+    }
+
+    #vendor_table thead tr th:nth-child(3) {
+        width: 12% !important;
+        padding: 1% 0px 1% 9px;
+    }
+
+    #vendor_table thead tr th:nth-child(4) {
+        width: 17% !important;
+        padding: 1% 0px 1% 9px;
+    }
+
+    #vendor_table thead tr th:nth-child(5) {
+        width: 5% !important;
+        padding: 1% 0px 1% 9px;
+    }
+
+    #vendor_table thead tr th:last-child {
+        width: 10% !important;
+    }
+}
+
+/* FOR BROWSER SIZE > 1025PX */
+@media (min-width: 1025px) {
+    .dsd-vendor-history .SupportFunctions {
+        margin: 0 0 1% 0;
+    }
+    .vendor-container .item-name-active {
+        margin-left: 0;
+        text-decoration: underline;
+        line-height: 3.6;
+        font-size: 16px;
+    }
+    .items-list {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 3.5;
+        letter-spacing: normal;
+        color: #333333;
+    }
+    .items-value {
+        font-weight: bold;
+    }
+}
+
+/* @media screen and (max-height: 665px) {
+    #vendor_table {
+        max-height: 440px;
+        padding-bottom: 60px;
+    }
+} */

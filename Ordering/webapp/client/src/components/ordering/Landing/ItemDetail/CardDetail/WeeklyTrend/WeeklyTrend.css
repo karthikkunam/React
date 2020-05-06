@@ -1,0 +1,364 @@
+.weekly-header{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #333333;
+    padding-right: 25% !important;
+}
+
+.item-row-weekly{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+}
+
+.weekly-table-border{
+    border: solid 2px #008060;
+}
+
+.padding-left{
+    padding-left: 40px !important;
+}
+
+.weekly-table th,
+.weekly-table td {
+    padding: .690rem;
+    padding-left: 1.20rem;
+    text-align: center;
+}
+
+.review-page-weekly th,
+.review-page-weekly td {
+    padding: .710rem .600rem .710rem 1.20rem;
+    text-align: center;
+}
+
+.body-background{
+    background: linear-gradient(to right, #f1f1f1 80%, #fff 50%);
+}
+
+.body-background-multi{
+    background: linear-gradient(to right, #f1f1f1 80%, #fff 50%);
+}
+
+.body-background-multi-trend{
+    background: linear-gradient(to right, #f1f1f1 80%, #fff 50%);
+}
+
+.body-background, .body-background-multi, .body-background-multi-trend :active{
+    background: linear-gradient(to right, #f1f1f1 100%, #fff 50%);
+
+}
+
+.box-highlight {
+    border: solid 2px #008060;
+}
+
+.non-daily-weekly th,
+.non-daily-weekly td {
+    padding: 0.725rem;
+    text-align: center;
+    padding-right: 1.5rem;
+    padding-left: 1rem;
+}
+
+.outOfStockStyle {
+  color: #ec2526;
+}
+
+.salesStyle {
+  font-weight: bold;
+}
+
+/* BROWSER > 1025PX Styles */
+@media (min-width: 1025px) {
+    .item-row-weekly {
+        width: 20%;
+    }
+    .weekly-trend .non-daily-weekly .item-row-weekly {
+        width: 25%;
+    }
+    .weekly-table th, 
+    .weekly-table td {
+        padding: 10px 0;
+        width: 50%;
+    }
+    .weekly-table thead th, 
+    .weekly-table thead td {
+        padding: 10px 0 0;
+        padding-right: 0 !important;
+    }
+    .non-daily-weekly th, 
+    .non-daily-weekly td {
+        padding-right: 0 !important;
+        padding: 10px 0 0;
+        width: 50%;
+    }
+    .weekly-trend, .weekly-table.review-page-weekly, .weekly-wrapper {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .weekly-trend.text-right-multi .row {
+        margin-left: 0px;
+        margin-right: -5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .weekly .weekly-table th,
+    .weekly-table td {
+        padding: .7rem;
+        padding-left: .20rem;
+        text-align: center;
+    }
+
+    .add-mg-trend{
+        margin-left: 1rem;
+    }
+
+    /* .mg-left-weekly-non-daily{
+        margin-left: 1rem;
+    } */
+
+    .add-daily-trend-mg{
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
+    }
+
+    .add-daily-trend-mg-non-daily{
+        margin-left: -1.4rem;
+        margin-right: -1.2rem;
+    }
+
+    .weekly1 .weekly-table th,
+    .weekly-table td {
+        padding: .7rem;
+        padding-left: .03rem;
+        text-align: center;
+        padding-right: 0.15rem;
+    }
+
+
+    .weekly2 .weekly-table th,
+    .weekly-table td {
+        padding: .7rem;
+        padding-left: .03rem;
+        text-align: center;
+        padding-right: 0.15rem;
+    }
+
+    .weekly-wrapper{
+        width: 260px;
+    }
+
+    .weekly-table{
+        width: 260px;
+        padding: 0;
+    }
+
+    .weekly1 .item-row-weekly{
+        /* padding-left: 1rem; */
+    }
+
+    /* .weekly2 .item-row-weekly{
+        padding-left: 0;
+    } */
+
+    .item-row-weekly{
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+    }
+
+    .weekly-header{
+        display: none;
+    }
+
+    .body-background{
+        background: linear-gradient(to right, #f1f1f1 75%, #fff 0%);
+    }
+
+    .weekly1 .body-background-multi{
+        margin: 0;
+        background: linear-gradient(to right, #f1f1f1 71%, #fff 0%);
+    }
+
+    .weekly2 .body-background-multi-trend{
+        margin: 0;
+        background: linear-gradient(to right, #f1f1f1 71%, #fff 0%);
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .item-row-weekly {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .item-row-weekly td tr td {
+        padding: 6px 0 0 0;
+        height: 33px;
+        text-align: center;
+    }
+    .item-row-weekly td tr:first-child td {
+        padding-left: 0px;
+        padding-right: 0px;
+        /* padding-top: 25px; */
+        /* padding-bottom: 7px; */
+        padding-top: 20px;
+        padding-bottom: 7px;
+    }
+    .item-row-weekly td {
+        padding: 0 3px;
+    }
+    /* .weekly2 .weekly-table th, 
+    .weekly-table td {
+        padding: 0 2px;
+    } */
+    .weekly-wrapper {
+        width: 270px;
+        /* padding: 0 0 0 15px; */
+        padding: 0;
+        background: linear-gradient(to right, #f1f1f1 70%, transparent 0%);
+    }
+    .weekly1 .body-background-multi {
+        background: linear-gradient(to right, #f1f1f1 75%, #fff 0%);
+    }
+    .weekly2 .body-background-multi-trend {
+        background: linear-gradient(to right, #f1f1f1 75%, #fff 0%);
+    }
+    .mg-left-weekly-non-daily .weekly-wrapper {
+        padding: 0;
+    }
+    .weekly-trend.mob-inline .row {
+        margin-left: 0px;
+        margin-right: -5px;
+    }
+}
+
+/*For ISP changes*/
+@media (min-width:769px) and (max-width:1024px){
+    .weekly-header{
+        font-size: 16px;
+    }
+
+    .item-row-weekly{
+        font-size: 14px;
+        color: #000000;
+    }
+
+    .weekly-table .item-row-weekly {
+        width: 20%;
+    }
+
+    .weekly-table.body-background-multi .item-row-weekly, .weekly-table.body-background-multi-trend .item-row-weekly {
+        width: 18%;
+    }
+
+    .weekly-table.body-background-multi-trend {
+        margin-left: 10px;
+        width: 93%;
+    }
+
+    .weekly-trend.text-right-multi .row {
+        margin-left: 0px;
+        margin-right: -5px; 
+    }
+
+    .weekly-trend.text-right-multi .weekly-wrapper {
+        padding-left: 10px;
+    }
+
+    .weekly-table.review-page-weekly .item-row-weekly {
+        width: 25%;
+    }
+
+    .weekly-trend, .weekly-table.review-page-weekly, .weekly-wrapper {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .weekly-table th,
+    .weekly-table td {
+        padding: .6rem 0 .5rem .15rem;
+        height: 35px;
+    }
+
+    .weekly-table th {
+        padding-bottom: 0;
+        padding-right: 0 !important;
+        height: auto;
+    }
+    .review-page-weekly th,
+    .review-page-weekly td {
+        padding: .59rem 0rem 0.59rem 0.29rem;
+    }
+
+    .weekly-table.review-page-weekly th,
+    .weekly-table.review-page-weekly td {
+        padding: .6rem 0 .5rem .15rem;
+    }
+
+    .non-daily-weekly th,
+    .non-daily-weekly td{
+        padding: .6rem 0 .5rem .15rem;
+        height: 35px;
+    }
+    .non-daily-weekly th {
+        height: auto;
+        padding: .6rem 0 .6rem .25rem;
+        padding-bottom: 0;
+    }
+
+    .non-daily-weekly td {
+        padding: .6rem 0 .5rem .15rem;
+    }
+
+    .body-background-multi .weekly-header{
+        padding-right: 20% !important;
+        height: auto;
+    }
+
+    .body-background-multi-trend .weekly-header{
+        padding-right: 20% !important;
+        height: auto;
+    }
+
+    .body-background-non-daily{
+        background: linear-gradient(to right, #f1f1f1 98%, #fff 50%);
+    }
+
+    .body-background-multi{
+        background: linear-gradient(to right, #f1f1f1 72%, #fff 50%);
+    }
+
+    .body-background-multi-trend{
+        background: linear-gradient(to right, #f1f1f1 72%, #fff 50%);
+    }
+
+    .weekly-wrapper.body-background {
+        background-image: linear-gradient(to right, #f1f1f1 80% , #fff 0%);
+        padding-left: 5px;
+    }
+
+    .weekly-wrapper.body-background .weekly-table.review-page-weekly{
+        background: linear-gradient(to right, #f1f1f1 100%, #fff 50%);
+    }
+}

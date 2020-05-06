@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <style type="text/css">
+      .panel-heading {
+    padding: 0;
+}
+
+@media print {
+    a[href]:after {
+        content: none !important;
+    }
+    .generated-on {
+        display: none
+    }
+    .navbar {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .pull-right-lg {
+        float: left;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.metadata {
+    overflow: auto;
+    letter-spacing: 0.2px;
+    border-color: white;
+    line-height: 1.6;
+    color: #4d4d4d;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding-bottom: 3px;
+}
+
+.panel-heading {
+    position: relative;
+}
+
+.panel-heading div.scenariohead {
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    width: calc(100% - 45px);
+}
+
+.panel-heading span.element {
+    width: 80%;
+}
+
+.panel-heading i.glyphicon-chevron-down {
+    display: none;
+}
+
+.panel-heading i.glyphicon-chevron-right {
+    display: inline-block;
+}
+
+.panel-heading.open i.glyphicon-chevron-down {
+    display: inline-block;
+}
+
+.panel-heading.open i.glyphicon-chevron-right {
+    display: none;
+}
+
+.generated-on {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.panel-title b {
+    padding-right: 10px;
+}
+
+.panel-heading .label-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.panel-heading .label-container label {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.navbar .label-container {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.navbar .label {
+    font-size: 20px;
+}
+
+.navbar .project-name {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tags {
+    margin-left: 18px;
+    margin-right: 20px;
+    padding-top: 5px;
+    margin-bottom: -4px;
+}
+
+.tag {
+    font-size: 13px;
+    color: #696969;
+    letter-spacing: 0.3px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.chart {
+    padding-bottom: 15px;
+}
+
+div.chart div div svg rect {
+    fill: #f5f5f5;
+}
+
+table.arguments {
+    margin-left: 30px;
+    border: 1px solid #ccc;
+}
+
+.screenshot {
+    padding: 2% 0 2% 0;
+}
+
+.scenarioTitle {
+    width: 80%
+}
+
+.description {
+    background-color: white;
+    border-color: white;
+    line-height: 1.6;
+    color: #6f6f6f;
+    font-weight: 400;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 0.1em 0.5em 1.2em 1.5em
+}
+
+#scenario-description {
+    padding-bottom: 1em;
+    padding-left: 0.2em;
+}
+
+.scrollBar {
+    overflow-x: scroll;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+.info {
+    background-color: #fbfbfb;
+}
+
+.step-duration {
+    float: right;
+    color: #BDBDBD;
+}
+
+.footer-div {
+    text-align: right;
+    vertical-align: middle;
+    height: 3.5%;
+    width: 100%;
+}
+
+.footer-container {
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 18%;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.footer-link {
+    font-size: 13px;
+    float: right;
+}
+
+.footer-link:hover {
+    color: darkgray;
+}
+
+i.arrow-down, i.arrow-right{
+    width: 20px;
+    height: 20px;
+}
+
+i.icon-ok,i.icon-remove,i.icon-minus,i.icon-question-sign,i.icon-exclamation-sign,i.icon-flash{
+    width: 12px;
+    height: 12px;
+}
+
+i.arrow-down {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='utf-8'?%3e%3c!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='20px' height='20px' viewBox='0 0 20 20' enable-background='new 0 0 20 20' xml:space='preserve'%3e%3cpath fill='%233F3F3F' d='M10,14l7-6.759L15.718,6L10,11.52L4.285,6L3,7.241L10,14z'/%3e%3c/svg%3e");
+}
+i.arrow-right{
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='utf-8'?%3e%3c!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='20px' height='20px' viewBox='0 0 20 20' enable-background='new 0 0 20 20' xml:space='preserve'%3e%3cpath fill='%233F3F3F' d='M15,10L6.551,4L5,5.101L11.899,10L5,14.898L6.551,16L15,10z'/%3e%3c/svg%3e ");    
+}
+i.icon-ok{
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='utf-8'?%3e%3c!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='12px' height='12px' viewBox='127.203 94 12 12' enable-background='new 127.203 94 12 12' xml:space='preserve'%3e%3cpath fill='%23FFFFFF' d='M138.203,99.623l-6.287,6.251l-1.247-1.247l-2.467-2.501l1.586-1.557l2.295,2.245l4.332-4.697 L138.203,99.623z'/%3e%3c/svg%3e ");    
+}
+i.icon-remove{    
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='utf-8'?%3e%3c!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='12px' height='12px' viewBox='94 94 12 12' enable-background='new 94 94 12 12' xml:space='preserve'%3e%3cpath fill='%23FFFFFF' d='M103.719,104.094l-2.367-2.367l2.367-2.366c0.373-0.374,0.375-0.979,0-1.353 c-0.373-0.373-0.979-0.373-1.352,0L100,100.374l-2.367-2.367c-0.374-0.373-0.979-0.374-1.353,0c-0.373,0.374-0.373,0.979,0,1.353 l2.367,2.366l-2.367,2.367c-0.374,0.375-0.374,0.98,0,1.352c0.374,0.375,0.979,0.375,1.353,0l2.367-2.365l2.368,2.367 c0.373,0.373,0.979,0.373,1.352,0C104.094,105.072,104.094,104.469,103.719,104.094z'/%3e%3c/svg%3e ");
+}
+i.icon-minus{
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='utf-8'?%3e%3c!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='12px' height='12px' viewBox='0 0 12 12' enable-background='new 0 0 12 12' xml:space='preserve'%3e%3cpath fill='%23FFFFFF' d='M105.5,99.25v1.5c0,0.208-0.072,0.385-0.219,0.531s-0.323,0.219-0.531,0.219h-9.5 c-0.208,0-0.387-0.072-0.532-0.219s-0.218-0.323-0.218-0.531v-1.5c0-0.208,0.072-0.385,0.218-0.531S95.041,98.5,95.25,98.5h9.5 c0.208,0,0.387,0.072,0.531,0.219S105.5,99.042,105.5,99.25z'/%3e%3cpath fill='%23FFFFFF' stroke='%23FFFFFF' d='M3,8C2.447,8,2,7.553,2,7l0,0c0-0.553,0.447-1,1-1h6c0.553,0,1,0.447,1,1l0,0 c0,0.553-0.447,1-1,1H3z'/%3e%3c/svg%3e ");    
+}
+i.icon-question-sign{
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='utf-8'?%3e%3c!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='12px' height='12px' viewBox='94 94 12 12' enable-background='new 94 94 12 12' xml:space='preserve'%3e%3cpath fill='%23FFFFFF' d='M100.912,103.793v1.5c0,0.066-0.024,0.125-0.074,0.174c-0.051,0.051-0.108,0.076-0.176,0.076h-1.5 c-0.066,0-0.125-0.025-0.175-0.076c-0.05-0.049-0.075-0.107-0.075-0.174v-1.5c0-0.066,0.025-0.125,0.075-0.176 c0.05-0.049,0.108-0.074,0.175-0.074h1.5c0.067,0,0.125,0.025,0.176,0.074C100.888,103.668,100.912,103.727,100.912,103.793z M102.888,100.042c0,0.225-0.032,0.436-0.097,0.631c-0.064,0.195-0.138,0.355-0.219,0.479c-0.082,0.123-0.196,0.246-0.344,0.371 c-0.148,0.125-0.268,0.216-0.359,0.271c-0.092,0.057-0.219,0.131-0.382,0.223c-0.171,0.096-0.313,0.23-0.428,0.406 s-0.172,0.314-0.172,0.418c0,0.072-0.025,0.139-0.075,0.203s-0.108,0.098-0.175,0.098h-1.5c-0.063,0-0.116-0.039-0.159-0.115 c-0.044-0.078-0.066-0.156-0.066-0.234v-0.281c0-0.346,0.136-0.672,0.406-0.979c0.271-0.307,0.569-0.532,0.895-0.678 c0.245-0.113,0.421-0.229,0.524-0.351c0.104-0.121,0.156-0.279,0.156-0.475c0-0.175-0.097-0.329-0.29-0.462 c-0.194-0.133-0.418-0.2-0.672-0.2c-0.271,0-0.496,0.06-0.676,0.181c-0.146,0.104-0.368,0.344-0.668,0.719 c-0.055,0.066-0.119,0.1-0.194,0.1c-0.05,0-0.102-0.017-0.156-0.05l-1.024-0.781c-0.055-0.042-0.087-0.094-0.098-0.156 c-0.01-0.063,0.002-0.121,0.035-0.175c0.666-1.108,1.633-1.663,2.899-1.663c0.334,0,0.669,0.064,1.007,0.194 c0.337,0.129,0.642,0.302,0.912,0.519c0.271,0.217,0.492,0.482,0.662,0.797C102.802,99.367,102.888,99.697,102.888,100.042z'/%3e%3c/svg%3e ");    
+}
+i.icon-exclamation-sign{
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='utf-8'?%3e%3c!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='12px' height='12px' viewBox='94 94 12 12' enable-background='new 94 94 12 12' xml:space='preserve'%3e%3cpath fill='%23FFFFFF' d='M101.5,104.75c0,0.689-0.673,1.25-1.5,1.25s-1.5-0.561-1.5-1.25c0-0.688,0.673-1.25,1.5-1.25 S101.5,104.063,101.5,104.75z M98.674,98.394l0.255,4.25c0.012,0.199,0.209,0.355,0.45,0.355h1.244c0.239,0,0.438-0.156,0.449-0.355 l0.255-4.25C101.34,98.18,101.135,98,100.877,98h-1.754C98.866,98,98.661,98.18,98.674,98.394z'/%3e%3c/svg%3e ");    
+}
+i.icon-flash{
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='utf-8'?%3e%3c!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='12px' height='12px' viewBox='94 94 12 12' enable-background='new 94 94 12 12' xml:space='preserve'%3e%3cpath fill='%23FFFFFF' d='M103.646,99.993h-2.173l1.145-4.32c0-0.158-0.229-0.158-0.343-0.079l-6.066,5.263 c-0.115,0.078,0,0.237,0.114,0.237h2.174l-1.143,4.319c0,0.156,0.228,0.156,0.343,0.077l6.065-5.262 C103.878,100.15,103.878,99.993,103.646,99.993z'/%3e%3c/svg%3e ");
+}
+
+i.glyphicon-chevron-down:before,i.glyphicon-chevron-right:before,i.glyphicon-ok:before,i.glyphicon-remove::before,i.glyphicon-minus::before,i.glyphicon-question-sign::before,i.glyphicon-exclamation-sign::before,i.glyphicon-flash::before{
+    content: ''
+}
+
+      
+    </style>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">CukeTest Report</a>
+          <div class="project-name">example</div>
+          <div class="label-container">
+            <span class="label label-success" title=scenarios>Passed: 0</span>
+            <span class="label label-danger" title=scenarios>Failed: 0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="generated-on">Fri Apr 19 2019 23:33:41 GMT-0500 (Central Daylight Time)</div>
+
+      <div class="row">
+        <div class="chart col-lg-6 col-md-6 col-xs-6" id="piechart_features"></div>
+        <div class="chart col-lg-6 col-md-6 col-xs-6" id="piechart_scenarios"></div>
+      </div>
+
+      <div class="row">
+       <div class="chart col-lg-6 col-md-6 col-xs-6"><canvas id="piechartjs_features"></canvas></div>
+       <div class="chart col-lg-6 col-md-6 col-xs-6" ><canvas id="piechartjs_scenarios"></canvas></div>
+      </div>
+
+      
+      <div class="panel panel-default">
+        <div class="panel-heading open">
+          <h4 class="panel-title">
+            <div class="scenariohead" data-toggle="collapse" href="#logOutput">
+              <i class="glyphicon glyphicon-chevron-right arrow-right"></i>
+              <i class="glyphicon glyphicon-chevron-down arrow-down"></i>
+              <b>Metadata</b>
+            </div>
+          </h4>
+        </div>
+        <div id="logOutput" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="row">
+              
+             
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-left>
+                    <strong> Total Time: </strong>0s
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> Generate On: </strong>4/19/2019, 11:33:41 PM
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-left>
+                    <strong> Host: </strong>DL007115309
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> Platform: </strong>Windows 10.0.16299
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-left>
+                    <strong> User Name: </strong>adedg001
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> CPU: </strong>ia32, 4 core, Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-left>
+                    <strong> CukeTest: </strong>1.3.0 (Cucumber 5.x)
+                  </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+
+<div class="row">
+
+  <div class="col-lg-6 col-md-6 ">
+    <div class="panel panel-default">
+      <div class="panel-heading open">
+        <h4 class="panel-title">
+            <div class="tags"> </div>
+          <div class="scenariohead" data-toggle="collapse" href="#collapseFeature0">
+            <i class="glyphicon  glyphicon-chevron-right arrow-right"></i>
+            <i class="glyphicon  glyphicon-chevron-down arrow-down"></i>
+            <b>Feature:</b>Login
+             
+          </div>
+          <span class="label-container">
+              
+              
+              <span class="label label-info" title="Undefined">1</span>
+              
+              
+              
+            </span>
+        </h4>
+      </div>
+      <div id="collapseFeature0" class="panel-collapse collapse in">
+        <div class="panel-body">
+         
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                
+                    <div class="tags"> <span class="tag"> @tags</span>  </div>
+                  <div class="scenariohead collapsed" title="Start Time: 0s" data-toggle="collapse" href="#collapseScenario0_0" class="collapsed">
+                    <i class="glyphicon glyphicon-chevron-right arrow-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down arrow-down"></i>
+                    <b>Scenario:</b>login with valid credentials
+                  
+                  </div>
+                  <span class="label-container">
+                      
+                      <span class="label label-info" title="Undefined">3</span>
+                      
+                      
+                      
+                      
+                  </span>
+                </h4>
+              </div>
+              <div id="collapseScenario0_0" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                        I am at the login page
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I am at the login page$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        I enter valid credentials
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I enter valid credentials$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        I click on Submit button
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I click on Submit button$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div class="col-lg-6 col-md-6 ">
+    <div class="panel panel-default">
+      <div class="panel-heading open">
+        <h4 class="panel-title">
+            <div class="tags"> </div>
+          <div class="scenariohead" data-toggle="collapse" href="#collapseFeature1">
+            <i class="glyphicon  glyphicon-chevron-right arrow-right"></i>
+            <i class="glyphicon  glyphicon-chevron-down arrow-down"></i>
+            <b>Feature:</b>Store selector
+             
+          </div>
+          <span class="label-container">
+              
+              
+              <span class="label label-info" title="Undefined">1</span>
+              
+              
+              
+            </span>
+        </h4>
+      </div>
+      <div id="collapseFeature1" class="panel-collapse collapse in">
+        <div class="panel-body">
+         
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                
+                    <div class="tags"> </div>
+                  <div class="scenariohead collapsed" title="Start Time: 0s" data-toggle="collapse" href="#collapseScenario1_0" class="collapsed">
+                    <i class="glyphicon glyphicon-chevron-right arrow-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down arrow-down"></i>
+                    <b>Scenario:</b>do login
+                  
+                  </div>
+                  <span class="label-container">
+                      
+                      <span class="label label-info" title="Undefined">10</span>
+                      
+                      
+                      
+                      
+                  </span>
+                </h4>
+              </div>
+              <div id="collapseScenario1_0" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Given </span>
+                        I am at the login page
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I am at the login page$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        I enter valid credentials
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I enter valid credentials$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        I click on Submit button
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I click on Submit button$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        I am at the store selector page
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I am at the store selector page$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        I check logo as 7B
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I check logo as 7B$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        I check title
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I check title$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        I check application name & page name
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I check application name & page name$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        I check search textbox is implemented & available on right hand corner
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I check search textbox is implemented & available on right hand corner$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        I enter number in search box
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I enter number in search box$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                    
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash icon-flash"></i></span>
+                      
+                    
+                    
+                      <span class="text">
+                        <span class="keyword highlight">Then </span>
+                        I click on previous button
+                          
+                         
+                            
+                          
+                      </span>
+                    
+                      
+                        <pre class=info>
+this.Then(/^I click on previous button$/, function(callback) {
+  // Write code here that turns the phrase above into concrete actions
+  callback(null, 'pending');
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
+
+
+
+    </div>
+
+    <div class="navbar-fixed-bottom row-fluid footer-div ">
+      <div class="navbar-inner">
+        <div class="footer-container">
+          
+            <div class="text-muted footer-link">
+              generated by @CukeTest
+            </div>
+             
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/moment.js/2.20.1/moment.min.js"></script>
+    <script src="https://cdn.bootcss.com/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+    $('.collapse').on('hide.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().removeClass('open');
+    }).on('show.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().addClass('open');
+    });
+
+    $('a.toggle').on('click', function() {
+        if ($(this).text() === 'Screenshot -') {
+            $(this).text('Screenshot +');
+            $(this).siblings('a.screenshot').find('img').hide();
+        } else {
+            $(this).text('Screenshot -');
+            $(this).siblings('a.screenshot').find('img').show();
+        }
+    });
+    var $generated = $('.generated-on');
+
+    $generated.text('Generated ' + moment($generated.text()).fromNow());
+
+});
+
+      /**
+ * leanpro chart
+*/
+function drawPieChart(chartData,ctx){
+    var chartlabels = Object.keys(chartData);
+    
+    var titlename = chartlabels.length > 4 ? "Scenarios" : "Feature";
+    
+    var chartdatas = Object.keys(chartData).map(function(key) {
+                        return chartData[key];
+                    });
+    var total = 0;
+    for(var i in chartdatas){
+        total += chartdatas[i];
+    }
+    
+    var options = {
+        type: 'pie',
+        data : {
+        labels:chartlabels,
+        datasets: [
+            {
+              data: chartdatas,
+              backgroundColor: ['#d9534f','#5cb85c', '#999', '#5bc0de', '#428bca', '#f0ad4e']
+            }]
+          },
+          animation: {
+            animateScale:true
+          },
+          options: {
+              responsive: true,
+              title:{
+                  display:true,
+                  text:total+" "+titlename
+              },
+              tooltips: {
+                  mode: 'point'
+              },
+              maintainAspectRatio: false,
+          }
+    }
+    
+    new Chart(ctx, options);
+}
+
+      
+    </script>
+    <script>
+    var featuresData={
+          "failed" : 0,
+          "passed" : 2,
+          "ambiguous" : 0
+        }
+
+        var scenariosData={
+          "failed" : 0,
+          "passed" : 0,
+          "undefined" : 2,
+          "pending" : 0,
+          "skipped" : 0,
+          "ambiguous" : 0
+        }
+        var feature_ctx = document.getElementById("piechartjs_features").getContext("2d");
+        var scenario_ctx = document.getElementById("piechartjs_scenarios").getContext("2d");
+        drawPieChart(featuresData,feature_ctx);
+        drawPieChart(scenariosData,scenario_ctx);
+    </script>
+  </body>
+</html>

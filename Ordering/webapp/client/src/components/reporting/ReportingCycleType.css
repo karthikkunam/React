@@ -1,0 +1,502 @@
+.reportingCycleType .box {
+    width: 90%;
+    height: 40px;
+    background-color: #ffffff;
+    margin-left:10%;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.23);
+    border-radius: 0px 5px 5px 0px;
+}
+
+.reportingCycleType .cat-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: Roboto;
+    font-weight: bold;
+    color: #000000;
+    font-size: 18px;
+}
+
+.reportingCycleType  .cycleType{
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .reportingCycleType .coloring-stripe-Singleday{
+    border-left: solid #ee7102 12px;
+    padding: 0px;
+  }
+
+  .reportingCycleType .coloring-stripe-Multiday{
+    border-left: solid #3ba944 12px;
+    padding: 0px;
+  }
+
+  .reportingCycleType .coloring-stripe-Nondaily{
+    border-left: solid #5a58a3 12px;
+    padding: 0px;
+  }
+  
+  .reportingCycleType .coloring-stripe .Multiday{
+    padding-left:15px;
+  }
+
+
+  .reportingCycleType .coloring-stripe .Nondaily{
+    padding-left:15px;
+  }
+
+  .reportingCycleType .guided{
+    margin:10px;
+    border-radius: 3px;
+    border: solid 1px #9b9b9b;
+    background-color: #ffffff;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #000000;
+    margin-left: 0px;
+  }
+  .reportingCycleType .right-padding{
+    padding-right: 3%;
+  }
+  .reportingCycleType .left-padding {
+    padding-left: 3%;
+
+  }
+  .reportingCycleType .view-by-vendor-padding{
+      padding-left: 1%;
+  }
+  .reportingCycleType .Select-Items-to-Order{
+    width: 213px;
+    height: 22px;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #4a4a4a;
+  }
+
+  .reportingCycleType .table-margin {
+    padding: 5px;
+}
+
+
+/* Day Picker */
+
+
+.reportingCycleType .date-picker-text-box{
+  height: 38px;
+  width: 100%;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #000000;
+  text-align:center; 
+  border: 0;
+  cursor: pointer;
+  }
+  .reportingCycleType .date-picker-text-div{  
+    height: 40px;  
+    width: 40%;  
+    border-radius: 3px;
+    border: solid 1px #9b9b9b;
+    background-color: #ffffff;
+    padding-left: 0%; 
+    padding-right: 2%; 
+  }  
+  .reportingCycleType .date-picker-calender{
+    width: 387px;
+    height: 323px;
+    border-radius: 6px;
+    box-shadow: 0 2px 23px 0 #ededed;
+    background-color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;  
+  }
+  .reportingCycleType .DayPickerInput {
+    width: 90%;
+    z-index: 3;
+  }
+
+  .reportingCycleType .date-picker-text-div .calendar {
+    margin-top: 5px;
+  }
+
+  .reportingCycleType .date-picker-calender-day{
+    width: 19px;
+    height: 21px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  /* View By Vendor */
+  .reportingCycleType .btn-view-by-vendor{
+    width: 40%;
+    height: 24px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold; 
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #107f62;
+    margin-left: 2%;
+  }
+
+  .reportingCycleType .btn_view_by_vendor_state {
+    width: 40%;
+    height: 40px;
+    border-radius: 3px;
+    border: solid 1px #008060;
+    background-color: #ffffff;
+    padding-top: 4px;
+  }
+
+
+
+  .reportingCycleType .table-margin-top{
+    margin-top: 1%
+  }
+
+/* Create a custom checkbox */
+.reportingCycleType .cat-checkmark {
+    position: absolute;
+    top: 3px;
+    width: 19px;
+    height: 19px;
+    border: solid 1px #979797;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .reportingCycleType .cat-container input:checked ~ .cat-checkmark {
+    background-color: #008060;
+    border: none;
+  }
+  
+  .reportingCycleType .cat-checkmark{
+      border-radius: 2px !important;
+  }
+
+   /* Style the cat-checkmark/indicator */
+   .reportingCycleType .cat-container .cat-checkmark:after {
+    left: 7px;
+    top: 0px;
+    width: 7px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 2px 2px 0;;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .reportingCycleType .cycleType{
+    position: relative;
+  }
+
+  .reportingCycleType .items-left{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .reportingCycleType .left-to-Order {
+    width: 160px;
+    height: 21px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #000000;
+  }
+.reportingCycleType .fa-angle-right{
+        margin: 6px;
+        padding-left: 10px;
+    }
+    
+.reportingCycleType .items-cycle-type{
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        color: #000000;
+        font-weight: 600;
+        padding-right: 10px;
+    }
+
+    .reportingCycleType .p-2{
+        padding: 0.5rem .4rem 0.8rem 0.4rem !important;
+    }
+    
+    .reportingCycleType .hide-for-mobile{
+        display:flex;
+    }
+
+    .reportingCycleType .hide-for-desktop{
+        display:none;
+    }      
+
+    .reportingCycleType .vendor-row {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    @media only screen and (min-width: 801px) and (max-width: 1290px) {
+      .reportingCycleType .day-picker-padding{
+            padding: 2%;
+        }
+        .reportingCycleType .cat-container{
+            font-size:13px;
+        }
+
+        .reportingCycleType .items-cycle-type{
+            font-size:15px;
+        }
+
+        .reportingCycleType p {
+            margin-top: 1px;
+        }
+
+        .reportingCycleType .coloring-stripe-Singleday{
+            padding:0px;
+        }
+
+        .reportingCycleType .coloring-stripe-Multiday{
+            padding:0px;
+        }
+
+        .reportingCycleType .coloring-stripe-Nondaily{
+            padding:0px;
+        }
+        .reportingCycleType .items-cycle-type{
+            font-size: 14px;
+        }
+        .reportingCycleType .cat-container{
+            font-size: 16px;
+        }
+
+        .reportingCycleType .btn_view_by_vendor_state {
+          width: -webkit-fill-available;
+          height: 40px;
+          border-radius: 3px;
+          border: solid 1px #008060;
+          background-color: #ffffff;
+        }
+
+        .reportingCycleType .date-picker-text-div{  
+          height: 40px;  
+          width: 85%;
+          width: fit-content;  
+          border-radius: 3px;
+          border: solid 1px #9b9b9b;
+          background-color: #ffffff;
+          padding-left: 0%; 
+          padding-right: 4%; 
+        } 
+
+        .cycles {
+          margin-top: 20px;
+          margin-right: 20px;
+          margin-bottom: 20px;
+          margin-left: 2%;
+        }
+    } 
+
+    @media (min-width:769px) and (max-width:1024px) {
+      .reportingCycleType .DayPickerInput .DayPickerInput-OverlayWrapper,
+       .DayPickerInput .DayPickerInput-OverlayWrapper {
+        margin-top: 2px;
+      }
+      .reportingCycleType .date-picker-text-div {
+        width: 90%;
+        height: 32px;
+        padding-top: 0px;
+      }
+      .reportingCycleType .vendor-row {
+        margin: 0;
+      }
+      
+      .reportingDetailHeader .customDayPicker .date-picker-text-div {
+        height: 32px;
+      }
+      .reportingDetailHeader .date-picker-text-div .calender {
+        margin-top: 2px;
+        margin-left: 4px;
+      }
+      .reportingDetailHeader .DayPickerInput {
+        width: 80%;
+        height: 100%;
+        z-index: 2;
+      }
+
+      .reportingDetailHeader .customDayPicker .date-picker-text-box {
+        width: 100%;
+        height: 100%;
+      }
+
+      .reportingCycleType .date-picker-text-div .calender {
+        margin-top: 2px;
+        margin-left: 1px;
+      }
+      .reportingCycleType .btn_view_by_vendor_state {
+        font-size: 16px;
+        height: 32px;
+        padding-top: 6px;
+      }
+      .reportingCycleType .coloring-stripe-Singleday, 
+      .reportingCycleType .coloring-stripe-Multiday,
+      .reportingCycleType .coloring-stripe-Nondaily {
+        height: auto;
+        padding: 5px 5px 3px !important;
+      }
+      .reportingCycleType .DayPickerInput {
+        height: 100%;
+      }
+      .reportingCycleType .date-picker-text-box {
+        height: 100%;
+        padding-top: 0px;
+      }
+      .cycles {
+        margin: 15px 0;
+      }
+    }
+    
+    @media only screen and (max-width: 768px) {
+      .reportingCycleType .cat-container{
+        line-height: 1;
+      }
+      .reportingCycleType .reportingCycleType .cat-checkmark{
+        top: -1px;
+      }
+
+      .reportingCycleType .left-to-Order {
+        line-height: 1.5;
+      }
+    }
+
+    @media (min-width: 320px) and (max-width: 768px)  {
+      .reportingCycleType .vendor-row {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .reportingCycleType .date-picker-text-div {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: auto;
+        width: 55%;
+        padding: 0px 0 !important;
+        margin-top: 20px;
+        margin-left: 5px;
+      }
+      .reportingCycleType .p-2 {
+        margin-left: 0px;
+        width: 100%;
+        border-top: solid 1px #cfcece;
+        padding: 15px 0.4rem !important;
+        height: auto;
+        box-shadow: none;
+        border-left-width: 8px;
+      }
+      .reportingCycleType .btn_view_by_vendor_state {
+        right: 0;
+        position: absolute;
+        top: -40px;
+        font-size: 14px;
+        width: 40%;
+        height: 40px;
+        margin-right: 5px;
+      }
+      
+      .reportingCycleType .DayPickerInput .DayPickerInput-OverlayWrapper {
+        margin-left: -10px;
+      }
+      .reportingCycleType .coloring-stripe-Singleday {
+        margin-top: 20px;
+      }
+    }
+
+/* FOR BROWSER SIZE > 1025PX */
+@media (min-width: 1025px) {
+  .reportingCycleType .DayPickerInput .DayPickerInput-OverlayWrapper,
+  .DayPickerInput .DayPickerInput-OverlayWrapper {
+    margin-top: 2px;
+  }
+  .reportingCycleType .date-picker-text-div {
+    width: 90%;
+    height: 40px;
+    padding-top: 0px;
+  }
+  .reportingCycleType .DayPickerInput {
+    height: 100%;
+  }
+  .reportingCycleType .date-picker-text-box {
+    height: 100%;
+    padding-top: 0px;
+  }
+  .reportingCycleType .btn_view_by_vendor_state {
+    font-size: 16px;
+    /* height: 32px; */
+    height: 40px;
+    padding-top: 6px;
+    width: -webkit-fill-available;
+  }
+  .reportingCycleType .coloring-stripe-Singleday,
+  .reportingCycleType .coloring-stripe-Multiday,
+  .reportingCycleType .coloring-stripe-Nondaily {
+    height: auto;
+    /* padding: 5px 5px 3px !important; */
+    padding: 8px 5px !important;
+  }
+  .reportingCycleType .vendor-row {
+    margin: 0;
+  }
+  .reportingCycleType .cat-container {
+    font-size: 16px;
+  }
+  .reportingCycleType .date-picker-text-div .calender {
+    margin-top: 4px;
+    margin-left: 1px;
+  }
+  /* .reportingDetailHeader .customDayPicker .date-picker-text-div {
+    height: 32px;
+  } */
+}

@@ -1,0 +1,304 @@
+.daily-header{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+    color: #333333; 
+}
+
+.item-row-daily{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5b616b;
+}
+
+.daily-table th, 
+.daily-table td {
+    padding: .710rem;
+    padding-left: 1.60rem;
+    text-align: center;
+}
+
+.review-page th, 
+.review-page td {
+    padding: .710rem;
+    padding-left: 1.30rem;
+    text-align: center;
+}
+.Multiday-resize {
+    padding-left: 0;
+}
+
+.weather-images:active{
+    height: 25px;
+    width: 25px;
+    opacity: 0.4;
+    color: yellow;
+}
+
+.weather-images{
+    height: 25px;
+    width: 25px;
+    color: red;
+
+}
+
+.review-page-multi th,
+.review-page-multi td {
+    padding: .710rem;
+    padding-left: 1.30rem;
+    text-align: center;
+}
+
+.daily-table{
+    padding-left: 20px;
+}
+
+.align-center-daily{
+    text-align: -webkit-center;
+    margin: 0 auto;
+}
+
+.daily-table-multi th,
+.daily-table-multi td {
+    padding: 0.95rem;
+    padding-right: 0.95rem;
+    padding-top: 0.6rem;
+}
+
+.item-row td.rmvPadding > div {
+    padding: .6rem 0 .5rem .15rem;
+    height: 35px;
+    width: 100%;
+}
+
+.item-row td.rmvPadding > div:last-child{
+    border: 0;
+}
+.item-row-daily .item-row-daily-header {
+    /* padding: .65rem 0 .5rem .15rem;
+    display: table-row;
+    text-align: center;
+    width: 38px; */
+}
+.item-row-daily .item-row-daily-header div,
+.item-row-weekly .item-row-daily-header div {
+    padding: .6rem 0 .5rem .15rem;
+    height: 35px;
+    display: table-cell;
+    width: 38px;
+}
+.item-row-daily .item-row-daily-body,
+.item-row-weekly .item-row-daily-body div {
+    padding: .65rem 0 .5rem .15rem;
+    height: 35px;
+}
+
+/* BROWSER > 1025PX Styles */
+@media (min-width: 1025px) {
+    .daily-table th, .daily-table td {
+        padding: 10px 0;
+        width: 50%;
+    }
+    .daily-table thead th, 
+    .daily-table thead td {
+        padding: 10px 0 0;
+    }
+    .item-row-daily {
+        width: 12.5%;
+    }
+    .item-row-daily .item-row-daily-body, 
+    .item-row-weekly .item-row-daily-body div {
+        padding: .65rem 0 .5rem 0;
+    }
+    .item-row-daily .item-row-daily-header div, 
+    .item-row-weekly .item-row-daily-header div {
+        width: 100%;
+        height: 38px;
+        display: block;
+    }
+    .daily-trend, .daily-table {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .daily-table-multi thead tr th {
+        /* padding-bottom: 0; */
+        padding: 10px 0 0;
+    }
+    .daily-table-multi .item-row-daily {
+        width: 25%;
+    }
+    .daily-table-multi .item-row-daily th, 
+    .daily-table-multi .item-row-daily td {
+        padding: 10px 0;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .daily-table th, 
+    .daily-table td {
+        padding: .7rem;
+        padding-left: .20rem;
+        text-align: center;
+    }
+
+    .daily-table{
+        width: 500px;
+        overflow-x: scroll;
+        overflow-y: visible;
+        padding: 0;
+    }
+
+    /* .daily-mg-left{
+        margin-left: 0.1rem;
+    } */
+
+    .daily-table-multi th,
+    .daily-table-multi td {
+    padding: 0.95rem;
+    padding-right: 0.55rem;
+    padding-top: 0.6rem;
+    }
+
+
+    .item-row-daily {
+        /* padding-left: 0.5%; */
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+    }
+    .item-row-daily .item-row-daily-header div, 
+    .item-row-weekly .item-row-daily-header div {
+        padding: 18px 0 7px;
+        height: 33px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .item-row-daily {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .item-row-daily td tr td {
+        /* padding-top: 6px; */
+        /* padding-bottom: 7px; */
+        padding: 6px 0 0;
+        height: 33px;
+        text-align: center;
+    }
+    .item-row-daily td tr:first-child td {
+        padding-left: 0px;
+        padding-right: 0px;
+        /* padding-top: 25px; */
+        /* padding-bottom: 7px; */
+        padding-top: 20px;
+        padding-bottom: 7px;
+        text-align: center;
+    }
+    .item-row-daily td {
+        padding: 0 3px;
+    }
+    
+    .daily-table th, 
+    .daily-table td {
+        padding: 0 3px;
+    }
+}
+
+.outOfStockStyle {
+    color: #ec2526;
+}
+
+.salesStyle {
+    font-weight: bold;
+}
+
+/*For ISP changes*/
+@media (min-width:769px) and (max-width:1024px){
+
+    .daily-header{
+        font-size: 16px;
+    }
+    
+    .item-row-daily{
+        font-size: 14px;
+        color: #000000;
+    }
+
+    .daily-trend .daily-table .item-row-daily {
+        width: 12%;
+    }
+
+    .daily-trend, .daily-table {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .daily-table.daily-table .item-row-daily {
+        width: 12%;
+    }
+
+    .daily-table.review-page .item-row-daily, .daily-table-multi.review-page-multi .item-row-daily {
+        width: 10%;
+    }
+
+    .daily-table-multi .item-row-daily {
+        width: 25%;
+    }
+
+    .non-daily-weekly.body-background-non-daily .item-row-weekly {
+        /* width: 18%; */
+        width: 25%;
+    }
+
+    .daily-table th, 
+    .daily-table td {
+        /* padding: .6rem 0 .6rem .25rem; */
+        padding: .6rem 0 .5rem .15rem;
+        /* height: 35px; */
+    }
+
+    .daily-table th {
+        padding-bottom: 0;
+        height: auto;
+    }
+
+    .review-page th, 
+    .review-page td {
+        /* padding: .6rem 0 .5rem .25rem; */
+        padding: .6rem 0 .5rem .15rem;
+        height: 35px;
+    }
+
+    .daily-table-multi th,
+    .daily-table-multi td {
+        padding: .5rem;
+        padding-right: 0rem;
+        padding-top: 0.6rem;
+        height: 35px;
+    }
+
+    .review-page-multi th,
+    .review-page-multi td {
+        padding: .6rem 0 .5rem .15rem;
+        /* padding: 0 0 .5rem .15rem; */
+    }
+}

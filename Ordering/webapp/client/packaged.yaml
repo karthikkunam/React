@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  BucketPolicy:
+    Properties:
+      Bucket: risordering.com
+      PolicyDocument:
+        Id: MyPolicy
+        Statement:
+        - Action: s3:*
+          Effect: Allow
+          Principal: '*'
+          Resource: arn:aws:s3:::risordering.com
+          Sid: PublicReadForGetBucketObjects
+        Version: 2012-10-17
+    Type: AWS::S3::BucketPolicy
+Transform: AWS::Serverless-2016-10-31

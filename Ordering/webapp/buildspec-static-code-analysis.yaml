@@ -1,0 +1,31 @@
+version: 0.2
+
+env:
+  parameter-store:
+    SONAR_TOKEN: "/codebuild/sonarqube/token"
+    SONAR_SERVER: "/codebuild/sonarqube/server"
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk8
+    commands:
+      - echo Build enviromment `uname -a` `aws --version 2>&1` node/`node --version` npm/`npm --version`
+      # - apt-get update -y
+      # - apt-get install -y software-properties-common
+      # - add-apt-repository ppa:openjdk-r/ppa
+      # - apt-get update -y
+      # - apt-get install -y openjdk-8-jre
+      - apt-get install -y --no-install-recommends ca-certificates-java
+      # - ( aws s3 cp s3://artifactory.7-11.com/checkmarx/reporter . --recursive && chmod 755 certs.sh && ./certs.sh )
+      - update-ca-certificates -f
+      # - echo Java environment `java -version`
+  pre_build:
+    commands:
+  build:
+    commands:
+      - ( cd $DeployableUnit && aws s3 cp s3://artifactory.7-11.com/checkmarx/reporter/sonarscan.sh . )
+      # - ( cd $DeployableUnit && chmod 755 sonarscan.sh && ./sonarscan.sh )
+  post_build:
+    commands:
+      - echo Static code analysis completed on `date`

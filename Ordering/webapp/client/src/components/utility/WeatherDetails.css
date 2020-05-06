@@ -1,0 +1,37 @@
+.Last-4-Sat {
+    font-family: Trasandina;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4a4a4a;
+  }
+ 
+  .Last-7-Days {
+    font-family: Trasandina;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4a4a4a;
+  }
+
+  .last-7-days{
+     padding: 0px; 
+  }
+
+  .weather-info .table{
+      /* margin-left: 0px !important;
+      margin-right: 0px !important;
+      margin-bottom: 0%; */
+  }
+
+  .table th, .table td{
+    padding: 0.47rem;
+  }
